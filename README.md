@@ -49,6 +49,7 @@
 | [0347-top-k-frequent-elements](https://github.com/dadavidtseng/LeetCodePractice/tree/master/0347-top-k-frequent-elements) |
 | [0417-pacific-atlantic-water-flow](https://github.com/dadavidtseng/LeetCodePractice/tree/master/0417-pacific-atlantic-water-flow) |
 | [0435-non-overlapping-intervals](https://github.com/dadavidtseng/LeetCodePractice/tree/master/0435-non-overlapping-intervals) |
+| [0695-max-area-of-island](https://github.com/dadavidtseng/LeetCodePractice/tree/master/0695-max-area-of-island) |
 | [0704-binary-search](https://github.com/dadavidtseng/LeetCodePractice/tree/master/0704-binary-search) |
 | [0739-daily-temperatures](https://github.com/dadavidtseng/LeetCodePractice/tree/master/0739-daily-temperatures) |
 | [0746-min-cost-climbing-stairs](https://github.com/dadavidtseng/LeetCodePractice/tree/master/0746-min-cost-climbing-stairs) |
@@ -246,6 +247,7 @@
 | [0200-number-of-islands](https://github.com/dadavidtseng/LeetCodePractice/tree/master/0200-number-of-islands) |
 | [0212-word-search-ii](https://github.com/dadavidtseng/LeetCodePractice/tree/master/0212-word-search-ii) |
 | [0417-pacific-atlantic-water-flow](https://github.com/dadavidtseng/LeetCodePractice/tree/master/0417-pacific-atlantic-water-flow) |
+| [0695-max-area-of-island](https://github.com/dadavidtseng/LeetCodePractice/tree/master/0695-max-area-of-island) |
 ## Simulation
 |  |
 | ------- |
@@ -292,6 +294,7 @@
 | [0417-pacific-atlantic-water-flow](https://github.com/dadavidtseng/LeetCodePractice/tree/master/0417-pacific-atlantic-water-flow) |
 | [0543-diameter-of-binary-tree](https://github.com/dadavidtseng/LeetCodePractice/tree/master/0543-diameter-of-binary-tree) |
 | [0572-subtree-of-another-tree](https://github.com/dadavidtseng/LeetCodePractice/tree/master/0572-subtree-of-another-tree) |
+| [0695-max-area-of-island](https://github.com/dadavidtseng/LeetCodePractice/tree/master/0695-max-area-of-island) |
 | [1448-count-good-nodes-in-binary-tree](https://github.com/dadavidtseng/LeetCodePractice/tree/master/1448-count-good-nodes-in-binary-tree) |
 ## Breadth-First Search
 |  |
@@ -306,6 +309,7 @@
 | [0226-invert-binary-tree](https://github.com/dadavidtseng/LeetCodePractice/tree/master/0226-invert-binary-tree) |
 | [0297-serialize-and-deserialize-binary-tree](https://github.com/dadavidtseng/LeetCodePractice/tree/master/0297-serialize-and-deserialize-binary-tree) |
 | [0417-pacific-atlantic-water-flow](https://github.com/dadavidtseng/LeetCodePractice/tree/master/0417-pacific-atlantic-water-flow) |
+| [0695-max-area-of-island](https://github.com/dadavidtseng/LeetCodePractice/tree/master/0695-max-area-of-island) |
 | [1448-count-good-nodes-in-binary-tree](https://github.com/dadavidtseng/LeetCodePractice/tree/master/1448-count-good-nodes-in-binary-tree) |
 ## String Matching
 |  |
@@ -343,6 +347,7 @@
 | ------- |
 | [0128-longest-consecutive-sequence](https://github.com/dadavidtseng/LeetCodePractice/tree/master/0128-longest-consecutive-sequence) |
 | [0200-number-of-islands](https://github.com/dadavidtseng/LeetCodePractice/tree/master/0200-number-of-islands) |
+| [0695-max-area-of-island](https://github.com/dadavidtseng/LeetCodePractice/tree/master/0695-max-area-of-island) |
 ## Greedy
 |  |
 | ------- |
