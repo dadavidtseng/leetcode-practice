@@ -1,44 +1,68 @@
 class Solution {
 public:
-public:
     int numIslands(vector<vector<char>>& grid) {
         int result = 0;
+        const int rowSize = static_cast<int>(grid.size());
+        const int colSize = static_cast<int>(grid[0].size());
 
-        // iterate through every grids
-        for (int i = 0; i < static_cast<int>(grid.size()); ++i) {
-            for (int j = 0; j < static_cast<int>(grid[0].size()); ++j) {
-                // only enter the recursive call if that grad is '1'
-                // if we successfully pass the sinkIsland,
-                // means that this is and island, hence result++
-                if (grid[i][j] == '1') {
-                    sinkIsland(grid, i, j);
+        // Iterate through every grid
+        for (int row = 0; row < rowSize; ++row) {
+            for (int col = 0; col < colSize; ++col) {
+                // Only enter the bfs call if that grid is "1",
+                // which means that it is part of the island;
+                // Increment the result by 1 after the bfs call,
+                // which means that we've found an island
+                if (grid[row][col] == '1') {
+                    bfs(grid, row, col);
                     result++;
                 }
             }
         }
-
         return result;
     }
 
-    void sinkIsland(vector<vector<char>>& grid, int row, int col) {
-        // return if this grid is out of bound
-        if (row < 0 || col < 0 || row >= static_cast<int>(grid.size()) ||
-            col >= static_cast<int>(grid[0].size())) {
-            return;
-        }
+    void bfs(vector<vector<char>>& grid, int row, int col) {
+        const int rowSize = static_cast<int>(grid.size());
+        const int colSize = static_cast<int>(grid[0].size());
 
-        // return if this grid has already been visited
-        // so that we don't count it again
-        if (grid[row][col] == '0') {
-            return;
-        }
-
-        // mark this grid as visited
+        // Push this grid's row/col index in the queue
+        // and mark this grid as visited
+        queue<pair<int, int>> q;
+        q.push(pair<int, int>(row, col));
         grid[row][col] = '0';
 
-        sinkIsland(grid, row - 1, col); // up
-        sinkIsland(grid, row + 1, col); // down
-        sinkIsland(grid, row, col - 1); // left
-        sinkIsland(grid, row, col + 1); // right
+        // Exit the while loop when there's nothing to process
+        // Note that "while (!q.empty())" is short for "while (q.size() != 0)"
+        while (!q.empty()) {
+            auto [qRow, qCol] = q.front();
+            q.pop();
+
+            static constexpr pair<int, int> directions[] = {
+                {-1, 0}, {1, 0}, {0, -1}, {0, 1}}; // up, down, left, right
+
+            // Spread the bfs call in four directions
+            for (auto const& [r, c] : directions) {
+                int nextRow = qRow + r;
+                int nextCol = qCol + c;
+
+                // Continue if next grid is out of bound
+                if (nextRow < 0 || nextCol < 0 || nextRow >= rowSize ||
+                    nextCol >= colSize) {
+                    continue;
+                }
+
+                // Continue if next grid has already been visited so that we
+                // don't count it again
+                if (grid[nextRow][nextCol] == '0') {
+                    continue;
+                }
+
+                // Mark this grid as visited
+                grid[nextRow][nextCol] = '0';
+
+                // Push next grid's row/col index in the queue
+                q.push(pair<int, int>(nextRow, nextCol));
+            }
+        }
     }
 };
