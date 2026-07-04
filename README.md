@@ -54,6 +54,7 @@
 | [0739-daily-temperatures](https://github.com/dadavidtseng/LeetCodePractice/tree/master/0739-daily-temperatures) |
 | [0746-min-cost-climbing-stairs](https://github.com/dadavidtseng/LeetCodePractice/tree/master/0746-min-cost-climbing-stairs) |
 | [0875-koko-eating-bananas](https://github.com/dadavidtseng/LeetCodePractice/tree/master/0875-koko-eating-bananas) |
+| [0994-rotting-oranges](https://github.com/dadavidtseng/LeetCodePractice/tree/master/0994-rotting-oranges) |
 ## Hash Table
 |  |
 | ------- |
@@ -248,6 +249,7 @@
 | [0212-word-search-ii](https://github.com/dadavidtseng/LeetCodePractice/tree/master/0212-word-search-ii) |
 | [0417-pacific-atlantic-water-flow](https://github.com/dadavidtseng/LeetCodePractice/tree/master/0417-pacific-atlantic-water-flow) |
 | [0695-max-area-of-island](https://github.com/dadavidtseng/LeetCodePractice/tree/master/0695-max-area-of-island) |
+| [0994-rotting-oranges](https://github.com/dadavidtseng/LeetCodePractice/tree/master/0994-rotting-oranges) |
 ## Simulation
 |  |
 | ------- |
@@ -310,6 +312,7 @@
 | [0297-serialize-and-deserialize-binary-tree](https://github.com/dadavidtseng/LeetCodePractice/tree/master/0297-serialize-and-deserialize-binary-tree) |
 | [0417-pacific-atlantic-water-flow](https://github.com/dadavidtseng/LeetCodePractice/tree/master/0417-pacific-atlantic-water-flow) |
 | [0695-max-area-of-island](https://github.com/dadavidtseng/LeetCodePractice/tree/master/0695-max-area-of-island) |
+| [0994-rotting-oranges](https://github.com/dadavidtseng/LeetCodePractice/tree/master/0994-rotting-oranges) |
 | [1448-count-good-nodes-in-binary-tree](https://github.com/dadavidtseng/LeetCodePractice/tree/master/1448-count-good-nodes-in-binary-tree) |
 ## String Matching
 |  |
