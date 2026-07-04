@@ -33,11 +33,6 @@ class Solution:
                 if row == 0 or col == 0 or row == row_size - 1 or col == col_size - 1:
                     if board[row][col] == "O":
                         board[row][col] = "S"
-
-        for row in range(row_size):
-            for col in range(col_size):
-                if row == 0 or col == 0 or row == row_size - 1 or col == col_size - 1:
-                    if board[row][col] == "S":
                         bfs(row, col)
 
         for row in range(row_size):
