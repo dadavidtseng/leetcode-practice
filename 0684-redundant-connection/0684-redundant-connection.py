@@ -18,11 +18,14 @@ class Solution:
 
         while q:
             leaf = q.popleft()
+
             for neighbor in graph[leaf]:
                 graph[neighbor].remove(leaf)
                 in_degree[neighbor] -= 1
+
                 if in_degree[neighbor] == 1:
                     q.append(neighbor)
+
             graph[leaf].clear()
             in_degree[leaf] = 0
 
@@ -35,3 +38,5 @@ class Solution:
         for u, v in reversed(edges):
             if u in s and v in s:
                 return [u, v]
+
+        return []
