@@ -3,27 +3,39 @@ public:
     bool canJump(vector<int>& nums) {
         const int size = static_cast<int>(nums.size());
 
-        vector<bool> dp(size, false);
-        dp[size - 1] = true;
+        // Create memo with nums' size and set them all to 0(unknown)
+        // memo[size-1] marks the final success state for dfs call's base case
+        // 0 = unknown, 1 = good, -1 = bad
+        vector<int> memo(size, 0);
+        memo[size - 1] = 1;
+        return dfs(nums, memo, 0);
+    }
 
-        // Iterate backwards from an index before the final index to 0,
-        // one step at a time
-        for (int i = size - 2; i >= 0; --i) {
-            // Calculate the maximum index we can reach from current index
-            const int end = min(size - 1, i + nums[i]);
+private:
+    static bool dfs(vector<int>& nums, vector<int>& memo, int i) {
+        // If this index has been visited,
+        // return true if we can reach it
+        if (memo[i] != 0) {
+            return memo[i] == 1;
+        }
 
-            // Iterate forward to see if we can reach any indexes;
-            // As soon as we find out that we can reach this index,
-            // mark dp[i] to true and break so that we don't do redundant work
-            for (int j = i + 1; j <= end; ++j) {
-                if (dp[j]) {
-                    dp[i] = true;
-                    break;
-                }
+        // Calculate the maximum index we can reach from current index
+        int end = min((int)nums.size() - 1, i + nums[i]);
+
+        // Iterate through all possible index,
+        // return true and mark in memo if we can reach any of them
+        // Note that the recursive call and next = pos + 1 is like testing every
+        // possibilities as we step further, but memo allows us not to step
+        // twice
+        for (int next = i + 1; next <= end; ++next) {
+            if (dfs(nums, memo, next)) {
+                memo[i] = 1;
+                return true;
             }
         }
 
-        // Return true if we've reached the first index
-        return dp[0];
+        // Mark in memo that we can't reach this position and return false
+        memo[i] = -1;
+        return false;
     }
 };
