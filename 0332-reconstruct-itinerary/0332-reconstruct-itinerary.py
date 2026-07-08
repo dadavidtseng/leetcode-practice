@@ -6,13 +6,12 @@ class Solution:
         for start, end in tickets:
             heapq.heappush(graph[start], end)
 
-        def dfs(node: str):
-            while graph[node]:
-                neighbor = heapq.heappop(graph[node])
-                dfs(neighbor)
-            result.append(node)
+        stack = ["JFK"]
 
-        dfs("JFK")
+        while stack:
+            while graph[stack[-1]]:
+                stack.append(heapq.heappop(graph[stack[-1]]))
+            result.append(stack.pop())
 
         result.reverse()
         return result
