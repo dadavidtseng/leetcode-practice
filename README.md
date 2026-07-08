@@ -65,6 +65,7 @@
 | [0973-k-closest-points-to-origin](https://github.com/dadavidtseng/LeetCodePractice/tree/master/0973-k-closest-points-to-origin) |
 | [0994-rotting-oranges](https://github.com/dadavidtseng/LeetCodePractice/tree/master/0994-rotting-oranges) |
 | [1046-last-stone-weight](https://github.com/dadavidtseng/LeetCodePractice/tree/master/1046-last-stone-weight) |
+| [1584-min-cost-to-connect-all-points](https://github.com/dadavidtseng/LeetCodePractice/tree/master/1584-min-cost-to-connect-all-points) |
 | [1851-minimum-interval-to-include-each-query](https://github.com/dadavidtseng/LeetCodePractice/tree/master/1851-minimum-interval-to-include-each-query) |
 | [1899-merge-triplets-to-form-target-triplet](https://github.com/dadavidtseng/LeetCodePractice/tree/master/1899-merge-triplets-to-form-target-triplet) |
 ## Hash Table
@@ -416,6 +417,7 @@
 | [0200-number-of-islands](https://github.com/dadavidtseng/LeetCodePractice/tree/master/0200-number-of-islands) |
 | [0684-redundant-connection](https://github.com/dadavidtseng/LeetCodePractice/tree/master/0684-redundant-connection) |
 | [0695-max-area-of-island](https://github.com/dadavidtseng/LeetCodePractice/tree/master/0695-max-area-of-island) |
+| [1584-min-cost-to-connect-all-points](https://github.com/dadavidtseng/LeetCodePractice/tree/master/1584-min-cost-to-connect-all-points) |
 ## Greedy
 |  |
 | ------- |
@@ -486,6 +488,7 @@
 | [0210-course-schedule-ii](https://github.com/dadavidtseng/LeetCodePractice/tree/master/0210-course-schedule-ii) |
 | [0332-reconstruct-itinerary](https://github.com/dadavidtseng/LeetCodePractice/tree/master/0332-reconstruct-itinerary) |
 | [0684-redundant-connection](https://github.com/dadavidtseng/LeetCodePractice/tree/master/0684-redundant-connection) |
+| [1584-min-cost-to-connect-all-points](https://github.com/dadavidtseng/LeetCodePractice/tree/master/1584-min-cost-to-connect-all-points) |
 ## Topological Sort
 |  |
 | ------- |
@@ -521,4 +524,8 @@
 |  |
 | ------- |
 | [0332-reconstruct-itinerary](https://github.com/dadavidtseng/LeetCodePractice/tree/master/0332-reconstruct-itinerary) |
+## Minimum Spanning Tree
+|  |
+| ------- |
+| [1584-min-cost-to-connect-all-points](https://github.com/dadavidtseng/LeetCodePractice/tree/master/1584-min-cost-to-connect-all-points) |
 <!---LeetCode Topics End-->
