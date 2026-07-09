@@ -20,36 +20,28 @@ public:
 
         int result = 0;
 
-        // Create a queue to store nodes from root
-        // and push the root node into the queue
-        queue<TreeNode*> q;
-        q.push(root);
+        // Create a stack to store a pair of node and depth
+        // and push the root node with depth 1 into the stack
+        stack<pair<TreeNode*, int>> s;
+        s.push({root, 1});
 
-        // Exit the while loop when the queue is empty
-        while (!q.empty()) {
-            const int size = static_cast<int>(q.size());
+        // Exit the while loop when the stack is empty
+        while (!s.empty()) {
+            // Get the current node and depth from the stack
+            const pair<TreeNode*, int> curr = s.top();
+            s.pop();
+            const TreeNode* node = curr.first;
+            const int depth = curr.second;
 
-            // Iterate through every nodes in the queue,
-            // which is the nodes in a level
-            for (int i = 0; i < size; ++i) {
-                // Get the node from the queue,
-                // which is the very left node for this level
-                // if this is the first iteration of the for loop
-                const TreeNode* node = q.front();
-                q.pop();
-
-                // Push that node's left child into the queue if it exists
-                if (node->left != nullptr) {
-                    q.push(node->left);
-                }
-
-                // Push that node's right child into the queue if it exists
-                if (node->right != nullptr) {
-                    q.push(node->right);
-                }
+            // If that node exists,
+            //      1. Push that node's left/right children and incremented
+            //      depth into the stack
+            //      2. Calculate the max depth
+            if (node != nullptr) {
+                s.push({node->left, depth + 1});
+                s.push({node->right, depth + 1});
+                result = max(result, depth);
             }
-            // Increment the result as we finished a level
-            result++;
         }
         return result;
     }
