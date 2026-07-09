@@ -18,31 +18,12 @@ public:
             return 0;
         }
 
-        int result = 0;
+        // Recursively compute the depth of the left/right subtrees and add 1
+        // for each of them
+        const int leftDepth = 1 + maxDepth(root->left);
+        const int rightDepth = 1 + maxDepth(root->right);
 
-        // Create a stack to store a pair of node and depth
-        // and push the root node with depth 1 into the stack
-        stack<pair<TreeNode*, int>> s;
-        s.push({root, 1});
-
-        // Exit the while loop when the stack is empty
-        while (!s.empty()) {
-            // Get the current node and depth from the stack
-            const pair<TreeNode*, int> curr = s.top();
-            s.pop();
-            const TreeNode* node = curr.first;
-            const int depth = curr.second;
-
-            // If that node exists,
-            //      1. Push that node's left/right children and incremented
-            //      depth into the stack
-            //      2. Calculate the max depth
-            if (node != nullptr) {
-                s.push({node->left, depth + 1});
-                s.push({node->right, depth + 1});
-                result = max(result, depth);
-            }
-        }
-        return result;
+        // Return the maximum from left/right depths as we unwind
+        return max(leftDepth, rightDepth);
     }
 };
