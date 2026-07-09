@@ -12,26 +12,22 @@ class Solution:
 
         result = 0
 
-        # Create a queue to store nodes from root
-        # and push the root node into the queue
-        q = deque()
-        q.append(root)
+        # Create a stack to store a tuple of node and depth
+        # and push the root node with depth 1 into the stack
+        s = []
+        s.append((root, 1))
 
-        # Exit the while loop when the queue is empty
-        while q:
-            # Iterate through every nodes in the queue,
-            # which is the nodes in a level
-            for _ in range(len(q)):
-                # Get the node from the queue,
-                # which is the very left node for this level
-                # if this is the first iteration of the for loop
-                node = q.popleft()
+        # Exit the while loop when the stack is empty
+        while s:
+            # Get the current node and depth from the stack
+            curr = s.pop()
+            (node, depth) = curr
 
-                # Push that node's left/right children into the queue if they exist
-                if node.left:
-                    q.append(node.left)
-                if node.right:
-                    q.append(node.right)
-            # Increment the result as we finished a level
-            result += 1
+            # If that node exists,
+            #   1. Push that node's left/right children and incremented depth into the stack
+            #   2. Calculate the max depth
+            if node:
+                s.append((node.left, depth + 1))
+                s.append((node.right, depth + 1))
+                result = max(result, depth)
         return result
