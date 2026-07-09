@@ -10,24 +10,9 @@ class Solution:
         if not root:
             return 0
 
-        result = 0
+        # Recursively compute the depth of the left/right subtrees and add 1 for each of them
+        left_depth = 1 + self.maxDepth(root.left)
+        right_depth = 1 + self.maxDepth(root.right)
 
-        # Create a stack to store a tuple of node and depth
-        # and push the root node with depth 1 into the stack
-        s = []
-        s.append((root, 1))
-
-        # Exit the while loop when the stack is empty
-        while s:
-            # Get the current node and depth from the stack
-            curr = s.pop()
-            node, depth = curr
-
-            # If that node exists,
-            #   1. Push that node's left/right children and incremented depth into the stack
-            #   2. Calculate the max depth
-            if node:
-                s.append((node.left, depth + 1))
-                s.append((node.right, depth + 1))
-                result = max(result, depth)
-        return result
+        # Return the maximum from left/right depths as we unwind
+        return max(left_depth, right_depth)
