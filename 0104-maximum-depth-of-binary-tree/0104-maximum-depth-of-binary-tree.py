@@ -21,7 +21,7 @@ class Solution:
         while s:
             # Get the current node and depth from the stack
             curr = s.pop()
-            (node, depth) = curr
+            node, depth = curr
 
             # If that node exists,
             #   1. Push that node's left/right children and incremented depth into the stack
