@@ -70,6 +70,7 @@
 | [1584-min-cost-to-connect-all-points](https://github.com/dadavidtseng/LeetCodePractice/tree/master/1584-min-cost-to-connect-all-points) |
 | [1851-minimum-interval-to-include-each-query](https://github.com/dadavidtseng/LeetCodePractice/tree/master/1851-minimum-interval-to-include-each-query) |
 | [1899-merge-triplets-to-form-target-triplet](https://github.com/dadavidtseng/LeetCodePractice/tree/master/1899-merge-triplets-to-form-target-triplet) |
+| [2013-detect-squares](https://github.com/dadavidtseng/LeetCodePractice/tree/master/2013-detect-squares) |
 ## Hash Table
 |  |
 | ------- |
@@ -99,6 +100,7 @@
 | [0763-partition-labels](https://github.com/dadavidtseng/LeetCodePractice/tree/master/0763-partition-labels) |
 | [0846-hand-of-straights](https://github.com/dadavidtseng/LeetCodePractice/tree/master/0846-hand-of-straights) |
 | [0981-time-based-key-value-store](https://github.com/dadavidtseng/LeetCodePractice/tree/master/0981-time-based-key-value-store) |
+| [2013-detect-squares](https://github.com/dadavidtseng/LeetCodePractice/tree/master/2013-detect-squares) |
 ## Math
 |  |
 | ------- |
@@ -416,6 +418,7 @@
 | ------- |
 | [0347-top-k-frequent-elements](https://github.com/dadavidtseng/LeetCodePractice/tree/master/0347-top-k-frequent-elements) |
 | [0621-task-scheduler](https://github.com/dadavidtseng/LeetCodePractice/tree/master/0621-task-scheduler) |
+| [2013-detect-squares](https://github.com/dadavidtseng/LeetCodePractice/tree/master/2013-detect-squares) |
 ## Quickselect
 |  |
 | ------- |
@@ -473,6 +476,7 @@
 | [0355-design-twitter](https://github.com/dadavidtseng/LeetCodePractice/tree/master/0355-design-twitter) |
 | [0703-kth-largest-element-in-a-stream](https://github.com/dadavidtseng/LeetCodePractice/tree/master/0703-kth-largest-element-in-a-stream) |
 | [0981-time-based-key-value-store](https://github.com/dadavidtseng/LeetCodePractice/tree/master/0981-time-based-key-value-store) |
+| [2013-detect-squares](https://github.com/dadavidtseng/LeetCodePractice/tree/master/2013-detect-squares) |
 ## Trie
 |  |
 | ------- |
@@ -498,6 +502,7 @@
 | ------- |
 | [0295-find-median-from-data-stream](https://github.com/dadavidtseng/LeetCodePractice/tree/master/0295-find-median-from-data-stream) |
 | [0703-kth-largest-element-in-a-stream](https://github.com/dadavidtseng/LeetCodePractice/tree/master/0703-kth-largest-element-in-a-stream) |
+| [2013-detect-squares](https://github.com/dadavidtseng/LeetCodePractice/tree/master/2013-detect-squares) |
 ## Graph Theory
 |  |
 | ------- |
