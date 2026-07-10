@@ -61,6 +61,7 @@
 | [0704-binary-search](https://github.com/dadavidtseng/LeetCodePractice/tree/master/0704-binary-search) |
 | [0739-daily-temperatures](https://github.com/dadavidtseng/LeetCodePractice/tree/master/0739-daily-temperatures) |
 | [0746-min-cost-climbing-stairs](https://github.com/dadavidtseng/LeetCodePractice/tree/master/0746-min-cost-climbing-stairs) |
+| [0778-swim-in-rising-water](https://github.com/dadavidtseng/LeetCodePractice/tree/master/0778-swim-in-rising-water) |
 | [0846-hand-of-straights](https://github.com/dadavidtseng/LeetCodePractice/tree/master/0846-hand-of-straights) |
 | [0875-koko-eating-bananas](https://github.com/dadavidtseng/LeetCodePractice/tree/master/0875-koko-eating-bananas) |
 | [0973-k-closest-points-to-origin](https://github.com/dadavidtseng/LeetCodePractice/tree/master/0973-k-closest-points-to-origin) |
@@ -201,6 +202,7 @@
 | [0287-find-the-duplicate-number](https://github.com/dadavidtseng/LeetCodePractice/tree/master/0287-find-the-duplicate-number) |
 | [0703-kth-largest-element-in-a-stream](https://github.com/dadavidtseng/LeetCodePractice/tree/master/0703-kth-largest-element-in-a-stream) |
 | [0704-binary-search](https://github.com/dadavidtseng/LeetCodePractice/tree/master/0704-binary-search) |
+| [0778-swim-in-rising-water](https://github.com/dadavidtseng/LeetCodePractice/tree/master/0778-swim-in-rising-water) |
 | [0875-koko-eating-bananas](https://github.com/dadavidtseng/LeetCodePractice/tree/master/0875-koko-eating-bananas) |
 | [0981-time-based-key-value-store](https://github.com/dadavidtseng/LeetCodePractice/tree/master/0981-time-based-key-value-store) |
 | [1851-minimum-interval-to-include-each-query](https://github.com/dadavidtseng/LeetCodePractice/tree/master/1851-minimum-interval-to-include-each-query) |
@@ -297,6 +299,7 @@
 | [0212-word-search-ii](https://github.com/dadavidtseng/LeetCodePractice/tree/master/0212-word-search-ii) |
 | [0417-pacific-atlantic-water-flow](https://github.com/dadavidtseng/LeetCodePractice/tree/master/0417-pacific-atlantic-water-flow) |
 | [0695-max-area-of-island](https://github.com/dadavidtseng/LeetCodePractice/tree/master/0695-max-area-of-island) |
+| [0778-swim-in-rising-water](https://github.com/dadavidtseng/LeetCodePractice/tree/master/0778-swim-in-rising-water) |
 | [0994-rotting-oranges](https://github.com/dadavidtseng/LeetCodePractice/tree/master/0994-rotting-oranges) |
 ## Simulation
 |  |
@@ -351,6 +354,7 @@
 | [0572-subtree-of-another-tree](https://github.com/dadavidtseng/LeetCodePractice/tree/master/0572-subtree-of-another-tree) |
 | [0684-redundant-connection](https://github.com/dadavidtseng/LeetCodePractice/tree/master/0684-redundant-connection) |
 | [0695-max-area-of-island](https://github.com/dadavidtseng/LeetCodePractice/tree/master/0695-max-area-of-island) |
+| [0778-swim-in-rising-water](https://github.com/dadavidtseng/LeetCodePractice/tree/master/0778-swim-in-rising-water) |
 | [0787-cheapest-flights-within-k-stops](https://github.com/dadavidtseng/LeetCodePractice/tree/master/0787-cheapest-flights-within-k-stops) |
 | [1448-count-good-nodes-in-binary-tree](https://github.com/dadavidtseng/LeetCodePractice/tree/master/1448-count-good-nodes-in-binary-tree) |
 ## Breadth-First Search
@@ -371,6 +375,7 @@
 | [0417-pacific-atlantic-water-flow](https://github.com/dadavidtseng/LeetCodePractice/tree/master/0417-pacific-atlantic-water-flow) |
 | [0684-redundant-connection](https://github.com/dadavidtseng/LeetCodePractice/tree/master/0684-redundant-connection) |
 | [0695-max-area-of-island](https://github.com/dadavidtseng/LeetCodePractice/tree/master/0695-max-area-of-island) |
+| [0778-swim-in-rising-water](https://github.com/dadavidtseng/LeetCodePractice/tree/master/0778-swim-in-rising-water) |
 | [0787-cheapest-flights-within-k-stops](https://github.com/dadavidtseng/LeetCodePractice/tree/master/0787-cheapest-flights-within-k-stops) |
 | [0994-rotting-oranges](https://github.com/dadavidtseng/LeetCodePractice/tree/master/0994-rotting-oranges) |
 | [1448-count-good-nodes-in-binary-tree](https://github.com/dadavidtseng/LeetCodePractice/tree/master/1448-count-good-nodes-in-binary-tree) |
@@ -394,6 +399,7 @@
 | [0355-design-twitter](https://github.com/dadavidtseng/LeetCodePractice/tree/master/0355-design-twitter) |
 | [0621-task-scheduler](https://github.com/dadavidtseng/LeetCodePractice/tree/master/0621-task-scheduler) |
 | [0703-kth-largest-element-in-a-stream](https://github.com/dadavidtseng/LeetCodePractice/tree/master/0703-kth-largest-element-in-a-stream) |
+| [0778-swim-in-rising-water](https://github.com/dadavidtseng/LeetCodePractice/tree/master/0778-swim-in-rising-water) |
 | [0787-cheapest-flights-within-k-stops](https://github.com/dadavidtseng/LeetCodePractice/tree/master/0787-cheapest-flights-within-k-stops) |
 | [0973-k-closest-points-to-origin](https://github.com/dadavidtseng/LeetCodePractice/tree/master/0973-k-closest-points-to-origin) |
 | [1046-last-stone-weight](https://github.com/dadavidtseng/LeetCodePractice/tree/master/1046-last-stone-weight) |
@@ -425,6 +431,7 @@
 | [0200-number-of-islands](https://github.com/dadavidtseng/LeetCodePractice/tree/master/0200-number-of-islands) |
 | [0684-redundant-connection](https://github.com/dadavidtseng/LeetCodePractice/tree/master/0684-redundant-connection) |
 | [0695-max-area-of-island](https://github.com/dadavidtseng/LeetCodePractice/tree/master/0695-max-area-of-island) |
+| [0778-swim-in-rising-water](https://github.com/dadavidtseng/LeetCodePractice/tree/master/0778-swim-in-rising-water) |
 | [1584-min-cost-to-connect-all-points](https://github.com/dadavidtseng/LeetCodePractice/tree/master/1584-min-cost-to-connect-all-points) |
 ## Greedy
 |  |
