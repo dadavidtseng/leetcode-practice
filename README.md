@@ -104,6 +104,7 @@
 | ------- |
 | [0002-add-two-numbers](https://github.com/dadavidtseng/LeetCodePractice/tree/master/0002-add-two-numbers) |
 | [0009-palindrome-number](https://github.com/dadavidtseng/LeetCodePractice/tree/master/0009-palindrome-number) |
+| [0043-multiply-strings](https://github.com/dadavidtseng/LeetCodePractice/tree/master/0043-multiply-strings) |
 | [0048-rotate-image](https://github.com/dadavidtseng/LeetCodePractice/tree/master/0048-rotate-image) |
 | [0050-powx-n](https://github.com/dadavidtseng/LeetCodePractice/tree/master/0050-powx-n) |
 | [0066-plus-one](https://github.com/dadavidtseng/LeetCodePractice/tree/master/0066-plus-one) |
@@ -138,6 +139,7 @@
 | [0017-letter-combinations-of-a-phone-number](https://github.com/dadavidtseng/LeetCodePractice/tree/master/0017-letter-combinations-of-a-phone-number) |
 | [0020-valid-parentheses](https://github.com/dadavidtseng/LeetCodePractice/tree/master/0020-valid-parentheses) |
 | [0022-generate-parentheses](https://github.com/dadavidtseng/LeetCodePractice/tree/master/0022-generate-parentheses) |
+| [0043-multiply-strings](https://github.com/dadavidtseng/LeetCodePractice/tree/master/0043-multiply-strings) |
 | [0049-group-anagrams](https://github.com/dadavidtseng/LeetCodePractice/tree/master/0049-group-anagrams) |
 | [0076-minimum-window-substring](https://github.com/dadavidtseng/LeetCodePractice/tree/master/0076-minimum-window-substring) |
 | [0079-word-search](https://github.com/dadavidtseng/LeetCodePractice/tree/master/0079-word-search) |
@@ -304,6 +306,7 @@
 ## Simulation
 |  |
 | ------- |
+| [0043-multiply-strings](https://github.com/dadavidtseng/LeetCodePractice/tree/master/0043-multiply-strings) |
 | [0054-spiral-matrix](https://github.com/dadavidtseng/LeetCodePractice/tree/master/0054-spiral-matrix) |
 ## Linked List
 |  |
