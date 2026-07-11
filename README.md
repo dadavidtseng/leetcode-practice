@@ -256,6 +256,7 @@
 | [0143-reorder-list](https://github.com/dadavidtseng/LeetCodePractice/tree/master/0143-reorder-list) |
 | [0150-evaluate-reverse-polish-notation](https://github.com/dadavidtseng/LeetCodePractice/tree/master/0150-evaluate-reverse-polish-notation) |
 | [0155-min-stack](https://github.com/dadavidtseng/LeetCodePractice/tree/master/0155-min-stack) |
+| [0225-implement-stack-using-queues](https://github.com/dadavidtseng/LeetCodePractice/tree/master/0225-implement-stack-using-queues) |
 | [0678-valid-parenthesis-string](https://github.com/dadavidtseng/LeetCodePractice/tree/master/0678-valid-parenthesis-string) |
 | [0739-daily-temperatures](https://github.com/dadavidtseng/LeetCodePractice/tree/master/0739-daily-temperatures) |
 ## Dynamic Programming
@@ -473,6 +474,7 @@
 | [0155-min-stack](https://github.com/dadavidtseng/LeetCodePractice/tree/master/0155-min-stack) |
 | [0208-implement-trie-prefix-tree](https://github.com/dadavidtseng/LeetCodePractice/tree/master/0208-implement-trie-prefix-tree) |
 | [0211-design-add-and-search-words-data-structure](https://github.com/dadavidtseng/LeetCodePractice/tree/master/0211-design-add-and-search-words-data-structure) |
+| [0225-implement-stack-using-queues](https://github.com/dadavidtseng/LeetCodePractice/tree/master/0225-implement-stack-using-queues) |
 | [0295-find-median-from-data-stream](https://github.com/dadavidtseng/LeetCodePractice/tree/master/0295-find-median-from-data-stream) |
 | [0297-serialize-and-deserialize-binary-tree](https://github.com/dadavidtseng/LeetCodePractice/tree/master/0297-serialize-and-deserialize-binary-tree) |
 | [0355-design-twitter](https://github.com/dadavidtseng/LeetCodePractice/tree/master/0355-design-twitter) |
@@ -533,6 +535,7 @@
 ## Queue
 |  |
 | ------- |
+| [0225-implement-stack-using-queues](https://github.com/dadavidtseng/LeetCodePractice/tree/master/0225-implement-stack-using-queues) |
 | [0239-sliding-window-maximum](https://github.com/dadavidtseng/LeetCodePractice/tree/master/0239-sliding-window-maximum) |
 ## Monotonic Queue
 |  |
