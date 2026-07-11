@@ -3,11 +3,11 @@ Understanding:
 nums: integer array, find the subarray from nums that contains the maximum sum
 subarray: increasing order and contiguous
 
-Model: Two pointers
+Model: resettable counter
 Planning:
-left/right pointers for subarrays start/end indices
-1. If current subarray is not in increasing order
-2. If current subarray's sum is greater than what we've seen
+iterate nums while keep track of a counter
+1. If current subarray is not in increasing order, reset counter
+2. If current subarray's sum is greater than what we've seen, update result
 """
 
 """
