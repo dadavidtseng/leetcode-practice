@@ -22,44 +22,51 @@ class Solution:
             # Return the serialized tree string after pushing node's left/right nodes into DFS
             return "$" + str(node.val) + serialize(node.left) + serialize(node.right)
 
-        def build_lps(pattern: str) -> List[int]:
-            pattern_length = len(pattern)
-            lps = [0] * pattern_length
+        def z_function(s: str) -> List[int]:
+            # 1. z[i] = length of the longest common prefix between s[i...] and s[0...]
+            # 2. Maintain the rightmost Z-box [L, R), where s[L...R-1] == s[0...(R-L)-1]
+            s_size = len(s)
+            z = [0] * s_size
+            L = 0
+            R = 0
 
-            for i in range(1, pattern_length):
-                j = lps[i - 1]
+            # Compute z[i] for every suffix starting at i
+            for i in range(1, s_size):
+                # If i falls inside the current Z-box, we can reuse the previously computed
+                # value at i - L. However, the match cannot extend beyond the current Z-box,
+                # so we cap it at R - i.
+                if i < R:
+                    z[i] = min(R - i, z[i - L])
 
-                while j > 0 and pattern[i] != pattern[j]:
-                    j = lps[j - 1]
+                # Try to extend the current match beyond the Z-box
+                # z[i] is the current matched prefix length
+                while i + z[i] < s_size and s[z[i]] == s[i + z[i]]:
+                    z[i] += 1
 
-                if pattern[i] == pattern[j]:
-                    j += 1
-                lps[i] = j
-            return lps
+                # If we extended farther than the current Z-box,
+                # update it to the new rightmost Z-box
+                if i + z[i] > R:
+                    L = i
+                    R = i + z[i]
+            return z
 
+        # 1. Serialize text from root
+        # 2. Serialize pattern from subRoot
+        # 3. Combine pattern, delimeter, and text
+        # Z-function compares every suffix with the prefix of the combined string.
+        # Therefore, we put pattern at the beginning so that z[i] tells us how much
+        # the current suffix matches the pattern.
         text = serialize(root)
         pattern = serialize(subRoot)
-        text_length = len(text)
+        combined = pattern + "|" + text
+
         pattern_length = len(pattern)
+        combined_length = len(combined)
+        z = z_function(combined)
 
-        # Build the LPS (failure) table for the pattern
-        lps = build_lps(pattern)
-
-        # Search for pattern in text
-        j = 0
-
-        for i in range(text_length):
-            # While there's a mismatch, we fallback to the index that's already a match instead of
-            # starting from 0
-            while j > 0 and text[i] != pattern[j]:
-                j = lps[j - 1]
-
-            # Advance j if it's currently a match
-            if text[i] == pattern[j]:
-                j += 1
-
-            # Return true if pattern is found in text
-            if j == pattern_length:
+        # From patternLength + 1 to the end,
+        # if z[i] equals patternLength, that means pattern is in text
+        for i in range(pattern_length + 1, combined_length):
+            if z[i] == pattern_length:
                 return True
-        # Return false if nothing was found
         return False
