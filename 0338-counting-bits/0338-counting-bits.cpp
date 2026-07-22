@@ -1,20 +1,13 @@
 class Solution {
 public:
     vector<int> countBits(int n) {
-       vector<int> result(n + 1, 0);
-        int offset = 1;
+        vector<int> result(n + 1, 0);
 
         // Iterate through 1 to n
         for (int num = 1; num <= n; ++num) {
-            // Update offset to the new highest bit value
-            // when num reaches the next power of two
-            if (offset * 2 == num) {
-                offset = num;
-            }
-            // offset represents the highest set bit of num
-            // Remove that highest bit by subtracting offset from num
-            // Reuse the previously computed result of the remaining bits
-            result[num] = 1 + result[num - offset];
+            // Find previous result by shifting num right by 1, and check if
+            // that lowest bit is 1
+            result[num] = result[num >> 1] + (num & 1);
         }
         return result;
     }
