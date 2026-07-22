@@ -1,58 +1,73 @@
 class Trie {
 public:
     Trie() = default;
+    Trie(const Trie&) = delete;
+    Trie& operator=(const Trie&) = delete;
 
     void insert(string word) {
-        // current node in trie
-        Trie* node = this;
+        // Current root node in trie
+        TrieNode* node = &root;
 
-        // iterate through the word string
+        // Iterate through the word string
         for (int i = 0; i < static_cast<int>(word.length()); i++) {
-            int const idx = word[i] - 'a';
+            const int idx = word[i] - 'a';
 
-            // if next node is empty
+            // Create a new TrieNode if next node is empty
             if (node->children[idx] == nullptr) {
-                // create a new node
-                node->children[idx] = new Trie();
+                node->children[idx] = new TrieNode();
             }
 
-            // advance to next node
+            // Advance to next node
             node = node->children[idx];
         }
-
-        // we've finished inserting the nodes
-        node->isEnd = true;
+        // We've finished inserting the nodes
+        node->isEndOfWord = true;
     }
 
     bool search(string word) {
-        Trie const* node = traverse(word);
-
-        return node == nullptr ? false : node->isEnd;
+        TrieNode const* node = traverse(word);
+        // Return false if we didn't find anything;
+        // Return true if node is the end of the word, otherwise, it's just a
+        // prefix
+        return node == nullptr ? false : node->isEndOfWord;
     }
 
     bool startsWith(string prefix) { return traverse(prefix) != nullptr; }
 
-    Trie* traverse(string const& word) {
-        // current node in trie
-        Trie* node = this;
+private:
+    struct TrieNode {
+        TrieNode* children[26] = {nullptr};
+        bool isEndOfWord = false;
 
-        // iterate through the word string
-        for (int i = 0; i < static_cast<int>(word.length()); i++) {
-            int const idx = word[i] - 'a';
+        ~TrieNode() {
+            for (int i = 0; i < 26; ++i) {
+                delete children[i];
+            }
+        }
+    };
 
-            // if next node is empty
+    TrieNode* traverse(string const& word) {
+        // Current root node in trie
+        TrieNode* node = &root;
+
+        // Iterate through the word string
+        for (int i = 0; i < static_cast<int>(word.length()); ++i) {
+            const int idx = word[i] - 'a';
+
+            // Return empty if next node is empty,
+            // which means that we failed to find the provided word
             if (node->children[idx] == nullptr) {
                 return nullptr;
             }
 
-            // advance to next node
+            // Advance to next node
             node = node->children[idx];
         }
+        // Return the node in Trie for the final char in word
         return node;
     }
 
-    Trie* children[26] = {nullptr};
-    bool isEnd = false;
+    TrieNode root;
 };
 
 /**
