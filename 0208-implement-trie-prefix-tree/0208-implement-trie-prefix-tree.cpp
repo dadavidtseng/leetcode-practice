@@ -10,15 +10,15 @@ public:
 
         // Iterate through the word string
         for (int i = 0; i < static_cast<int>(word.length()); i++) {
-            const int idx = word[i] - 'a';
+            const char c = word[i];
 
             // Create a new TrieNode if next node is empty
-            if (node->children[idx] == nullptr) {
-                node->children[idx] = new TrieNode();
+            if (node->children.find(c) == node->children.end()) {
+                node->children[c] = new TrieNode();
             }
 
             // Advance to next node
-            node = node->children[idx];
+            node = node->children[c];
         }
         // We've finished inserting the nodes
         node->isEndOfWord = true;
@@ -36,32 +36,32 @@ public:
 
 private:
     struct TrieNode {
-        TrieNode* children[26] = {nullptr};
+        unordered_map<char, TrieNode*> children;
         bool isEndOfWord = false;
 
         ~TrieNode() {
-            for (int i = 0; i < 26; ++i) {
-                delete children[i];
+            for (auto it = children.begin(); it != children.end(); ++it) {
+                delete it->second;
             }
         }
     };
 
-    TrieNode* traverse(string const& word) {
+    TrieNode* traverse(const string& word) {
         // Current root node in trie
         TrieNode* node = &root;
 
         // Iterate through the word string
         for (int i = 0; i < static_cast<int>(word.length()); ++i) {
-            const int idx = word[i] - 'a';
+            const char c = word[i];
 
             // Return empty if next node is empty,
             // which means that we failed to find the provided word
-            if (node->children[idx] == nullptr) {
+            if (node->children.find(c) == node->children.end()) {
                 return nullptr;
             }
 
             // Advance to next node
-            node = node->children[idx];
+            node = node->children[c];
         }
         // Return the node in Trie for the final char in word
         return node;
