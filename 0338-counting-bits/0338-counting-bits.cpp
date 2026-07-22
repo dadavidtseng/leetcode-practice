@@ -1,36 +1,18 @@
 class Solution {
 public:
     vector<int> countBits(int n) {
-        vector<int> result;
+        vector<int> result(n + 1, 0);
 
-for (int i = 0; i < n+1; i++)
-{
-    result.push_back(hammingWeight(i));
-}
-
-return result;
-    }
-
-    int hammingWeight(int n) {
-
-        int count = 0;
-
-        //for (int i = 0; i < 32; i++)
-        //{
-        //    if ((n & 1)  == 1)
-        //    {
-        //        count++;
-        //    }
-
-        //    n = n >> 1;
-        //}
-
-        while (n != 0)
-        {
-            n = n & (n - 1);
-            count++;
+        // Iterate through 1 to n
+        for (int num = 1; num <= n; ++num) {
+            // Iterate through all 32 bits in num
+            for (int i = 0; i < 32; i++) {
+                // Increment result[num] if ith bit in num is 1
+                if (num & (1 << i)) {
+                    result[num]++;
+                }
+            }
         }
-
-        return count;
+        return result;
     }
 };
