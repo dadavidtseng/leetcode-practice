@@ -9,21 +9,24 @@
 class Solution {
 public:
     bool hasCycle(ListNode* head) {
-        // iterate through the linked list and store them in an unordered_set
-        unordered_set<ListNode*> container;
+        ListNode* slow = head;
+        ListNode* fast = head;
 
-        while (head != nullptr) {
-            // if the listnode appeared before, return true
-            if (container.contains(head)) {
+        // Exit the while loop if we are
+        // 1. At the end of the linked list
+        // 2. At one node before the end of the linked list
+        while (fast != nullptr && fast->next != nullptr) {
+            // Advance slow pointer by one node
+            // and fast pointer by two nodes
+            slow = slow->next;
+            fast = fast->next->next;
+
+            // Return true if slow equals to fast
+            if (slow == fast) {
                 return true;
             }
-
-            container.insert(head); // store the node in the container
-            head = head->next;      // advance the node list
         }
-
-        // if we reach the end of the linked list, there will be no cycle,
-        // return false
+        // Return false if we've reached the end of the linked list
         return false;
     }
 };
