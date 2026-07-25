@@ -1,19 +1,20 @@
-use std::collections::HashMap;
-
 impl Solution {
     pub fn two_sum(nums: Vec<i32>, target: i32) -> Vec<i32> {
-        let mut num_index_map: HashMap<i32, i32> = HashMap::new();
+        let nums_size = nums.len();
 
-        for (i, &num) in nums.iter().enumerate() {
-            let diff = target - num;
-
-            if let Some(&index) = num_index_map.get(&diff) {
-                return vec![index, i as i32];
+        // Iterate through every possible pairs in nums
+        for i in 0..nums_size {
+            for j in (i + 1)..nums_size {
+                // Return result if we've found target
+                if nums[i] + nums[j] == target {
+                    return vec![i as i32, j as i32];
+                }
             }
-
-            num_index_map.insert(num, i as i32);
         }
 
-        vec![]
+        // Return empty result to satisfy compiler
+        // Since the problem says there is guaranteed to be exactly one solution,
+        // so we will never return an empty array.
+        unreachable!()
     }
 }
