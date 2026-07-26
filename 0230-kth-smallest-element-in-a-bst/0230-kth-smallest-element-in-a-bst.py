@@ -6,31 +6,31 @@
 #         self.right = right
 class Solution:
     def kthSmallest(self, root: Optional[TreeNode], k: int) -> int:
-        result = 0
+        curr = root
+        s = []
 
-        # Use inorder traversal for BST and decrement k as it goes
-        # Note that result will be sorted naturally because of the nature of BST
-        def dfs(node: Optional[TreeNode]) -> None:
-            nonlocal k, result
+        # Exit the loop when current node is empty and the stack is empty
+        while curr or len(s) != 0:
+            # Exit the loop when current node is nullptr,
+            # otherwise, push the current node into stack
+            # and keep going left
+            while curr:
+                s.append(curr)
+                curr = curr.left
 
-            if node is None or k == 0:
-                return
-            dfs(node.left)
-
-            if k == 0:
-                return
-
-            # 1. Decrement k
-            # 2. Assign node's value to result
-            # 3. Return from DFS
+            # 1. Get current node from the top of the stack
+            # 2. Remove the visited node since we don't need it anymore
+            # 3. Decrement k
+            curr = s.pop()
             k -= 1
 
+            # If k is 0, that mean we've reached our goal, return the current node's value
             if k == 0:
-                result = node.val
-                return
-            dfs(node.right)
+                return curr.val
 
-        dfs(root)
+            # Move the current node to its right
+            curr = curr.right
 
-        # Return kth smallest element
-        return result
+        # Return -1 to satisfy the compiler
+        # Note that we'll never reach this because 1 <= k <= n <= 10^4
+        return -1
