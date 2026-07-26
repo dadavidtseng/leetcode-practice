@@ -7,29 +7,46 @@
 class Solution:
     def kthSmallest(self, root: Optional[TreeNode], k: int) -> int:
         curr = root
-        s = []
 
-        # Exit the loop when current node is empty and the stack is empty
-        while curr or len(s) != 0:
-            # Exit the loop when current node is nullptr,
-            # otherwise, push the current node into stack
-            # and keep going left
-            while curr:
-                s.append(curr)
-                curr = curr.left
+        # Exit the while loop when there's no more node to process
+        while curr:
+            # If current node doesn't have a left child,
+            # 1. Decrement k
+            # 2. Return current node's value if k is 0
+            # 3. Move the current node to its right
+            if curr.left is None:
+                k -= 1
+                if k == 0:
+                    return curr.val
+                curr = curr.right
 
-            # 1. Get current node from the top of the stack
-            # 2. Remove the visited node since we don't need it anymore
-            # 3. Decrement k
-            curr = s.pop()
-            k -= 1
+            # If current node does have a left child
+            else:
+                # Assign that left child node as predecessor
+                pred = curr.left
 
-            # If k is 0, that mean we've reached our goal, return the current node's value
-            if k == 0:
-                return curr.val
+                # Find the predecessor node
+                while pred.right and pred.right != curr:
+                    pred = pred.right
 
-            # Move the current node to its right
-            curr = curr.right
+                # If this is the first time we visit the predecessor
+                # 1. Create a link back to current node so that the next time we visit we know where
+                # the root is for inorder traversal
+                # 2. Move the current node to its left
+                if pred.right is None:
+                    pred.right = curr
+                    curr = curr.left
+
+                # If this is the second time we visit the predecessor,
+                # it's time to go back to root node
+                # 1. Rremove the link from predecessor to current node
+                # 2. Move the current node to its right
+                else:
+                    pred.right = None
+                    k -= 1
+                    if k == 0:
+                        return curr.val
+                    curr = curr.right
 
         # Return -1 to satisfy the compiler
         # Note that we'll never reach this because 1 <= k <= n <= 10^4
