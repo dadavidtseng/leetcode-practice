@@ -6,28 +6,18 @@
 #         self.right = right
 class Solution:
     def kthSmallest(self, root: Optional[TreeNode], k: int) -> int:
-        result = 0
+        result = []
 
-        # Use inorder traversal for BST and decrement k as it goes
-        # Note that result will be sorted naturally because of the nature of BST
+        # Brutally traverse through the BST and store every node's values in result
         def dfs(node: Optional[TreeNode]) -> None:
-            nonlocal k, result
-
             if node is None:
                 return
-
+            result.append(node.val)
             dfs(node.left)
-
-            
-            k -= 1
-
-            if k == 0:
-                result = node.val
-                return
-
             dfs(node.right)
 
         dfs(root)
 
-        # Return kth smallest element
-        return result
+        # Sort result and return kth smallest element
+        result.sort()
+        return result[k - 1]
