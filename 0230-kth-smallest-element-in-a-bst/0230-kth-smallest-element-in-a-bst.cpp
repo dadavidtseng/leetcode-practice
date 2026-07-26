@@ -13,23 +13,36 @@
 class Solution {
 public:
     int kthSmallest(TreeNode* root, int k) {
-        vector<int> result;
+        int result = 0;
 
-        // Use inorder traversal for BST and push node's value into result as it
-        // goes Note that result will be sorted naturally because of the nature
-        // of BST
+        // Use inorder traversal for BST and decrement k as it goes
+        // Note that result will be sorted naturally because of the nature of
+        // BST
         auto dfs = [&](this auto&& self, TreeNode* node) -> void {
-            if (node == nullptr) {
+            if (node == nullptr || k == 0) {
                 return;
             }
             self(node->left);
-            result.push_back(node->val);
+
+            if (k == 0) {
+                return;
+            }
+
+            // 1. Decrement k
+            // 2. Assign node's value to result
+            // 3. Return from DFS
+            k--;
+
+            if (k == 0) {
+                result = node->val;
+                return;
+            }
             self(node->right);
         };
 
         dfs(root);
 
         // Return kth smallest element
-        return result[k - 1];
+        return result;
     }
 };
