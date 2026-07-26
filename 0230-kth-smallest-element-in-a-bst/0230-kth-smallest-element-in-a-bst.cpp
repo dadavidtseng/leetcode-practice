@@ -13,36 +13,37 @@
 class Solution {
 public:
     int kthSmallest(TreeNode* root, int k) {
-        int result = 0;
+        TreeNode* curr = root;
+        stack<TreeNode*> s;
 
-        // Use inorder traversal for BST and decrement k as it goes
-        // Note that result will be sorted naturally because of the nature of
-        // BST
-        auto dfs = [&](this auto&& self, TreeNode* node) -> void {
-            if (node == nullptr || k == 0) {
-                return;
-            }
-            self(node->left);
-
-            if (k == 0) {
-                return;
+        // Exit the loop when current node is empty and the stack is empty
+        while (curr != nullptr || !s.empty()) {
+            // Exit the loop when current node is nullptr,
+            // otherwise, push the current node into stack
+            // and keep going left
+            while (curr != nullptr) {
+                s.push(curr);
+                curr = curr->left;
             }
 
-            // 1. Decrement k
-            // 2. Assign node's value to result
-            // 3. Return from DFS
+            // 1. Get current node from the top of the stack
+            // 2. Remove the visited node since we don't need it anymore
+            // 3. Decrement k
+            curr = s.top();
+            s.pop();
             k--;
 
+            // If k is 0, that mean we've reached our goal, return the current
+            // node's value
             if (k == 0) {
-                result = node->val;
-                return;
+                return curr->val;
             }
-            self(node->right);
-        };
 
-        dfs(root);
-
-        // Return kth smallest element
-        return result;
+            // Move the current node to its right
+            curr = curr->right;
+        }
+        // Return -1 to satisfy the compiler
+        // Note that we'll never reach this because 1 <= k <= n <= 10^4
+        return -1;
     }
 };
