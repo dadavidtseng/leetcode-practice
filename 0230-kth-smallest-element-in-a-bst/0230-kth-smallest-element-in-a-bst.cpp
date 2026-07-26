@@ -15,21 +15,21 @@ public:
     int kthSmallest(TreeNode* root, int k) {
         vector<int> result;
 
-        // Brutally traverse through the BST and store every node's values in
-        // result
+        // Use inorder traversal for BST and push node's value into result as it
+        // goes Note that result will be sorted naturally because of the nature
+        // of BST
         auto dfs = [&](this auto&& self, TreeNode* node) -> void {
             if (node == nullptr) {
                 return;
             }
-            result.push_back(node->val);
             self(node->left);
+            result.push_back(node->val);
             self(node->right);
         };
 
         dfs(root);
 
-        // Sort result and return kth smallest element
-        sort(result.begin(), result.end());
+        // Return kth smallest element
         return result[k - 1];
     }
 };
