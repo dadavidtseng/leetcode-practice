@@ -56,6 +56,7 @@
 | [0347-top-k-frequent-elements](https://github.com/dadavidtseng/LeetCodePractice/tree/master/0347-top-k-frequent-elements) |
 | [0417-pacific-atlantic-water-flow](https://github.com/dadavidtseng/LeetCodePractice/tree/master/0417-pacific-atlantic-water-flow) |
 | [0435-non-overlapping-intervals](https://github.com/dadavidtseng/LeetCodePractice/tree/master/0435-non-overlapping-intervals) |
+| [0494-target-sum](https://github.com/dadavidtseng/leetcode-practice/tree/master/0494-target-sum) |
 | [0621-task-scheduler](https://github.com/dadavidtseng/LeetCodePractice/tree/master/0621-task-scheduler) |
 | [0695-max-area-of-island](https://github.com/dadavidtseng/LeetCodePractice/tree/master/0695-max-area-of-island) |
 | [0704-binary-search](https://github.com/dadavidtseng/LeetCodePractice/tree/master/0704-binary-search) |
@@ -281,6 +282,7 @@
 | [0131-palindrome-partitioning](https://github.com/dadavidtseng/LeetCodePractice/tree/master/0131-palindrome-partitioning) |
 | [0338-counting-bits](https://github.com/dadavidtseng/LeetCodePractice/tree/master/0338-counting-bits) |
 | [0435-non-overlapping-intervals](https://github.com/dadavidtseng/LeetCodePractice/tree/master/0435-non-overlapping-intervals) |
+| [0494-target-sum](https://github.com/dadavidtseng/leetcode-practice/tree/master/0494-target-sum) |
 | [0647-palindromic-substrings](https://github.com/dadavidtseng/leetcode-practice/tree/master/0647-palindromic-substrings) |
 | [0678-valid-parenthesis-string](https://github.com/dadavidtseng/LeetCodePractice/tree/master/0678-valid-parenthesis-string) |
 | [0746-min-cost-climbing-stairs](https://github.com/dadavidtseng/LeetCodePractice/tree/master/0746-min-cost-climbing-stairs) |
@@ -512,6 +514,7 @@
 | [0090-subsets-ii](https://github.com/dadavidtseng/LeetCodePractice/tree/master/0090-subsets-ii) |
 | [0131-palindrome-partitioning](https://github.com/dadavidtseng/LeetCodePractice/tree/master/0131-palindrome-partitioning) |
 | [0212-word-search-ii](https://github.com/dadavidtseng/LeetCodePractice/tree/master/0212-word-search-ii) |
+| [0494-target-sum](https://github.com/dadavidtseng/leetcode-practice/tree/master/0494-target-sum) |
 ## Data Stream
 |  |
 | ------- |
