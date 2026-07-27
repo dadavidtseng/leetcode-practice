@@ -28,29 +28,47 @@ Then we can perform nums[i]^nums[i-1] again to get a and b from these two groups
 class Solution:
     def singleNumber(self, nums: List[int]) -> List[int]:
         a_xor_b = 0
-        # Iterate through nums, perform nums[i]^nums[i-1] to get a^b
+
+        # Iterate through nums
         for i in range(len(nums)):
+            # x^x=0
+            # x^0=x
             a_xor_b ^= nums[i]
-        nums_a = []
-        nums_b = []
+
         bit = 0
-        # (nums[i]>>i) & 1 to know which bit is bit and use this to separate nums into two groups
+
+        # (nums[i]>>i) & 1 to know which bit is either 0 or 1
         for i in range(32):
-            if ((a_xor_b>>i) & 1) == 1:
+            if ((a_xor_b >> i) & 1) == 1:
                 bit = i
                 break
 
-        for i in range(len(nums)):
-            if ((nums[i]>>bit) & 1) == 1:
-                nums_a.append(nums[i])
-            else:
-                nums_b.append(nums[i])
-        print(f"nums_a={nums_a}, nums_b={nums_b}")
         a = 0
         b = 0
-        # Iterate through nums_a and nums_b, perform nums[i]^nums[i-1] again to get a and b from them
-        for i in range(len(nums_a)):
-            a ^= nums_a[i]
-        for i in range(len(nums_b)):
-            b ^= nums_b[i]
+
+        # Iterate through nums again
+        for i in range(len(nums)):
+            # If nums[i]'s bit is 1, it belongs to group a,
+            # otherwise, it belongs to group b
+            if ((nums[i] >> bit) & 1) == 1:
+                a ^= nums[i]
+            else:
+                b ^= nums[i]
         return [a, b]
+
+
+"""
+Review:
+When thinking about using bit manipulation to solve any problem, I should write out the
+bit itself for thinking about the solution and debugging. It was a little bit tricky to
+come up with XOR's feature where XOR=1 means they must have two different bits, thus can be
+seperated to two groups, and we could perform the x^x=0, x^0=x again.
+
+Evaluate:
+Bit manipulation solution isn't always straight forward. I should practice more bit operation
+so that this can become some kind of intuitive that I can come up with solution around it.
+
+Complexity:
+Time: O(n)
+Space: O(1)
+"""
