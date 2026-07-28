@@ -18,7 +18,7 @@ Whenever we meet ], that means we have to do the decode, so this might be the ba
 of recursive call.
 
 Use a stack to store characters, when there's not a k, we must be reading a string.
-When there's a k, we remember it and continue reading the encoded_string until we meet 
+When there's a k, we remember it and continue reading the encoded_string until we meet
 the right bracket. Once we read the right bracket, we start popping from the stack and do
 the decode
 
@@ -35,43 +35,60 @@ the decode
 #11 s=abbbabbbc, return
 """
 
+
 class Solution:
     def decodeString(self, s: str) -> str:
-        result = ""
-        stack = []  # 1 <= s.length <= 30
-        i=0
+        stack = []
+        i = 0
 
-        # If s[i] is in a-z
+        # Exit the while loop when we finish processing s
+        while i < len(s):
+            # Cache the current i
+            start = i
 
-        while i<len(s):
-            start=i
+            # If s[i] is a digit,
+            # try to push all neighbor digits into the stack
             if s[i].isdigit():
                 while i < len(s) and s[i].isdigit():
-                    i+=1
+                    i += 1
                 stack.append(s[start:i])
-            
+
+            # If s[i] is a letter,
+            # try to push all neighbor letters into the stack
             elif s[i].isalpha():
                 while i < len(s) and s[i].isalpha():
-                    i+=1
-                stack.append(s[start:i])            
+                    i += 1
+                stack.append(s[start:i])
 
-            elif i < len(s) and s[i]=='[':
+            # If s[i] is a '[',
+            # push it into the stack
+            elif s[i] == "[":
                 stack.append(s[i])
-                i+=1
-            
-            elif i < len(s) and  s[i]==']':
-                token = []
-                while stack[-1] != '[':
-                    token.append(stack.pop())
+                i += 1
+
+            # If s[i] is a ']'
+            elif s[i] == "]":
+                # Pop all tokens until we find '['
+                tokens = []
+                while stack[-1] != "[":
+                    tokens.append(stack.pop())
+
+                # Pop the stack '['
                 stack.pop()
+
+                # Pop the stack to get k
                 k = stack.pop()
-                decoded_token = "".join(reversed(token)) * int(k)
-                if stack and stack[-1]!='[':
-                    stack.append(stack.pop() +decoded_token)
-                else:
-                    stack.append(decoded_token)
-                i+=1
+
+                # Merge all tokens and decode it by multiplying it with k
+                decoded = "".join(reversed(tokens)) * int(k)
+
+                # Push the decoded string into stack
+                stack.append(decoded)
+                i += 1
+
+        # Return the decoded string
         return "".join(stack)
+
 
 """
 Review:
@@ -85,11 +102,3 @@ When trying to decode, I tried to merge all tokens, but I missed the tokens afte
 For example, 2[a3[b]c], wehre there's a letter after decoded token but before right bracket.
 Maybe I should be more comfortable with while loop and stack since other questions also use them frequently.
 """
-        
-
-        
-
-
-
-
-        
