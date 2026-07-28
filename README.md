@@ -159,6 +159,7 @@
 | [0242-valid-anagram](https://github.com/dadavidtseng/LeetCodePractice/tree/master/0242-valid-anagram) |
 | [0297-serialize-and-deserialize-binary-tree](https://github.com/dadavidtseng/LeetCodePractice/tree/master/0297-serialize-and-deserialize-binary-tree) |
 | [0332-reconstruct-itinerary](https://github.com/dadavidtseng/LeetCodePractice/tree/master/0332-reconstruct-itinerary) |
+| [0394-decode-string](https://github.com/dadavidtseng/leetcode-practice/tree/master/0394-decode-string) |
 | [0424-longest-repeating-character-replacement](https://github.com/dadavidtseng/LeetCodePractice/tree/master/0424-longest-repeating-character-replacement) |
 | [0567-permutation-in-string](https://github.com/dadavidtseng/LeetCodePractice/tree/master/0567-permutation-in-string) |
 | [0647-palindromic-substrings](https://github.com/dadavidtseng/leetcode-practice/tree/master/0647-palindromic-substrings) |
@@ -266,6 +267,7 @@
 | [0150-evaluate-reverse-polish-notation](https://github.com/dadavidtseng/LeetCodePractice/tree/master/0150-evaluate-reverse-polish-notation) |
 | [0155-min-stack](https://github.com/dadavidtseng/LeetCodePractice/tree/master/0155-min-stack) |
 | [0225-implement-stack-using-queues](https://github.com/dadavidtseng/LeetCodePractice/tree/master/0225-implement-stack-using-queues) |
+| [0394-decode-string](https://github.com/dadavidtseng/leetcode-practice/tree/master/0394-decode-string) |
 | [0678-valid-parenthesis-string](https://github.com/dadavidtseng/LeetCodePractice/tree/master/0678-valid-parenthesis-string) |
 | [0739-daily-temperatures](https://github.com/dadavidtseng/LeetCodePractice/tree/master/0739-daily-temperatures) |
 ## Dynamic Programming
@@ -349,6 +351,7 @@
 | [0050-powx-n](https://github.com/dadavidtseng/LeetCodePractice/tree/master/0050-powx-n) |
 | [0143-reorder-list](https://github.com/dadavidtseng/LeetCodePractice/tree/master/0143-reorder-list) |
 | [0206-reverse-linked-list](https://github.com/dadavidtseng/LeetCodePractice/tree/master/0206-reverse-linked-list) |
+| [0394-decode-string](https://github.com/dadavidtseng/leetcode-practice/tree/master/0394-decode-string) |
 ## Depth-First Search
 |  |
 | ------- |
