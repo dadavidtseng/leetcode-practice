@@ -69,5 +69,5 @@ so I had to write an iterative DFS solution.
 
 Complexity:
 -Time:  O(n)
--Space: O(n) for recursion stack
+-Space: O(n)
 """
