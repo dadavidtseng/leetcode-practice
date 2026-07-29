@@ -1,16 +1,32 @@
 class Solution {
 public:
     void rotate(vector<vector<int>>& matrix) {
-        const int matrix_size = static_cast<int>(matrix.size());
-        vector<vector<int>> rotated(matrix_size, vector<int>(matrix_size, 0));
+        int L = 0;
+        int R = static_cast<int>(matrix.size()) - 1;
 
-        for (int i = 0; i < matrix_size; ++i) {
-            for (int j = 0; j < matrix_size; ++j) {
-                // 1. m[i][j] = m[j][i] -> transpose
-                // 2. m[j][(n - 1) - i] -> mirror by x-axis
-                rotated[j][(matrix_size - 1) - i] = matrix[i][j];
+        while (L < R) {
+            for (int i = 0; i < (R - L); ++i) {
+                int top = L;
+                int bottom = R;
+
+                // Cache the top left
+                int topLeft = matrix[top][L + i];
+
+                // Move bottom left to top left
+                matrix[top][L + i] = matrix[bottom - i][L];
+
+                // Move bottom right to bottom left
+                matrix[bottom - i][L] = matrix[bottom][R - i];
+
+                // Move top right to bottom right
+                matrix[bottom][R - i] = matrix[top + i][R];
+
+                // Move top left to top right
+                matrix[top + i][R] = topLeft;
             }
+            // Move left/right pointers to inner layer
+            R--;
+            L++;
         }
-        matrix = rotated;
     }
 };
