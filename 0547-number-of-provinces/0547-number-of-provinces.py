@@ -30,7 +30,11 @@ Plan:
 Iterate through the nodes and perform a DFS call for it.
 Increment the counter if we can finish the DFS call.
 """
-
+"""
+n= 3
+visited= [False, False, False]
+i=0, visited= [True, True, False]
+"""
 
 
 class Solution:
@@ -38,7 +42,7 @@ class Solution:
         # Create a list to mark if the node has been visited
         n = len(isConnected)
         result = 0
-        visited = [False] * n
+        visited = [False] * n   
 
         # DFS
         def dfs(node: int) -> None:
