@@ -9,25 +9,32 @@ class Solution:
         if head is None or head.next is None:
             return
 
-        # Create an empty container to store ListNode*
-        # and attach head to curr
-        nodes = []
-        curr = head
+        # Note that we could use front = [head] so that we don't need nonlocal front
+        # but then we will have tons of front[0] and front[0].next, which is hard to read
+        front = head
 
-        # Push every nodes into container by going through the linkedlist
-        while curr:
-            nodes.append(curr)
-            curr = curr.next
+        def dfs(back) -> bool:
+            nonlocal front
 
-        L = 0
-        R = len(nodes) - 1
+            # Return true if back is empty
+            if back is None:
+                return True
 
-        # Reorder nodes using left/right pointers
-        while L < R:
-            nodes[L].next = nodes[R]
-            L += 1
-            nodes[R].next = nodes[L]
-            R -= 1
+            if not dfs(back.next):
+                # Note that this could return whatever because it's just for existing the DFS call
+                return False
 
-        # Set the tail's next pointer points to prevent a cycle
-        nodes[L].next = None
+            # Set the new tail (back->next) to empty and return false
+            if front == back or front.next == back:
+                back.next = None
+                return False
+
+            # Reorder nodes using front/back pointers
+            temp = front.next
+            front.next = back
+            back.next = temp
+            front = temp
+
+            return True
+
+        dfs(head.next)
