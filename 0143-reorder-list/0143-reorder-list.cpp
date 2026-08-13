@@ -11,33 +11,38 @@
 class Solution {
 public:
     void reorderList(ListNode* head) {
-        // Return early if provided head is empty
-        if (head == nullptr) {
+        // Return early if provided head is empty or there's only one node in
+        // the linkedlist
+        if (head == nullptr || head->next == nullptr) {
             return;
         }
+        auto dfs = [&](this auto&& self, ListNode*& front,
+                       ListNode* back) -> bool {
+            // Return true if back is empty
+            if (back == nullptr) {
+                return true;
+            }
 
-        // Create an empty container to store ListNode*
-        // and attach head to curr
-        vector<ListNode*> nodes;
-        ListNode* curr = head;
+            if (!self(front, back->next)) {
+                // Note that this could return whatever because it's just for
+                // existing the DFS call
+                return false;
+            }
 
-        // Push every nodes into container by going through the linkedlist
-        while (curr != nullptr) {
-            nodes.push_back(curr);
-            curr = curr->next;
-        }
+            // Set the new tail (back->next) to empty and return false
+            if (front == back || front->next == back) {
+                back->next = nullptr;
+                return false;
+            }
 
-        int L = 0;
-        int R = static_cast<int>(nodes.size()) - 1;
+            // Reorder nodes using front/back pointers
+            ListNode* temp = front->next;
+            front->next = back;
+            back->next = temp;
+            front = temp;
 
-        // Reorder nodes using left/right pointers
-        while (L < R) {
-            nodes[L]->next = nodes[R];
-            L++;
-            nodes[R]->next = nodes[L];
-            R--;
-        }
-        // Set the tail's next pointer points to prevent a cycle
-        nodes[L]->next = nullptr;
+            return true;
+        };
+        dfs(head, head->next);
     }
 };
