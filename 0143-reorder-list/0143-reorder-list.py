@@ -6,35 +6,58 @@
 class Solution:
     def reorderList(self, head: Optional[ListNode]) -> None:
         # Return early if provided head is empty or there's only one node in the linkedlist
-        if head is None or head.next is None:
+        if not head or not head.next:
             return
 
-        # Note that we could use front = [head] so that we don't need nonlocal front
-        # but then we will have tons of front[0] and front[0].next, which is hard to read
-        front = head
+        # Find the middle node in linkedlist using slow/fast pointers
+        slow = head
+        fast = head
 
-        def dfs(back) -> bool:
-            nonlocal front
+        # Advance slow/fast pointers when
+        # 1. Fast pointer is not nullptr(even list)
+        # 2. Fast pointer's next is not nullptr(odd list)
+        while fast and fast.next:
+            slow = slow.next
+            fast = fast.next.next
 
-            # Return true if back is empty
-            if back is None:
-                return True
+        # Split the list in half
+        # 1. Attach original head to first
+        # 2. Attach slow pointer's next to second(this works both on odd/even list)
+        # 3. Cut the second half from first half(original head)
+        first = head
+        second = slow.next
+        slow.next = None
 
-            if not dfs(back.next):
-                # Note that this could return whatever because it's just for existing the DFS call
-                return False
+        # Reverse the second list
+        # 1. Store the next node in temp
+        # 2. Set the next node to prev
+        # 3. Advance the prev node
+        # 4. Advance the curr node
+        # Attach prev to the head of second half(cur is nullptr now)
+        prev = None
+        curr = second
 
-            # Set the new tail (back->next) to empty and return false
-            if front == back or front.next == back:
-                back.next = None
-                return False
+        while curr:
+            temp = curr.next
+            curr.next = prev
+            prev = curr
+            curr = temp
 
-            # Reorder nodes using front/back pointers
-            temp = front.next
-            front.next = back
-            back.next = temp
-            front = temp
+        second = prev
 
-            return True
+        # Iterate through the first haft and insert the second half one after another in first half
+        # exit the loop when second is empty
+        #
+        # Note that we don't need to check first because for first half is one node more than second
+        # half in odd list
+        while second:
+            temp_first = first.next
+            temp_second = second.next
 
-        dfs(head.next)
+            # Reorder nodes
+            first.next = second
+            second.next = temp_first
+
+            # Advance first and second for next iteration
+            first = temp_first
+            second = temp_second
