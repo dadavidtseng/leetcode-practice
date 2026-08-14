@@ -11,26 +11,35 @@
 class Solution {
 public:
     ListNode* removeNthFromEnd(ListNode* head, int n) {
-        // Create an empty container to store ListNode*
-        // and attach head to curr
-        vector<ListNode*> nodes;
+        int nodesSize = 0;
         ListNode* curr = head;
 
-        // Push every nodes into container by going through the linkedlist
+        // Calculate the number of nodes in the linkedlist by iterating through
+        // it
         while (curr != nullptr) {
-            nodes.push_back(curr);
+            nodesSize++;
             curr = curr->next;
         }
 
-        const int removeIdx = static_cast<int>(nodes.size()) - n;
+        const int removeIdx = nodesSize - n;
 
         // Return early without doing the removal
         if (removeIdx == 0) {
             return head->next;
         }
 
-        // Remove the target node from the linkedlist
-        nodes[removeIdx - 1]->next = nodes[removeIdx]->next;
+        // Move current node back to head for next iteration
+        curr = head;
+
+        // Iterate through the linkedlist again and break after removing the
+        // target node
+        for (int i = 0; i < nodesSize; ++i) {
+            if ((i + 1) == removeIdx) {
+                curr->next = curr->next->next;
+                break;
+            }
+            curr = curr->next;
+        }
 
         // Return the modified linkedlist's head
         return head;
