@@ -11,37 +11,32 @@
 class Solution {
 public:
     ListNode* removeNthFromEnd(ListNode* head, int n) {
-        int nodesSize = 0;
-        ListNode* curr = head;
-
-        // Calculate the number of nodes in the linkedlist by iterating through
-        // it
-        while (curr != nullptr) {
-            nodesSize++;
-            curr = curr->next;
-        }
-
-        const int removeIdx = nodesSize - n;
-
-        // Return early without doing the removal
-        if (removeIdx == 0) {
-            return head->next;
-        }
-
-        // Move current node back to head for next iteration
-        curr = head;
-
-        // Iterate through the linkedlist again and break after removing the
-        // target node
-        for (int i = 0; i < nodesSize; ++i) {
-            if ((i + 1) == removeIdx) {
-                curr->next = curr->next->next;
-                break;
+        auto dfs = [&](this auto&& self, ListNode* head, int& n) -> ListNode* {
+            // Return empty if we've reached the end of the linkedlist
+            if (head == nullptr) {
+                return nullptr;
             }
-            curr = curr->next;
-        }
 
-        // Return the modified linkedlist's head
-        return head;
+            // The shape of the DFS call is
+            // DFS(head){head's next}, so it's iterating through the linkedlist
+            head->next = self(head->next, n);
+
+            // n was passed in by reference in order to really modify it in DFS
+            // call
+            n--;
+
+            // Return this node's next node so that it can be linked with this
+            // node's previous node, which is essentially removing this node
+            // from the linked list
+            if (n == 0) {
+                return head->next;
+            }
+
+            // Return head, which was passed in this DFS call
+            // so that the unwinding process won't modify anything in the
+            // linkedlist
+            return head;
+        };
+        return dfs(head, n);
     }
 };
