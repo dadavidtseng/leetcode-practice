@@ -42,6 +42,7 @@
 | [0134-gas-station](https://github.com/dadavidtseng/LeetCodePractice/tree/master/0134-gas-station) |
 | [0136-single-number](https://github.com/dadavidtseng/LeetCodePractice/tree/master/0136-single-number) |
 | [0150-evaluate-reverse-polish-notation](https://github.com/dadavidtseng/LeetCodePractice/tree/master/0150-evaluate-reverse-polish-notation) |
+| [0152-maximum-product-subarray](https://github.com/dadavidtseng/LeetCodePractice/tree/master/0152-maximum-product-subarray) |
 | [0153-find-minimum-in-rotated-sorted-array](https://github.com/dadavidtseng/LeetCodePractice/tree/master/0153-find-minimum-in-rotated-sorted-array) |
 | [0167-two-sum-ii-input-array-is-sorted](https://github.com/dadavidtseng/LeetCodePractice/tree/master/0167-two-sum-ii-input-array-is-sorted) |
 | [0200-number-of-islands](https://github.com/dadavidtseng/LeetCodePractice/tree/master/0200-number-of-islands) |
@@ -287,6 +288,7 @@
 | [0121-best-time-to-buy-and-sell-stock](https://github.com/dadavidtseng/LeetCodePractice/tree/master/0121-best-time-to-buy-and-sell-stock) |
 | [0124-binary-tree-maximum-path-sum](https://github.com/dadavidtseng/LeetCodePractice/tree/master/0124-binary-tree-maximum-path-sum) |
 | [0131-palindrome-partitioning](https://github.com/dadavidtseng/LeetCodePractice/tree/master/0131-palindrome-partitioning) |
+| [0152-maximum-product-subarray](https://github.com/dadavidtseng/LeetCodePractice/tree/master/0152-maximum-product-subarray) |
 | [0322-coin-change](https://github.com/dadavidtseng/LeetCodePractice/tree/master/0322-coin-change) |
 | [0338-counting-bits](https://github.com/dadavidtseng/LeetCodePractice/tree/master/0338-counting-bits) |
 | [0435-non-overlapping-intervals](https://github.com/dadavidtseng/LeetCodePractice/tree/master/0435-non-overlapping-intervals) |
