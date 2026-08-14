@@ -11,31 +11,28 @@
 class Solution {
 public:
     ListNode* removeNthFromEnd(ListNode* head, int n) {
-        // attach fast pointer to head
-        ListNode const* fast = head;
+        // Create an empty container to store ListNode*
+        // and attach head to curr
+        vector<ListNode*> nodes;
+        ListNode* curr = head;
 
-        // attach a dummy node before head to handle the head removal case
-        ListNode dummy(0, head);
-        ListNode* preSlow = &dummy;
-
-        // advance the fast pointer by (n-1) times
-        for (int i = 1; i < n; i++) {
-            fast = fast->next;
+        // Push every nodes into container by going through the linkedlist
+        while (curr != nullptr) {
+            nodes.push_back(curr);
+            curr = curr->next;
         }
 
-        // advance fast/preSlow pointer
-        // exit when reaching the last node(fast pointer's next is nullptr)
-        while (fast->next != nullptr) {
-            preSlow = preSlow->next;
-            fast = fast->next;
+        const int removeIdx = static_cast<int>(nodes.size()) - n;
+
+        // Return early without doing the removal
+        if (removeIdx == 0) {
+            return head->next;
         }
 
-        // remove the node preSlow's next pointer is at,
-        // which is the nth node in from the end of the list
-        preSlow->next = preSlow->next->next;
+        // Remove the target node from the linkedlist
+        nodes[removeIdx - 1]->next = nodes[removeIdx]->next;
 
-        // return dummy.next(head),
-        // in head removal case(single node), dummy.next is nullptr
-        return dummy.next;
+        // Return the modified linkedlist's head
+        return head;
     }
 };
