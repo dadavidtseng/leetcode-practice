@@ -5,28 +5,27 @@
 #         self.next = next
 class Solution:
     def removeNthFromEnd(self, head: Optional[ListNode], n: int) -> Optional[ListNode]:
-        nodes_size = 0
-        curr = head
+        def dfs(head):
+            nonlocal n
 
-        # Calculate the number of nodes in the linkedlist by iterating through it
-        while curr:
-            nodes_size += 1
-            curr = curr.next
-        remove_idx = nodes_size - n
+            # Return empty if we've reached the end of the linkedlist
+            if not head:
+                return None
 
-        # Return early without doing the removal
-        if remove_idx == 0:
-            return head.next
+            # The shape of the DFS call is
+            # DFS(head){head's next}, so it's iterating through the linkedlist
+            head.next = dfs(head.next)
 
-        # Move current node back to head for next iteration
-        curr = head
+            # n was passed in by reference in order to really modify it in DFS call
+            n -= 1
 
-        # Iterate through the linkedlist again and break after removing the target node
-        for i in range(nodes_size):
-            if (i + 1) == remove_idx:
-                curr.next = curr.next.next
-                break
-            curr = curr.next
+            # Return this node's next node so that it can be linked with this node's previous node,
+            # which is essentially removing this node from the linked list
+            if n == 0:
+                return head.next
 
-        # Return the modified linkedlist's head
-        return head
+            # Return head, which was passed in this DFS call
+            # so that the unwinding process won't modify anything in the linkedlist
+            return head
+
+        return dfs(head)
