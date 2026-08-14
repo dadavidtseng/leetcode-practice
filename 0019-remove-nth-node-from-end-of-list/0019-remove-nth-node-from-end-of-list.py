@@ -5,27 +5,29 @@
 #         self.next = next
 class Solution:
     def removeNthFromEnd(self, head: Optional[ListNode], n: int) -> Optional[ListNode]:
-        def dfs(head):
-            nonlocal n
+        # 1. Attach a dummy node before head
+        # 2. Attach slow pointer to dummy so it's a node before head
+        # 3. Attach fast pointer to head
+        dummy = ListNode(0, head)
+        slow = dummy
+        fast = head
 
-            # Return empty if we've reached the end of the linkedlist
-            if not head:
-                return None
-
-            # The shape of the DFS call is
-            # DFS(head){head's next}, so it's iterating through the linkedlist
-            head.next = dfs(head.next)
-
-            # n was passed in by reference in order to really modify it in DFS call
+        # Advance fast pointer by n nodes
+        while n > 0:
+            fast = fast.next
             n -= 1
 
-            # Return this node's next node so that it can be linked with this node's previous node,
-            # which is essentially removing this node from the linked list
-            if n == 0:
-                return head.next
+        # Advance slow/fast pointers and exit the while loop when finished iterating the linkedlist
+        while fast:
+            slow = slow.next
+            fast = fast.next
 
-            # Return head, which was passed in this DFS call
-            # so that the unwinding process won't modify anything in the linkedlist
-            return head
+        # Slow pointer is now a node before the node to remove
+        # so this is essentially removing the target node from the linkedlist
+        slow.next = slow.next.next
 
-        return dfs(head)
+        # Return dummy.next, which is the new head
+        # Note that,
+        # 1. In head removal case(single node), dummy.next is nullptr
+        # 2. We don't return head because head might be the removal target
+        return dummy.next
