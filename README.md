@@ -41,6 +41,7 @@
 | [0130-surrounded-regions](https://github.com/dadavidtseng/LeetCodePractice/tree/master/0130-surrounded-regions) |
 | [0134-gas-station](https://github.com/dadavidtseng/LeetCodePractice/tree/master/0134-gas-station) |
 | [0136-single-number](https://github.com/dadavidtseng/LeetCodePractice/tree/master/0136-single-number) |
+| [0139-word-break](https://github.com/dadavidtseng/LeetCodePractice/tree/master/0139-word-break) |
 | [0150-evaluate-reverse-polish-notation](https://github.com/dadavidtseng/LeetCodePractice/tree/master/0150-evaluate-reverse-polish-notation) |
 | [0152-maximum-product-subarray](https://github.com/dadavidtseng/LeetCodePractice/tree/master/0152-maximum-product-subarray) |
 | [0153-find-minimum-in-rotated-sorted-array](https://github.com/dadavidtseng/LeetCodePractice/tree/master/0153-find-minimum-in-rotated-sorted-array) |
@@ -91,6 +92,7 @@
 | [0128-longest-consecutive-sequence](https://github.com/dadavidtseng/LeetCodePractice/tree/master/0128-longest-consecutive-sequence) |
 | [0133-clone-graph](https://github.com/dadavidtseng/LeetCodePractice/tree/master/0133-clone-graph) |
 | [0138-copy-list-with-random-pointer](https://github.com/dadavidtseng/LeetCodePractice/tree/master/0138-copy-list-with-random-pointer) |
+| [0139-word-break](https://github.com/dadavidtseng/LeetCodePractice/tree/master/0139-word-break) |
 | [0141-linked-list-cycle](https://github.com/dadavidtseng/LeetCodePractice/tree/master/0141-linked-list-cycle) |
 | [0146-lru-cache](https://github.com/dadavidtseng/LeetCodePractice/tree/master/0146-lru-cache) |
 | [0202-happy-number](https://github.com/dadavidtseng/LeetCodePractice/tree/master/0202-happy-number) |
@@ -156,6 +158,7 @@
 | [0125-valid-palindrome](https://github.com/dadavidtseng/LeetCodePractice/tree/master/0125-valid-palindrome) |
 | [0127-word-ladder](https://github.com/dadavidtseng/LeetCodePractice/tree/master/0127-word-ladder) |
 | [0131-palindrome-partitioning](https://github.com/dadavidtseng/LeetCodePractice/tree/master/0131-palindrome-partitioning) |
+| [0139-word-break](https://github.com/dadavidtseng/LeetCodePractice/tree/master/0139-word-break) |
 | [0208-implement-trie-prefix-tree](https://github.com/dadavidtseng/LeetCodePractice/tree/master/0208-implement-trie-prefix-tree) |
 | [0211-design-add-and-search-words-data-structure](https://github.com/dadavidtseng/LeetCodePractice/tree/master/0211-design-add-and-search-words-data-structure) |
 | [0212-word-search-ii](https://github.com/dadavidtseng/LeetCodePractice/tree/master/0212-word-search-ii) |
@@ -290,6 +293,7 @@
 | [0121-best-time-to-buy-and-sell-stock](https://github.com/dadavidtseng/LeetCodePractice/tree/master/0121-best-time-to-buy-and-sell-stock) |
 | [0124-binary-tree-maximum-path-sum](https://github.com/dadavidtseng/LeetCodePractice/tree/master/0124-binary-tree-maximum-path-sum) |
 | [0131-palindrome-partitioning](https://github.com/dadavidtseng/LeetCodePractice/tree/master/0131-palindrome-partitioning) |
+| [0139-word-break](https://github.com/dadavidtseng/LeetCodePractice/tree/master/0139-word-break) |
 | [0152-maximum-product-subarray](https://github.com/dadavidtseng/LeetCodePractice/tree/master/0152-maximum-product-subarray) |
 | [0322-coin-change](https://github.com/dadavidtseng/LeetCodePractice/tree/master/0322-coin-change) |
 | [0338-counting-bits](https://github.com/dadavidtseng/LeetCodePractice/tree/master/0338-counting-bits) |
@@ -304,6 +308,7 @@
 |  |
 | ------- |
 | [0070-climbing-stairs](https://github.com/dadavidtseng/LeetCodePractice/tree/master/0070-climbing-stairs) |
+| [0139-word-break](https://github.com/dadavidtseng/LeetCodePractice/tree/master/0139-word-break) |
 ## Bit Manipulation
 |  |
 | ------- |
@@ -519,6 +524,7 @@
 ## Trie
 |  |
 | ------- |
+| [0139-word-break](https://github.com/dadavidtseng/LeetCodePractice/tree/master/0139-word-break) |
 | [0208-implement-trie-prefix-tree](https://github.com/dadavidtseng/LeetCodePractice/tree/master/0208-implement-trie-prefix-tree) |
 | [0211-design-add-and-search-words-data-structure](https://github.com/dadavidtseng/LeetCodePractice/tree/master/0211-design-add-and-search-words-data-structure) |
 | [0212-word-search-ii](https://github.com/dadavidtseng/LeetCodePractice/tree/master/0212-word-search-ii) |
@@ -609,4 +615,8 @@
 |  |
 | ------- |
 | [0322-coin-change](https://github.com/dadavidtseng/LeetCodePractice/tree/master/0322-coin-change) |
+## Brute-Force Search
+|  |
+| ------- |
+| [0139-word-break](https://github.com/dadavidtseng/LeetCodePractice/tree/master/0139-word-break) |
 <!---LeetCode Topics End-->
