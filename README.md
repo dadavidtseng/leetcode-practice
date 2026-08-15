@@ -55,6 +55,7 @@
 | [0260-single-number-iii](https://github.com/dadavidtseng/leetcode-practice/tree/master/0260-single-number-iii) |
 | [0268-missing-number](https://github.com/dadavidtseng/LeetCodePractice/tree/master/0268-missing-number) |
 | [0287-find-the-duplicate-number](https://github.com/dadavidtseng/LeetCodePractice/tree/master/0287-find-the-duplicate-number) |
+| [0300-longest-increasing-subsequence](https://github.com/dadavidtseng/LeetCodePractice/tree/master/0300-longest-increasing-subsequence) |
 | [0322-coin-change](https://github.com/dadavidtseng/LeetCodePractice/tree/master/0322-coin-change) |
 | [0332-reconstruct-itinerary](https://github.com/dadavidtseng/LeetCodePractice/tree/master/0332-reconstruct-itinerary) |
 | [0347-top-k-frequent-elements](https://github.com/dadavidtseng/LeetCodePractice/tree/master/0347-top-k-frequent-elements) |
@@ -221,6 +222,7 @@
 | [0235-lowest-common-ancestor-of-a-binary-search-tree](https://github.com/dadavidtseng/LeetCodePractice/tree/master/0235-lowest-common-ancestor-of-a-binary-search-tree) |
 | [0268-missing-number](https://github.com/dadavidtseng/LeetCodePractice/tree/master/0268-missing-number) |
 | [0287-find-the-duplicate-number](https://github.com/dadavidtseng/LeetCodePractice/tree/master/0287-find-the-duplicate-number) |
+| [0300-longest-increasing-subsequence](https://github.com/dadavidtseng/LeetCodePractice/tree/master/0300-longest-increasing-subsequence) |
 | [0450-delete-node-in-a-bst](https://github.com/dadavidtseng/leetcode-practice/tree/master/0450-delete-node-in-a-bst) |
 | [0538-convert-bst-to-greater-tree](https://github.com/dadavidtseng/leetcode-practice/tree/master/0538-convert-bst-to-greater-tree) |
 | [0703-kth-largest-element-in-a-stream](https://github.com/dadavidtseng/LeetCodePractice/tree/master/0703-kth-largest-element-in-a-stream) |
@@ -295,6 +297,7 @@
 | [0131-palindrome-partitioning](https://github.com/dadavidtseng/LeetCodePractice/tree/master/0131-palindrome-partitioning) |
 | [0139-word-break](https://github.com/dadavidtseng/LeetCodePractice/tree/master/0139-word-break) |
 | [0152-maximum-product-subarray](https://github.com/dadavidtseng/LeetCodePractice/tree/master/0152-maximum-product-subarray) |
+| [0300-longest-increasing-subsequence](https://github.com/dadavidtseng/LeetCodePractice/tree/master/0300-longest-increasing-subsequence) |
 | [0322-coin-change](https://github.com/dadavidtseng/LeetCodePractice/tree/master/0322-coin-change) |
 | [0338-counting-bits](https://github.com/dadavidtseng/LeetCodePractice/tree/master/0338-counting-bits) |
 | [0435-non-overlapping-intervals](https://github.com/dadavidtseng/LeetCodePractice/tree/master/0435-non-overlapping-intervals) |
@@ -619,4 +622,8 @@
 |  |
 | ------- |
 | [0139-word-break](https://github.com/dadavidtseng/LeetCodePractice/tree/master/0139-word-break) |
+## Longest Increasing Subsequence
+|  |
+| ------- |
+| [0300-longest-increasing-subsequence](https://github.com/dadavidtseng/LeetCodePractice/tree/master/0300-longest-increasing-subsequence) |
 <!---LeetCode Topics End-->
