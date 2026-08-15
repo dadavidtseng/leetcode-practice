@@ -174,6 +174,7 @@
 | [0678-valid-parenthesis-string](https://github.com/dadavidtseng/LeetCodePractice/tree/master/0678-valid-parenthesis-string) |
 | [0763-partition-labels](https://github.com/dadavidtseng/LeetCodePractice/tree/master/0763-partition-labels) |
 | [0981-time-based-key-value-store](https://github.com/dadavidtseng/LeetCodePractice/tree/master/0981-time-based-key-value-store) |
+| [1143-longest-common-subsequence](https://github.com/dadavidtseng/LeetCodePractice/tree/master/1143-longest-common-subsequence) |
 | [1405-longest-happy-string](https://github.com/dadavidtseng/leetcode-practice/tree/master/1405-longest-happy-string) |
 ## Divide and Conquer
 |  |
@@ -309,6 +310,7 @@
 | [0746-min-cost-climbing-stairs](https://github.com/dadavidtseng/LeetCodePractice/tree/master/0746-min-cost-climbing-stairs) |
 | [0787-cheapest-flights-within-k-stops](https://github.com/dadavidtseng/LeetCodePractice/tree/master/0787-cheapest-flights-within-k-stops) |
 | [0918-maximum-sum-circular-subarray](https://github.com/dadavidtseng/LeetCodePractice/tree/master/0918-maximum-sum-circular-subarray) |
+| [1143-longest-common-subsequence](https://github.com/dadavidtseng/LeetCodePractice/tree/master/1143-longest-common-subsequence) |
 ## Memoization
 |  |
 | ------- |
@@ -632,4 +634,8 @@
 |  |
 | ------- |
 | [0062-unique-paths](https://github.com/dadavidtseng/LeetCodePractice/tree/master/0062-unique-paths) |
+## Longest Common Subsequence
+|  |
+| ------- |
+| [1143-longest-common-subsequence](https://github.com/dadavidtseng/LeetCodePractice/tree/master/1143-longest-common-subsequence) |
 <!---LeetCode Topics End-->
