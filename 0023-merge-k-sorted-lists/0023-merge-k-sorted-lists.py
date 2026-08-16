@@ -5,7 +5,7 @@
 #         self.next = next
 class Solution:
     def mergeKLists(self, lists: List[Optional[ListNode]]) -> Optional[ListNode]:
-        def conquer(
+        def merge_two_lists(
             listA: Optional[ListNode], listB: Optional[ListNode]
         ) -> Optional[ListNode]:
             # Create a dummy node that points to nothing
@@ -37,20 +37,33 @@ class Solution:
             # Return the head of the merged list
             return dummy.next
 
-        def divide(L: int, R: int) -> Optional[ListNode]:
-            if L > R:
-                return None
-            if L == R:
-                return lists[L]
-
-            M = L + (R - L) // 2
-            left = divide(L, M)
-            right = divide(M + 1, R)
-            return conquer(left, right)
+        lists_size = len(lists)
 
         # Return empty if lists is empty
-        if not lists:
+        if lists_size == 0:
             return None
 
-        # Return divid and conquer using left/right pointers start from the first and last idx
-        return divide(0, len(lists) - 1)
+        # Exit the while loop when there's only one list left,
+        # which means that everything has been merged
+        while lists_size > 1:
+            # Reset newSize after a merge
+            new_size = 0
+
+            # Iterate lists with 2 steps
+            for i in range(0, lists_size, 2):
+                # In odd lists case, we should store the last list back to lists
+                if (i + 1) == lists_size:
+                    lists[new_size] = lists[i]
+
+                # Merge two lists and store back to lists[newSize]
+                else:
+                    lists[new_size] = merge_two_lists(lists[i], lists[i + 1])
+
+                # Calculate newSize so lists will be shrunk after every operation
+                new_size += 1
+
+            # Update listsSize with newSize
+            lists_size = new_size
+
+        # Return lists because listsSize is 1 after merging everything
+        return lists[0]
