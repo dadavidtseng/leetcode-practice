@@ -638,4 +638,8 @@
 |  |
 | ------- |
 | [1143-longest-common-subsequence](https://github.com/dadavidtseng/LeetCodePractice/tree/master/1143-longest-common-subsequence) |
+## Tournament Sort
+|  |
+| ------- |
+| [0023-merge-k-sorted-lists](https://github.com/dadavidtseng/LeetCodePractice/tree/master/0023-merge-k-sorted-lists) |
 <!---LeetCode Topics End-->
