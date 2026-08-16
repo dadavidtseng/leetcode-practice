@@ -11,7 +11,7 @@
 class Solution {
 public:
     ListNode* mergeKLists(vector<ListNode*>& lists) {
-        auto mergeTwoLists = [](ListNode* listA, ListNode* listB) -> ListNode* {
+        auto conquer = [](ListNode* listA, ListNode* listB) -> ListNode* {
             // Create a dummy node that points to nothing
             // and attach a tail node on that dummy node
             ListNode dummy(0, nullptr);
@@ -44,16 +44,36 @@ public:
             // Return the head of the merged list
             return dummy.next;
         };
+        auto divide = [&](this auto&& self, vector<ListNode*>& lists, int L,
+                          int R) -> ListNode* {
+            // Return empty if left/right pointers cross
+            if (L > R) {
+                return nullptr;
+            }
+            // Return lists[L] if this is lists has an odd size
+            if (L == R) {
+                return lists[L];
+            }
+
+            // Calculate mid pointer for divide
+            const int M = L + (R - L) / 2;
+
+            // Recursively call divide function until there are one left and one
+            // right
+            ListNode* left = self(lists, L, M);
+            ListNode* right = self(lists, M + 1, R);
+
+            // Conquer left/right ListNode when unwinding
+            return conquer(left, right);
+        };
 
         // Return nullptr if lists is empty
         if (lists.empty()) {
             return nullptr;
         }
 
-        // Iterate through lists from index 1 and merge them one by one
-        for (int i = 1; i < static_cast<int>(lists.size()); ++i) {
-            lists[i] = mergeTwoLists(lists[i], lists[i - 1]);
-        }
-        return lists.back();
+        // Return divid and conquer using left/right pointers start from the
+        // first and last idx
+        return divide(lists, 0, static_cast<int>(lists.size()) - 1);
     }
 };
