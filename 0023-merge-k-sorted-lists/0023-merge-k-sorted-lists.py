@@ -5,43 +5,39 @@
 #         self.next = next
 class Solution:
     def mergeKLists(self, lists: List[Optional[ListNode]]) -> Optional[ListNode]:
-        def merge_two_lists(
-            listA: Optional[ListNode], listB: Optional[ListNode]
-        ) -> Optional[ListNode]:
-            # Create a dummy node that points to nothing
-            # and attach a tail node on that dummy node
-            dummy = ListNode(0, None)
-            tail = dummy
-
-            # Exit the while loop when listA and listB are both exhausted
-            while listA and listB:
-                # If listA's value is smaller than listB's value
-                # 1. Attach listA to tail
-                # 2. Advance listA
-                if listA.val < listB.val:
-                    tail.next = listA
-                    listA = listA.next
-                # If listA's value is larger or equal to listB's value
-                # 1. Attach listB to tail
-                # 2. Advance listB
-                else:
-                    tail.next = listB
-                    listB = listB.next
-
-                # Advance tail
-                tail = tail.next
-
-            # Attach the remaining of listA and listB to tail
-            tail.next = listA if listA else listB
-
-            # Return the head of the merged list
-            return dummy.next
-
         # Return empty if lists is empty
         if not lists:
             return None
 
-        # Iterate through lists from index 1 and merge them one by one
-        for i in range(1, len(lists)):
-            lists[i] = merge_two_lists(lists[i], lists[i - 1])
-        return lists[-1]
+        counter = 0
+        min_heap = []
+
+        # Iterate through lists
+        for i in range(len(lists)):
+            # Push lists[i] into min heap if it's not empty
+            if lists[i]:
+                heapq.heappush(min_heap, (lists[i].val, counter, lists[i]))
+                counter += 1
+
+        result = ListNode(0, None)
+        curr = result
+
+        # Exit the while loop when min heap is empty
+        while min_heap:
+            # Pop a node from min heap, it'll be the smallest node
+            _, _, node = heapq.heappop(min_heap)
+
+            # 1. Attach the node to current node
+            # 2. Advance current node
+            # 3. Advance the node for next iteration
+            # 4. If node is not empty, push it into min heap
+            curr.next = node
+            curr = curr.next
+            node = node.next
+
+            if node:
+                heapq.heappush(min_heap, (node.val, counter, node))
+                counter += 1
+
+        # Return result's next node because result is a dummy node
+        return result.next
