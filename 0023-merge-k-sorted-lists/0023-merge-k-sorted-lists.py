@@ -5,26 +5,34 @@
 #         self.next = next
 class Solution:
     def mergeKLists(self, lists: List[Optional[ListNode]]) -> Optional[ListNode]:
-        nodes = []
+        dummy = ListNode(0, None)
+        curr = dummy
 
-        # Iterate through lists and push every list into nodes
-        for i in range(len(lists)):
-            while lists[i]:
-                nodes.append(lists[i].val)
-                lists[i] = lists[i].next
+        while True:
+            # minIdx for picking out the list with smallest node value
+            # Note that -1 means nothing has been picked yet
+            min_idx = -1
 
-        # Sort every node, which creates O(n log n) for time complexity
-        nodes.sort()
+            # Iterate through lists
+            for i in range(len(lists)):
+                # Continue if lists[i] is empty
+                if not lists[i]:
+                    continue
 
-        result = ListNode(0)
-        curr = result
+                # If we haven't picked anything or
+                # if current node's value is smaller than what node we've picked's value,
+                # set minIdx to current idx, which means picking that node
+                if min_idx == -1 or lists[i].val < lists[min_idx].val:
+                    min_idx = i
 
-        # Iterate through nodes,
-        # 1. Create new node using nodes[i]
-        # 2. Advance current node
-        for i in range(len(nodes)):
-            curr.next = ListNode(nodes[i])
+            # Break out of the while loop if we have nothing to pick
+            if min_idx == -1:
+                break
+
+            # 1. Attach the picked node to current node
+            # 2. Advance current node
+            # 3. Advance the list that has been picked for next iteration
+            curr.next = lists[min_idx]
             curr = curr.next
-
-        # Return result's next node because result is a dummy node
-        return result.next
+            lists[min_idx] = lists[min_idx].next
+        return dummy.next
