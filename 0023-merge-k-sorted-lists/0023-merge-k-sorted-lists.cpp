@@ -11,42 +11,49 @@
 class Solution {
 public:
     ListNode* mergeKLists(vector<ListNode*>& lists) {
-        ListNode* dummy = new ListNode(0);
-        ListNode* curr = dummy;
+        auto mergeTwoLists = [](ListNode* listA, ListNode* listB) -> ListNode* {
+            // Create a dummy node that points to nothing
+            // and attach a tail node on that dummy node
+            ListNode dummy(0, nullptr);
+            ListNode* tail = &dummy;
 
-        while (true) {
-            // minIdx for picking out the list with smallest node value
-            // Note that -1 means nothing has been picked yet
-            int minIdx = -1;
-
-            // Iterate through lists
-            for (int i = 0; i < static_cast<int>(lists.size()); ++i) {
-                // Continue if lists[i] is empty
-                if (lists[i] == nullptr) {
-                    continue;
+            // Exit the while loop when listA and listB are both exhausted
+            while (listA != nullptr && listB != nullptr) {
+                // If listA's value is smaller than listB's value
+                // 1. Attach listA to tail
+                // 2. Advance listA
+                if (listA->val < listB->val) {
+                    tail->next = listA;
+                    listA = listA->next;
+                }
+                // If listA's value is larger or equal to listB's value
+                // 1. Attach listB to tail
+                // 2. Advance listB
+                else {
+                    tail->next = listB;
+                    listB = listB->next;
                 }
 
-                // If we haven't picked anything or
-                // if current node's value is smaller than what node we've
-                // picked's value, set minIdx to current idx, which means
-                // picking that node
-                if (minIdx == -1 || lists[i]->val < lists[minIdx]->val) {
-                    minIdx = i;
-                }
+                // Advance tail
+                tail = tail->next;
             }
 
-            // Break out of the while loop if we have nothing to pick
-            if (minIdx == -1) {
-                break;
-            }
+            // Attach the remaining of listA and listB to tail
+            tail->next = (listA != nullptr) ? listA : listB;
 
-            // 1. Attach the picked node to current node
-            // 2. Advance the list that has been picked for next iteration
-            // 3. Advance current node
-            curr->next = lists[minIdx];
-            lists[minIdx] = lists[minIdx]->next;
-            curr = curr->next;
+            // Return the head of the merged list
+            return dummy.next;
+        };
+
+        // Return nullptr if lists is empty
+        if (lists.empty()) {
+            return nullptr;
         }
-        return dummy->next;
+
+        // Iterate through lists from index 1 and merge them one by one
+        for (int i = 1; i < static_cast<int>(lists.size()); ++i) {
+            lists[i] = mergeTwoLists(lists[i], lists[i - 1]);
+        }
+        return lists.back();
     }
 };
