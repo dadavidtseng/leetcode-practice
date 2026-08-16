@@ -11,31 +11,42 @@
 class Solution {
 public:
     ListNode* mergeKLists(vector<ListNode*>& lists) {
-        vector<int> nodes;
+        ListNode* dummy = new ListNode(0);
+        ListNode* curr = dummy;
 
-        // Iterate through lists and push every list into nodes
-        for (int i = 0; i < static_cast<int>(lists.size()); ++i) {
-            while (lists[i] != nullptr) {
-                nodes.push_back((lists[i]->val));
-                lists[i] = lists[i]->next;
+        while (true) {
+            // minIdx for picking out the list with smallest node value
+            // Note that -1 means nothing has been picked yet
+            int minIdx = -1;
+
+            // Iterate through lists
+            for (int i = 0; i < static_cast<int>(lists.size()); ++i) {
+                // Continue if lists[i] is empty
+                if (lists[i] == nullptr) {
+                    continue;
+                }
+
+                // If we haven't picked anything or
+                // if current node's value is smaller than what node we've
+                // picked's value, set minIdx to current idx, which means
+                // picking that node
+                if (minIdx == -1 || lists[i]->val < lists[minIdx]->val) {
+                    minIdx = i;
+                }
             }
-        }
 
-        // Sort every node, which creates O(n log n) for time complexity
-        sort(nodes.begin(), nodes.end());
+            // Break out of the while loop if we have nothing to pick
+            if (minIdx == -1) {
+                break;
+            }
 
-        ListNode* result = new ListNode(0);
-        ListNode* curr = result;
-
-        // Iterate through nodes,
-        // 1. Create new node using nodes[i]
-        // 2. Advance current node
-        for (int i = 0; i < static_cast<int>(nodes.size()); ++i) {
-            curr->next = new ListNode(nodes[i]);
+            // 1. Attach the picked node to current node
+            // 2. Advance the list that has been picked for next iteration
+            // 3. Advance current node
+            curr->next = lists[minIdx];
+            lists[minIdx] = lists[minIdx]->next;
             curr = curr->next;
         }
-
-        // Return result's next node because result is a dummy node
-        return result->next;
+        return dummy->next;
     }
 };
