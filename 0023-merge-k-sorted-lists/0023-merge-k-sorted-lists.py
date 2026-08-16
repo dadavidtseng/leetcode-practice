@@ -5,34 +5,43 @@
 #         self.next = next
 class Solution:
     def mergeKLists(self, lists: List[Optional[ListNode]]) -> Optional[ListNode]:
-        dummy = ListNode(0, None)
-        curr = dummy
+        def merge_two_lists(
+            listA: Optional[ListNode], listB: Optional[ListNode]
+        ) -> Optional[ListNode]:
+            # Create a dummy node that points to nothing
+            # and attach a tail node on that dummy node
+            dummy = ListNode(0, None)
+            tail = dummy
 
-        while True:
-            # minIdx for picking out the list with smallest node value
-            # Note that -1 means nothing has been picked yet
-            min_idx = -1
+            # Exit the while loop when listA and listB are both exhausted
+            while listA and listB:
+                # If listA's value is smaller than listB's value
+                # 1. Attach listA to tail
+                # 2. Advance listA
+                if listA.val < listB.val:
+                    tail.next = listA
+                    listA = listA.next
+                # If listA's value is larger or equal to listB's value
+                # 1. Attach listB to tail
+                # 2. Advance listB
+                else:
+                    tail.next = listB
+                    listB = listB.next
 
-            # Iterate through lists
-            for i in range(len(lists)):
-                # Continue if lists[i] is empty
-                if not lists[i]:
-                    continue
+                # Advance tail
+                tail = tail.next
 
-                # If we haven't picked anything or
-                # if current node's value is smaller than what node we've picked's value,
-                # set minIdx to current idx, which means picking that node
-                if min_idx == -1 or lists[i].val < lists[min_idx].val:
-                    min_idx = i
+            # Attach the remaining of listA and listB to tail
+            tail.next = listA if listA else listB
 
-            # Break out of the while loop if we have nothing to pick
-            if min_idx == -1:
-                break
+            # Return the head of the merged list
+            return dummy.next
 
-            # 1. Attach the picked node to current node
-            # 2. Advance current node
-            # 3. Advance the list that has been picked for next iteration
-            curr.next = lists[min_idx]
-            curr = curr.next
-            lists[min_idx] = lists[min_idx].next
-        return dummy.next
+        # Return empty if lists is empty
+        if not lists:
+            return None
+
+        # Iterate through lists from index 1 and merge them one by one
+        for i in range(1, len(lists)):
+            lists[i] = merge_two_lists(lists[i], lists[i - 1])
+        return lists[-1]
