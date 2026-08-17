@@ -13,29 +13,48 @@
 class Solution {
 public:
     vector<vector<int>> levelOrder(TreeNode* root) {
+        // Return empty if root is empty
+        if (root == nullptr) {
+            return {};
+        }
+
         vector<vector<int>> result;
+        queue<TreeNode*> q;
 
-        auto dfs = [&](this auto&& self, TreeNode* node, int depth) -> void {
-            // Return if current node is empty
-            if (node == nullptr) {
-                return;
+        // Push root so the while loop can start
+        q.push(root);
+
+        // Exist when the queue is empty, which means that we've processed
+        // everything
+        while (!q.empty()) {
+            // Cache the current level size from the queue
+            // Note that we have to do this because q's size changes in the for
+            // loop below
+            const int levelSize = static_cast<int>(q.size());
+            vector<int> level;
+
+            // Iterate through the queue to process current level
+            for (int i = 0; i < levelSize; ++i) {
+                // Read the front node and push its value into level
+                const TreeNode* front = q.front();
+                level.push_back(front->val);
+
+                // Push front node's children into queue if they exist
+                if (front->left != nullptr) {
+                    q.push(front->left);
+                }
+                if (front->right != nullptr) {
+                    q.push(front->right);
+                }
+
+                // Remove the front node since we don't need it anymore
+                q.pop();
             }
 
-            // Push an empty container for this level if result's size equals
-            // depth
-            if (static_cast<int>(result.size()) == depth) {
-                result.push_back(vector<int>{});
-            }
-
-            // Push current node's value into result[depth]
-            result[depth].push_back(node->val);
-
-            // Recursive call with left/right nodes and (depth+1)
-            self(node->left, depth + 1);
-            self(node->right, depth + 1);
-        };
-
-        dfs(root, 0);
+            // Push level into result because the level container
+            // should now contain current level's nodes in right order
+            result.push_back(level);
+        }
         return result;
     }
 };
