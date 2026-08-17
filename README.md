@@ -70,6 +70,7 @@
 | [0778-swim-in-rising-water](https://github.com/dadavidtseng/LeetCodePractice/tree/master/0778-swim-in-rising-water) |
 | [0846-hand-of-straights](https://github.com/dadavidtseng/LeetCodePractice/tree/master/0846-hand-of-straights) |
 | [0875-koko-eating-bananas](https://github.com/dadavidtseng/LeetCodePractice/tree/master/0875-koko-eating-bananas) |
+| [0877-stone-game](https://github.com/dadavidtseng/LeetCodePractice/tree/master/0877-stone-game) |
 | [0918-maximum-sum-circular-subarray](https://github.com/dadavidtseng/LeetCodePractice/tree/master/0918-maximum-sum-circular-subarray) |
 | [0973-k-closest-points-to-origin](https://github.com/dadavidtseng/LeetCodePractice/tree/master/0973-k-closest-points-to-origin) |
 | [0994-rotting-oranges](https://github.com/dadavidtseng/LeetCodePractice/tree/master/0994-rotting-oranges) |
@@ -126,6 +127,7 @@
 | [0202-happy-number](https://github.com/dadavidtseng/LeetCodePractice/tree/master/0202-happy-number) |
 | [0268-missing-number](https://github.com/dadavidtseng/LeetCodePractice/tree/master/0268-missing-number) |
 | [0371-sum-of-two-integers](https://github.com/dadavidtseng/LeetCodePractice/tree/master/0371-sum-of-two-integers) |
+| [0877-stone-game](https://github.com/dadavidtseng/LeetCodePractice/tree/master/0877-stone-game) |
 | [0973-k-closest-points-to-origin](https://github.com/dadavidtseng/LeetCodePractice/tree/master/0973-k-closest-points-to-origin) |
 ## Sorting
 |  |
@@ -309,6 +311,7 @@
 | [0678-valid-parenthesis-string](https://github.com/dadavidtseng/LeetCodePractice/tree/master/0678-valid-parenthesis-string) |
 | [0746-min-cost-climbing-stairs](https://github.com/dadavidtseng/LeetCodePractice/tree/master/0746-min-cost-climbing-stairs) |
 | [0787-cheapest-flights-within-k-stops](https://github.com/dadavidtseng/LeetCodePractice/tree/master/0787-cheapest-flights-within-k-stops) |
+| [0877-stone-game](https://github.com/dadavidtseng/LeetCodePractice/tree/master/0877-stone-game) |
 | [0918-maximum-sum-circular-subarray](https://github.com/dadavidtseng/LeetCodePractice/tree/master/0918-maximum-sum-circular-subarray) |
 | [1143-longest-common-subsequence](https://github.com/dadavidtseng/LeetCodePractice/tree/master/1143-longest-common-subsequence) |
 ## Memoization
@@ -650,4 +653,16 @@
 |  |
 | ------- |
 | [0235-lowest-common-ancestor-of-a-binary-search-tree](https://github.com/dadavidtseng/LeetCodePractice/tree/master/0235-lowest-common-ancestor-of-a-binary-search-tree) |
+## Minimax
+|  |
+| ------- |
+| [0877-stone-game](https://github.com/dadavidtseng/LeetCodePractice/tree/master/0877-stone-game) |
+## Game Theory
+|  |
+| ------- |
+| [0877-stone-game](https://github.com/dadavidtseng/LeetCodePractice/tree/master/0877-stone-game) |
+## Zero-Sum Game
+|  |
+| ------- |
+| [0877-stone-game](https://github.com/dadavidtseng/LeetCodePractice/tree/master/0877-stone-game) |
 <!---LeetCode Topics End-->
