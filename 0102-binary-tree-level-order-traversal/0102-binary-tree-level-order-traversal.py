@@ -6,23 +6,33 @@
 #         self.right = right
 class Solution:
     def levelOrder(self, root: Optional[TreeNode]) -> List[List[int]]:
+        # Return empty if root is empty
+        if not root:
+            return []
+
         result = []
+        q = deque([root])  # Push root so the while loop can start
 
-        def dfs(node: Optional[TreeNode], depth: int) -> None:
-            # Return if current node is empty
-            if not node:
-                return
+        # Exist when the queue is empty, which means that we've processed everything
+        while q:
+            # Cache the current level size from the queue
+            # Note that we have to do this because q's size changes in the for loop below
+            level_size = len(q)
+            level = []
 
-            # Push an empty container for this level if result's size equals depth
-            if len(result) == depth:
-                result.append([])
+            # Iterate through the queue to process current level
+            for _ in range(level_size):
+                # Pop the front node and push its value into level
+                front = q.popleft()
+                level.append(front.val)
 
-            # Push current node's value into result[depth]
-            result[depth].append(node.val)
+                # Push front node's children into queue if they exist
+                if front.left:
+                    q.append(front.left)
+                if front.right:
+                    q.append(front.right)
 
-            # Recursive call with left/right nodes and (depth+1)
-            dfs(node.left, depth + 1)
-            dfs(node.right, depth + 1)
-
-        dfs(root, 0)
+            # Push level into result because the level container
+            # should now contain current level's nodes in right order
+            result.append(level)
         return result
