@@ -23,13 +23,13 @@ we need to jump to the one after.
 class Solution:
     def maxNumberOfFamilies(self, n: int, reservedSeats: List[List[int]]) -> int:
         result = 0
-        row_to_col = {}
+        row_to_seat = {}
         for row, col in reservedSeats:
-            if row not in row_to_col:
-                row_to_col[row] = []
-            row_to_col[row].append(col)
+            if row not in row_to_seat:
+                row_to_seat[row] = []
+            row_to_seat[row].append(col)
 
-        for reserved in row_to_col.values():
+        for reserved in row_to_seat.values():
             can_first = all(seat not in reserved for seat in [2, 3, 4, 5])
             can_mid = all(seat not in reserved for seat in [4, 5, 6, 7])
             can_last = all(seat not in reserved for seat in [6, 7, 8, 9])
@@ -38,4 +38,20 @@ class Solution:
                 result += 2
             elif can_first or can_mid or can_last:
                 result += 1
-        return result + 2 * (n-len(row_to_col))
+        return result + 2 * (n - len(row_to_seat))
+
+
+"""
+Review
+It turned out that we didn't need a matrix, but we need to transform reservedSeats into a queryable row_to_seat so that we can visit a row and ask for seats to see if it's assignable.
+I was able to get can_first, can_mid, can_last, but I guess next time I shouldn't assume that
+we should always use 2D matrix when seeing that kind of diagram.
+
+Evaluate
+I prefer this `reservedSeats -> row_to_seat` solution because it's easier to read, comparing to bitwise solution. However, a bitwise solution is something worth trying and knowing as well.
+
+Complexity
+Time: O(m)
+Space: O(m)
+Where m is the length of reservedSeats
+"""
