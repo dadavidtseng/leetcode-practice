@@ -22,22 +22,32 @@ we need to jump to the one after.
 
 class Solution:
     def maxNumberOfFamilies(self, n: int, reservedSeats: List[List[int]]) -> int:
-        result = 0
+        # Create a map for O(1) look up
         row_to_seat = {}
+        result = 0
+
+        # Iterate through reservedSeats
+        # and build row_to_seat with {row, set(col_a, col_b, ...)}
+        # so we can visit each rows and check their col
         for row, col in reservedSeats:
             if row not in row_to_seat:
                 row_to_seat[row] = set()
             row_to_seat[row].add(col)
 
+        # Iterate through every reserved seats in each rows
+        # and compute can_first, can_mid, can_last
         for reserved in row_to_seat.values():
             can_first = all(seat not in reserved for seat in [2, 3, 4, 5])
             can_mid = all(seat not in reserved for seat in [4, 5, 6, 7])
             can_last = all(seat not in reserved for seat in [6, 7, 8, 9])
 
+            # Greedily increment result
             if can_first and can_last:
                 result += 2
             elif can_first or can_mid or can_last:
                 result += 1
+
+        # Return result + every unreserved row
         return result + 2 * (n - len(row_to_seat))
 
 
