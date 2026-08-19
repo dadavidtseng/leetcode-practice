@@ -6,15 +6,29 @@
 #         self.right = right
 class Solution:
     def isValidBST(self, root: Optional[TreeNode]) -> bool:
-        def dfs(node: Optional[TreeNode], left: int, right: int) -> bool:
-            # Return true if current node is empty because we have nothing to check
+        # Return true if root is empty
+        if not root:
+            return True
+
+        # Create a queue that carries current node and left/right bounds
+        # and push root into the queue so we can start the while loop
+        q = deque([(root, float("-inf"), float("inf"))])
+
+        # Exit the while loop when queue is empty
+        while q:
+            # Get the front node and remove it from the queue
+            node, left, right = q.popleft()
+
+            # Continue is current node is empty because we don't need to process it
             if not node:
-                return True
+                continue
 
             # Return false if current node is not valid for any of left/right bounds
             if not (left < node.val < right):
                 return False
-            return dfs(node.left, left, node.val) and dfs(node.right, node.val, right)
 
-        # Note that TreeNode's value is int so we're using `float("inf")` to avoid the boundary problem
-        return dfs(root, float("-inf"), float("inf"))
+            q.append((node.left, left, node.val))
+            q.append((node.right, node.val, right))
+
+        # Return true if we've successfully processed all nodes in the BST
+        return True
