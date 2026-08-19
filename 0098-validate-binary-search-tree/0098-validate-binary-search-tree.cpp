@@ -13,37 +13,39 @@
 class Solution {
 public:
     bool isValidBST(TreeNode* root) {
-        auto isValid = [&](this auto&& self, TreeNode* node, const int limit,
-                           const bool isLeft) -> bool {
-            // Return true if current node is empty because we have nothing to
-            // check
+        // Return true if root is empty
+        if (root == nullptr) {
+            return true;
+        }
+
+        // Create a queue that carries current node and left/right bounds
+        // and push root into the queue so we can start the while loop
+        queue<tuple<TreeNode*, long long, long long>> q;
+        q.push(make_tuple(root, LLONG_MIN, LLONG_MAX));
+
+        // Exit the while loop when queue is empty
+        while (!q.empty()) {
+            // Get the front node and remove it from the queue
+            auto [node, left, right] = q.front();
+            q.pop();
+
+            // Continue is current node is empty because we don't need to
+            // process it
             if (node == nullptr) {
-                return true;
+                continue;
             }
 
-            // Compare differently based on the bool flag
-            bool valid = isLeft ? node->val < limit : node->val > limit;
+            // Return false if current node is not valid for any of left/right
+            // bounds
+            if (!(node->val > left && node->val < right)) {
+                return false;
+            }
 
-            // Return false if invalid
-            if (!valid) {
-                return false;
-            }
-            return self(node->left, limit, isLeft) &&
-                   self(node->right, limit, isLeft);
-        };
-        auto dfs = [&](this auto&& self, TreeNode* node) {
-            // Return true if current node is empty because we have nothing to
-            // check
-            if (node == nullptr) {
-                return true;
-            }
-            // Return false if any of the recursive call returns false
-            if (!isValid(node->left, node->val, true) ||
-                !isValid(node->right, node->val, false)) {
-                return false;
-            }
-            return self(node->left) && self(node->right);
-        };
-        return dfs(root);
+            q.push(make_tuple(node->left, left, node->val));
+            q.push(make_tuple(node->right, node->val, right));
+        }
+
+        // Return true if we've successfully processed all nodes in the BST
+        return true;
     }
 };
