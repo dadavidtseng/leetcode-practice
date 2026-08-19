@@ -26,8 +26,8 @@ class Solution:
         row_to_seat = {}
         for row, col in reservedSeats:
             if row not in row_to_seat:
-                row_to_seat[row] = []
-            row_to_seat[row].append(col)
+                row_to_seat[row] = set()
+            row_to_seat[row].add(col)
 
         for reserved in row_to_seat.values():
             can_first = all(seat not in reserved for seat in [2, 3, 4, 5])
