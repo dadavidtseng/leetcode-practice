@@ -6,32 +6,15 @@
 #         self.right = right
 class Solution:
     def isValidBST(self, root: Optional[TreeNode]) -> bool:
-        def is_valid(node: Optional[TreeNode], limit: int, is_left: bool) -> bool:
+        def dfs(node: Optional[TreeNode], left: int, right: int) -> bool:
             # Return true if current node is empty because we have nothing to check
             if not node:
                 return True
 
-            # Compare differently based on the bool flag
-            valid = node.val < limit if is_left else node.val > limit
-
-            # Return false if invalid
-            if not valid:
+            # Return false if current node is not valid for any of left/right bounds
+            if not (left < node.val < right):
                 return False
+            return dfs(node.left, left, node.val) and dfs(node.right, node.val, right)
 
-            return is_valid(node.left, limit, is_left) and is_valid(
-                node.right, limit, is_left
-            )
-
-        def dfs(node: Optional[TreeNode]) -> bool:
-            # Return true if current node is empty because we have nothing to check
-            if not node:
-                return True
-
-            # Return false if any of the recursive call returns false
-            if not is_valid(node.left, node.val, True) or not (
-                is_valid(node.right, node.val, False)
-            ):
-                return False
-            return dfs(node.left) and dfs(node.right)
-
-        return dfs(root)
+        # Note that TreeNode's value is int so we're using `float("inf")` to avoid the boundary problem
+        return dfs(root, float("-inf"), float("inf"))
