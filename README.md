@@ -76,6 +76,7 @@
 | [0994-rotting-oranges](https://github.com/dadavidtseng/LeetCodePractice/tree/master/0994-rotting-oranges) |
 | [1046-last-stone-weight](https://github.com/dadavidtseng/LeetCodePractice/tree/master/1046-last-stone-weight) |
 | [1140-stone-game-ii](https://github.com/dadavidtseng/LeetCodePractice/tree/master/1140-stone-game-ii) |
+| [1386-cinema-seat-allocation](https://github.com/dadavidtseng/LeetCodePractice/tree/master/1386-cinema-seat-allocation) |
 | [1584-min-cost-to-connect-all-points](https://github.com/dadavidtseng/LeetCodePractice/tree/master/1584-min-cost-to-connect-all-points) |
 | [1800-maximum-ascending-subarray-sum](https://github.com/dadavidtseng/LeetCodePractice/tree/master/1800-maximum-ascending-subarray-sum) |
 | [1851-minimum-interval-to-include-each-query](https://github.com/dadavidtseng/LeetCodePractice/tree/master/1851-minimum-interval-to-include-each-query) |
@@ -112,6 +113,7 @@
 | [0763-partition-labels](https://github.com/dadavidtseng/LeetCodePractice/tree/master/0763-partition-labels) |
 | [0846-hand-of-straights](https://github.com/dadavidtseng/LeetCodePractice/tree/master/0846-hand-of-straights) |
 | [0981-time-based-key-value-store](https://github.com/dadavidtseng/LeetCodePractice/tree/master/0981-time-based-key-value-store) |
+| [1386-cinema-seat-allocation](https://github.com/dadavidtseng/LeetCodePractice/tree/master/1386-cinema-seat-allocation) |
 | [2013-detect-squares](https://github.com/dadavidtseng/LeetCodePractice/tree/master/2013-detect-squares) |
 | [3471-find-the-largest-almost-missing-integer](https://github.com/dadavidtseng/LeetCodePractice/tree/master/3471-find-the-largest-almost-missing-integer) |
 ## Math
@@ -337,6 +339,7 @@
 | [0287-find-the-duplicate-number](https://github.com/dadavidtseng/LeetCodePractice/tree/master/0287-find-the-duplicate-number) |
 | [0338-counting-bits](https://github.com/dadavidtseng/LeetCodePractice/tree/master/0338-counting-bits) |
 | [0371-sum-of-two-integers](https://github.com/dadavidtseng/LeetCodePractice/tree/master/0371-sum-of-two-integers) |
+| [1386-cinema-seat-allocation](https://github.com/dadavidtseng/LeetCodePractice/tree/master/1386-cinema-seat-allocation) |
 ## Matrix
 |  |
 | ------- |
@@ -509,6 +512,7 @@
 | [0678-valid-parenthesis-string](https://github.com/dadavidtseng/LeetCodePractice/tree/master/0678-valid-parenthesis-string) |
 | [0763-partition-labels](https://github.com/dadavidtseng/LeetCodePractice/tree/master/0763-partition-labels) |
 | [0846-hand-of-straights](https://github.com/dadavidtseng/LeetCodePractice/tree/master/0846-hand-of-straights) |
+| [1386-cinema-seat-allocation](https://github.com/dadavidtseng/LeetCodePractice/tree/master/1386-cinema-seat-allocation) |
 | [1405-longest-happy-string](https://github.com/dadavidtseng/leetcode-practice/tree/master/1405-longest-happy-string) |
 | [1899-merge-triplets-to-form-target-triplet](https://github.com/dadavidtseng/LeetCodePractice/tree/master/1899-merge-triplets-to-form-target-triplet) |
 ## Sliding Window
