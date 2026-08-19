@@ -13,46 +13,27 @@
 class Solution {
 public:
     bool isValidBST(TreeNode* root) {
-        // return true if root is nullptr
-        if (root == nullptr) {
-            return true;
-        }
-
-        // 1. current node is root
-        // 2. previous node's value for comparison
-        // 3. a stack for LIFO
-        TreeNode* cur = root;
-        long long pre = LLONG_MIN;
-        stack<TreeNode*> s;
-
-        // exit the loop when current node is nullptr and the stack is empty
-        while (cur != nullptr || !s.empty()) {
-            // exit the loop when current node is nullptr,
-            // otherwise, push the current node into stack
-            // and keep going left
-            while (cur != nullptr) {
-                s.push(cur);
-                cur = cur->left;
+        auto dfs = [](this auto&& self, TreeNode* node, long long left,
+                      long long right) -> bool {
+            // Return true if current node is empty because we have nothing to
+            // check
+            if (node == nullptr) {
+                return true;
             }
-
-            // 1. set current node to the top of the stack
-            // this is essentially visiting that node
-            // 2. remove the visited node since we don't need it anymore
-            cur = s.top();
-            s.pop();
-
-            // if current node's value is less than previous node, return false
-            // this should always be increasing because we're doing in-order
-            // traversing
-            if (cur->val <= pre) {
+            // Return false if current node is not valid for any of left/right
+            // bounds
+            if (!(node->val > left && node->val < right)) {
                 return false;
             }
+            return self(node->left, left, node->val) &&
+                   self(node->right, node->val, right);
+        };
 
-            // records the current node and goes right
-            pre = cur->val;
-            cur = cur->right;
-        }
-
-        return true;
+        // Note that TreeNode's value is int so we're using `long long` to avoid
+        // the boundary problem For example, if we use INT_MIN and if that
+        // node's value is INT_MIN, the bool check will not return what we
+        // expected. Thus, we use a wider range and guarantee to have 8 bytes in
+        // all platforms, which is long long.
+        return dfs(root, LLONG_MIN, LLONG_MAX);
     }
 };
