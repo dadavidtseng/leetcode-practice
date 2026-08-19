@@ -13,27 +13,37 @@
 class Solution {
 public:
     bool isValidBST(TreeNode* root) {
-        auto dfs = [](this auto&& self, TreeNode* node, long long left,
-                      long long right) -> bool {
+        auto isValid = [&](this auto&& self, TreeNode* node, const int limit,
+                           const bool isLeft) -> bool {
             // Return true if current node is empty because we have nothing to
             // check
             if (node == nullptr) {
                 return true;
             }
-            // Return false if current node is not valid for any of left/right
-            // bounds
-            if (!(node->val > left && node->val < right)) {
+
+            // Compare differently based on the bool flag
+            bool valid = isLeft ? node->val < limit : node->val > limit;
+
+            // Return false if invalid
+            if (!valid) {
                 return false;
             }
-            return self(node->left, left, node->val) &&
-                   self(node->right, node->val, right);
+            return self(node->left, limit, isLeft) &&
+                   self(node->right, limit, isLeft);
         };
-
-        // Note that TreeNode's value is int so we're using `long long` to avoid
-        // the boundary problem For example, if we use INT_MIN and if that
-        // node's value is INT_MIN, the bool check will not return what we
-        // expected. Thus, we use a wider range and guarantee to have 8 bytes in
-        // all platforms, which is long long.
-        return dfs(root, LLONG_MIN, LLONG_MAX);
+        auto dfs = [&](this auto&& self, TreeNode* node) {
+            // Return true if current node is empty because we have nothing to
+            // check
+            if (node == nullptr) {
+                return true;
+            }
+            // Return false if any of the recursive call returns false
+            if (!isValid(node->left, node->val, true) ||
+                !isValid(node->right, node->val, false)) {
+                return false;
+            }
+            return self(node->left) && self(node->right);
+        };
+        return dfs(root);
     }
 };
