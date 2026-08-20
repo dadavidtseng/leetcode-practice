@@ -1,6 +1,6 @@
 """
 Understand
-Provided integer array nums, distribute it to two integer arrays and combine them.
+Provided an integer array nums, distribute it to two integer arrays and combine them.
 When distributing, append nums[i] to array1 when the last element of array1 is greater than the last element of array2, otherwise, append nums[i] to array2.
 Return array1 + array2
 
