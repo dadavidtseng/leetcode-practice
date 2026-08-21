@@ -6,7 +6,7 @@ Provided an integer array coins find return the kth smallest amount that can be 
 Binary Search
 
 # Plan
-As we can see in the example above, the possible x might contain duplicates, such as 12. The naive way would be 
+As we can see in the example above, the possible x might contain duplicates, such as 12. The naive way would be
 ```python3[]
 def findKthSmallest(self, coins: List[int], k: int) -> int:
         s = set()
@@ -28,6 +28,8 @@ Note that,
 1. There are duplicates of possible x can be made up by coin
 2. The range of x is 3*1 and 3*3 because it's not possible that we use up all 6s, but we could use up all 3s and it could only be less than 3*3.
 """
+
+
 class Solution:
     def findKthSmallest(self, coins: List[int], k: int) -> int:
         def lcm(a, b):
@@ -35,39 +37,41 @@ class Solution:
 
             while y:
                 x, y = y, x % y
+            return a // x * b
 
-                gcd = x
-            return a // gcd * b
-        
-        L = min(coins) # x_min
-        R = min(coins) * k # x_max
-        
-       
+        L = min(coins)  # x_min
+        R = min(coins) * k  # x_max
 
-        def count(x: int)->int:
+        subsets = []
+
+        for mask in range(1, 1 << len(coins)):
+            subset_lcm = 1
+            subset_size = 0
+
+            for i in range(len(coins)):
+                if mask & (1 << i):
+                    subset_size += 1
+                    subset_lcm = lcm(subset_lcm, coins[i])
+
+                    if subset_lcm > R:
+                        break
+            if subset_lcm <= R:
+                if subset_size % 2:
+                    subsets.append((subset_lcm, 1))
+                else:
+                    subsets.append((subset_lcm, -1))
+
+        def count(x: int) -> int:
             count = 0
 
-            for mask in range(1, 1<<len(coins)):
-                subset_lcm = 1
-                subset_size = 0
-
-                for i in range(len(coins)):
-                    if mask & (1<<i):
-                        subset_size +=1
-                        subset_lcm = lcm(subset_lcm, coins[i])
-                if subset_size % 2:
-                        count += x // subset_lcm
-                else:
-                    count -= x // subset_lcm    
+            for subset_lcm, sign in subsets:
+                count += sign * (x // subset_lcm)
             return count
-        
-        while L<R:
-            M = L + (R-L)// 2
-            if count(M)>=k:
-                R=M
+
+        while L < R:
+            M = L + (R - L) // 2
+            if count(M) >= k:
+                R = M
             else:
-                L=M+1
+                L = M + 1
         return L
-
-
-
