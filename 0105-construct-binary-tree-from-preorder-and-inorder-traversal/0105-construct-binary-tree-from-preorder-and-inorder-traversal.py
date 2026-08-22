@@ -6,20 +6,36 @@
 #         self.right = right
 class Solution:
     def buildTree(self, preorder: List[int], inorder: List[int]) -> Optional[TreeNode]:
-        # Return empty if any of preorder and inorder is empty
-        # Note that this is the base case of DFS, not an early return
-        if not preorder or not inorder:
-            return None
+        inorder_size = len(inorder)
+        pre_idx = 0
+        m = {}
 
-        # Create root node using preorder[0]
-        # because index 0 in preorder will always be the root of a subtree
-        root = TreeNode(preorder[0])
+        # Iterate through inorder to create inorder's value to index map
+        for i in range(inorder_size):
+            m[inorder[i]] = i
 
-        # Get preorder[0]'s index in inorder
-        mid = inorder.index(preorder[0])
+        # subtree's range= [L, R]
+        def dfs(L: int, R: int) -> Optional[TreeNode]:
+            nonlocal pre_idx
 
-        # preorder = root | preLeft | preRight
-        # inorder = inorderLeft | root | inorderLeft
-        root.left = self.buildTree(preorder[1 : mid + 1], inorder[:mid])
-        root.right = self.buildTree(preorder[mid + 1 :], inorder[mid + 1 :])
-        return root
+            # Return empty when L crosses R
+            if L > R:
+                return None
+
+            # Get root node's value from preorder[preorder's index]
+            # and then increment preorder's index
+            root_val = preorder[pre_idx]
+            pre_idx += 1
+
+            # Create root node
+            root = TreeNode(root_val)
+
+            # Get the index of root node in inorder
+            M = m[root_val]
+
+            # inorder = (L, M - 1) | root | (M + 1, R)
+            root.left = dfs(L, M - 1)
+            root.right = dfs(M + 1, R)
+            return root
+
+        return dfs(0, inorder_size - 1)
