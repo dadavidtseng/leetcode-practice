@@ -13,35 +13,37 @@
 class Solution {
 public:
     TreeNode* buildTree(vector<int>& preorder, vector<int>& inorder) {
-        // Return empty if any of preorder and inorder is empty
-        // Note that this is the base case of DFS, not an early return
-        if (preorder.empty() || inorder.empty()) {
-            return nullptr;
+        const int inorderSize = static_cast<int>(inorder.size());
+        int preIdx = 0;
+        unordered_map<int, int> m;
+
+        // Iterate through inorder to create inorder's value to index map
+        for (int i = 0; i < inorderSize; ++i) {
+            m[inorder[i]] = i;
         }
 
-        // Create root node using preorder[0]
-        // because index 0 in preorder will always be the root of a subtree
-        TreeNode* root = new TreeNode(preorder[0]);
+        // subtree's range= [L, R]
+        auto dfs = [&](this auto&& self, int L, int R) -> TreeNode* {
+            // Return empty when L crosses R
+            if (L > R) {
+                return nullptr;
+            }
 
-        // Find preorder[0] in inorder and get preorder[0]'s index in inorder
-        // Note that iteratorA - iteratorB = the distance between iteratorA and
-        // iteratorB Ex.  iteratorA is a position 3, iteratorB is at position
-        // 0(begin()),
-        //      iteratorA - iteratorB = 3 = iteratorA's index
-        auto mid =
-            find(inorder.begin(), inorder.end(), preorder[0]) - inorder.begin();
+            // Get root node's value from preorder[preorder's index]
+            // and then increment preorder's index
+            int rootVal = preorder[preIdx++];
 
-        // preorder = root | preLeft | preRight
-        // inorder = inorderLeft | root | inorderLeft
-        // Note that vector(_First, _Last) doesn't include _Last
-        vector preLeft(preorder.begin() + 1, preorder.begin() + 1 + mid);
-        vector preRight(preorder.begin() + 1 + mid, preorder.end());
-        vector inLeft(inorder.begin(), inorder.begin() + mid);
-        vector inRight(inorder.begin() + mid + 1, inorder.end());
+            // Create root node
+            TreeNode* root = new TreeNode(rootVal);
 
-        // Pass in preLeft, preRight, inLeft, inRight for recursive call
-        root->left = buildTree(preLeft, inLeft);
-        root->right = buildTree(preRight, inRight);
-        return root;
+            // Get the index of root node in inorder
+            int M = m[rootVal];
+
+            // inorder = (L, M - 1) | root | (M + 1, R)
+            root->left = self(L, M - 1);
+            root->right = self(M + 1, R);
+            return root;
+        };
+        return dfs(0, inorderSize - 1);
     }
 };
