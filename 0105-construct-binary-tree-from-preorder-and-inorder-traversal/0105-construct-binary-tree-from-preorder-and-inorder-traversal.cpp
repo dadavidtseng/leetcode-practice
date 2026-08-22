@@ -13,19 +13,21 @@
 class Solution {
 public:
     TreeNode* buildTree(vector<int>& preorder, vector<int>& inorder) {
-        const int inorderSize = static_cast<int>(inorder.size());
+        const int preorderSize = static_cast<int>(preorder.size());
         int preIdx = 0;
-        unordered_map<int, int> m;
+        int inIdx = 0;
 
-        // Iterate through inorder to create inorder's value to index map
-        for (int i = 0; i < inorderSize; ++i) {
-            m[inorder[i]] = i;
-        }
-
-        // subtree's range= [L, R]
-        auto dfs = [&](this auto&& self, int L, int R) -> TreeNode* {
-            // Return empty when L crosses R
-            if (L > R) {
+        auto dfs = [&](this auto&& self, optional<int> limit) -> TreeNode* {
+            // Return empty if we've processed all elements in preorder
+            if (preIdx >= preorderSize) {
+                return nullptr;
+            }
+            // If there's a limit and the value of that limit equals current
+            // element in inorder
+            // 1. Increment inorder's index
+            // 2. Return empty
+            if (limit && *limit == inorder[inIdx]) {
+                inIdx++;
                 return nullptr;
             }
 
@@ -36,14 +38,12 @@ public:
             // Create root node
             TreeNode* root = new TreeNode(rootVal);
 
-            // Get the index of root node in inorder
-            int M = m[rootVal];
-
-            // inorder = (L, M - 1) | root | (M + 1, R)
-            root->left = self(L, M - 1);
-            root->right = self(M + 1, R);
+            // Pass in new limit for left/right subtrees for DFS call
+            root->left = self(rootVal);
+            root->right = self(limit);
             return root;
         };
-        return dfs(0, inorderSize - 1);
+        // Start the DFS call with no limit
+        return dfs(nullopt);
     }
 };
