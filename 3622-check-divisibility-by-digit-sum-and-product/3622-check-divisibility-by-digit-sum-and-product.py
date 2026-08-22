@@ -41,7 +41,7 @@ Review
 The core concept of this solution is integer manipulation using `%` and `//`
 
 Evaluate
-There's also other ways to do this question, such as string conversion and mapping from string to integer.
+There are also other ways to do this question, such as string conversion and mapping from string to integer.
 
 Complexity:
 Time: O(log10(n)), the value of n scales by a factor of 10 for each digit added.
