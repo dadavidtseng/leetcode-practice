@@ -6,20 +6,23 @@
 #         self.right = right
 class Solution:
     def buildTree(self, preorder: List[int], inorder: List[int]) -> Optional[TreeNode]:
-        inorder_size = len(inorder)
+        preorder_size = len(preorder)
         pre_idx = 0
-        m = {}
+        in_idx = 0
 
-        # Iterate through inorder to create inorder's value to index map
-        for i in range(inorder_size):
-            m[inorder[i]] = i
-
-        # subtree's range= [L, R]
-        def dfs(L: int, R: int) -> Optional[TreeNode]:
+        def dfs(limit: Optional[int]) -> Optional[TreeNode]:
             nonlocal pre_idx
+            nonlocal in_idx
 
-            # Return empty when L crosses R
-            if L > R:
+            # Return empty if we've processed all elements in preorder
+            if pre_idx >= preorder_size:
+                return None
+
+            # If there's a limit and the value of that limit equals current element in inorder
+            # 1. Increment inorder's index
+            # 2. Return empty
+            if limit is not None and limit == inorder[in_idx]:
+                in_idx += 1
                 return None
 
             # Get root node's value from preorder[preorder's index]
@@ -30,12 +33,10 @@ class Solution:
             # Create root node
             root = TreeNode(root_val)
 
-            # Get the index of root node in inorder
-            M = m[root_val]
-
-            # inorder = (L, M - 1) | root | (M + 1, R)
-            root.left = dfs(L, M - 1)
-            root.right = dfs(M + 1, R)
+            # Pass in new limit for left/right subtrees for DFS call
+            root.left = dfs(root_val)
+            root.right = dfs(limit)
             return root
 
-        return dfs(0, inorder_size - 1)
+        # Start the DFS call with no limit
+        return dfs(None)
