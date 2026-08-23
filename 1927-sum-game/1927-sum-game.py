@@ -1,4 +1,5 @@
 """
+Understand
 Given a string num, which contains digital number "0-9" and "?"
 1. Each turn, Alice and Bob can replace "?" with "0-9"
 2. first != second -> Alice wins, Bob loses; vice versa
