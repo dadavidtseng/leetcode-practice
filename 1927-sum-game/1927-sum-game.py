@@ -6,7 +6,7 @@ Given a string num, which contains digital number "0-9" and "?"
 4. Alice starts first
 
 Match
-Array, String, Greedy
+Array, String, Greedy, Game Theory
 
 Plan
 Depends on how many "?" in num, whoever plays last can win the game
@@ -18,7 +18,6 @@ There are some cases we have to consider:
 2. odd "?" -> Alice control last digit -> Alice wins because Bob has no way to respond to Alice
 3. even "?" -> Bob control last digit -> check if after Bob responses to Alice, diff is 0
 """
-
 
 class Solution:
     def sumGame(self, num: str) -> bool:
@@ -49,8 +48,21 @@ class Solution:
         if (qL + qR) % 2 == 1:
             return True
 
+        # Case 3a: even "?" on both sides
         if qL == qR:
             return sumL != sumR
 
-        # Case 3: even "?"
+        # Case 3b: even "?" in total, (qL-qR) is odd
         return 2 * (sumL - sumR) != 9 * (qR - qL)
+
+"""
+Review
+I was able to come up with an idea that whoever controls the last digit wins and I thought about maybe we need to conside which side is "?" at. The core concept of this problem is "who can control the result wins", but for Bob, even if he can control the result, he might still lose. In order for Bob to control the final result, not only does the "?" have to be even number, but he needs to use (9-x) when Alice uses x. That's why we have `2 * (sumL - sumR) != 9 * (qR - qL)`.
+
+Evaluate
+Drawing out the round manually helped me to understand this problem better and I think the mental model for the problem needs careful observation. Overall, it was a nice problem!
+
+Complexity
+Time: O(n)
+Space: O(1)
+"""
