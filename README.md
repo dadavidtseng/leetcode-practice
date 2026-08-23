@@ -139,6 +139,7 @@
 | [0877-stone-game](https://github.com/dadavidtseng/LeetCodePractice/tree/master/0877-stone-game) |
 | [0973-k-closest-points-to-origin](https://github.com/dadavidtseng/LeetCodePractice/tree/master/0973-k-closest-points-to-origin) |
 | [1140-stone-game-ii](https://github.com/dadavidtseng/LeetCodePractice/tree/master/1140-stone-game-ii) |
+| [1927-sum-game](https://github.com/dadavidtseng/LeetCodePractice/tree/master/1927-sum-game) |
 | [3116-kth-smallest-amount-with-single-denomination-combination](https://github.com/dadavidtseng/LeetCodePractice/tree/master/3116-kth-smallest-amount-with-single-denomination-combination) |
 | [3622-check-divisibility-by-digit-sum-and-product](https://github.com/dadavidtseng/LeetCodePractice/tree/master/3622-check-divisibility-by-digit-sum-and-product) |
 ## Sorting
@@ -190,6 +191,7 @@
 | [0981-time-based-key-value-store](https://github.com/dadavidtseng/LeetCodePractice/tree/master/0981-time-based-key-value-store) |
 | [1143-longest-common-subsequence](https://github.com/dadavidtseng/LeetCodePractice/tree/master/1143-longest-common-subsequence) |
 | [1405-longest-happy-string](https://github.com/dadavidtseng/leetcode-practice/tree/master/1405-longest-happy-string) |
+| [1927-sum-game](https://github.com/dadavidtseng/LeetCodePractice/tree/master/1927-sum-game) |
 ## Divide and Conquer
 |  |
 | ------- |
@@ -527,6 +529,7 @@
 | [1386-cinema-seat-allocation](https://github.com/dadavidtseng/LeetCodePractice/tree/master/1386-cinema-seat-allocation) |
 | [1405-longest-happy-string](https://github.com/dadavidtseng/leetcode-practice/tree/master/1405-longest-happy-string) |
 | [1899-merge-triplets-to-form-target-triplet](https://github.com/dadavidtseng/LeetCodePractice/tree/master/1899-merge-triplets-to-form-target-triplet) |
+| [1927-sum-game](https://github.com/dadavidtseng/LeetCodePractice/tree/master/1927-sum-game) |
 ## Sliding Window
 |  |
 | ------- |
@@ -687,6 +690,7 @@
 | ------- |
 | [0877-stone-game](https://github.com/dadavidtseng/LeetCodePractice/tree/master/0877-stone-game) |
 | [1140-stone-game-ii](https://github.com/dadavidtseng/LeetCodePractice/tree/master/1140-stone-game-ii) |
+| [1927-sum-game](https://github.com/dadavidtseng/LeetCodePractice/tree/master/1927-sum-game) |
 ## Zero-Sum Game
 |  |
 | ------- |
