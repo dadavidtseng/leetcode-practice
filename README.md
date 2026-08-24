@@ -81,6 +81,7 @@
 | [1584-min-cost-to-connect-all-points](https://github.com/dadavidtseng/LeetCodePractice/tree/master/1584-min-cost-to-connect-all-points) |
 | [1800-maximum-ascending-subarray-sum](https://github.com/dadavidtseng/LeetCodePractice/tree/master/1800-maximum-ascending-subarray-sum) |
 | [1851-minimum-interval-to-include-each-query](https://github.com/dadavidtseng/LeetCodePractice/tree/master/1851-minimum-interval-to-include-each-query) |
+| [1872-stone-game-viii](https://github.com/dadavidtseng/LeetCodePractice/tree/master/1872-stone-game-viii) |
 | [1899-merge-triplets-to-form-target-triplet](https://github.com/dadavidtseng/LeetCodePractice/tree/master/1899-merge-triplets-to-form-target-triplet) |
 | [2013-detect-squares](https://github.com/dadavidtseng/LeetCodePractice/tree/master/2013-detect-squares) |
 | [3069-distribute-elements-into-two-arrays-i](https://github.com/dadavidtseng/LeetCodePractice/tree/master/3069-distribute-elements-into-two-arrays-i) |
@@ -139,6 +140,7 @@
 | [0877-stone-game](https://github.com/dadavidtseng/LeetCodePractice/tree/master/0877-stone-game) |
 | [0973-k-closest-points-to-origin](https://github.com/dadavidtseng/LeetCodePractice/tree/master/0973-k-closest-points-to-origin) |
 | [1140-stone-game-ii](https://github.com/dadavidtseng/LeetCodePractice/tree/master/1140-stone-game-ii) |
+| [1872-stone-game-viii](https://github.com/dadavidtseng/LeetCodePractice/tree/master/1872-stone-game-viii) |
 | [1927-sum-game](https://github.com/dadavidtseng/LeetCodePractice/tree/master/1927-sum-game) |
 | [3116-kth-smallest-amount-with-single-denomination-combination](https://github.com/dadavidtseng/LeetCodePractice/tree/master/3116-kth-smallest-amount-with-single-denomination-combination) |
 | [3622-check-divisibility-by-digit-sum-and-product](https://github.com/dadavidtseng/LeetCodePractice/tree/master/3622-check-divisibility-by-digit-sum-and-product) |
@@ -333,6 +335,7 @@
 | [0918-maximum-sum-circular-subarray](https://github.com/dadavidtseng/LeetCodePractice/tree/master/0918-maximum-sum-circular-subarray) |
 | [1140-stone-game-ii](https://github.com/dadavidtseng/LeetCodePractice/tree/master/1140-stone-game-ii) |
 | [1143-longest-common-subsequence](https://github.com/dadavidtseng/LeetCodePractice/tree/master/1143-longest-common-subsequence) |
+| [1872-stone-game-viii](https://github.com/dadavidtseng/LeetCodePractice/tree/master/1872-stone-game-viii) |
 ## Memoization
 |  |
 | ------- |
@@ -503,6 +506,7 @@
 | ------- |
 | [0238-product-of-array-except-self](https://github.com/dadavidtseng/LeetCodePractice/tree/master/0238-product-of-array-except-self) |
 | [1140-stone-game-ii](https://github.com/dadavidtseng/LeetCodePractice/tree/master/1140-stone-game-ii) |
+| [1872-stone-game-viii](https://github.com/dadavidtseng/LeetCodePractice/tree/master/1872-stone-game-viii) |
 ## Union-Find
 |  |
 | ------- |
@@ -685,17 +689,20 @@
 | ------- |
 | [0877-stone-game](https://github.com/dadavidtseng/LeetCodePractice/tree/master/0877-stone-game) |
 | [1140-stone-game-ii](https://github.com/dadavidtseng/LeetCodePractice/tree/master/1140-stone-game-ii) |
+| [1872-stone-game-viii](https://github.com/dadavidtseng/LeetCodePractice/tree/master/1872-stone-game-viii) |
 ## Game Theory
 |  |
 | ------- |
 | [0877-stone-game](https://github.com/dadavidtseng/LeetCodePractice/tree/master/0877-stone-game) |
 | [1140-stone-game-ii](https://github.com/dadavidtseng/LeetCodePractice/tree/master/1140-stone-game-ii) |
+| [1872-stone-game-viii](https://github.com/dadavidtseng/LeetCodePractice/tree/master/1872-stone-game-viii) |
 | [1927-sum-game](https://github.com/dadavidtseng/LeetCodePractice/tree/master/1927-sum-game) |
 ## Zero-Sum Game
 |  |
 | ------- |
 | [0877-stone-game](https://github.com/dadavidtseng/LeetCodePractice/tree/master/0877-stone-game) |
 | [1140-stone-game-ii](https://github.com/dadavidtseng/LeetCodePractice/tree/master/1140-stone-game-ii) |
+| [1872-stone-game-viii](https://github.com/dadavidtseng/LeetCodePractice/tree/master/1872-stone-game-viii) |
 ## Number Theory
 |  |
 | ------- |
