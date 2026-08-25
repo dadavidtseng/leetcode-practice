@@ -87,6 +87,7 @@
 | [3069-distribute-elements-into-two-arrays-i](https://github.com/dadavidtseng/LeetCodePractice/tree/master/3069-distribute-elements-into-two-arrays-i) |
 | [3116-kth-smallest-amount-with-single-denomination-combination](https://github.com/dadavidtseng/LeetCodePractice/tree/master/3116-kth-smallest-amount-with-single-denomination-combination) |
 | [3471-find-the-largest-almost-missing-integer](https://github.com/dadavidtseng/LeetCodePractice/tree/master/3471-find-the-largest-almost-missing-integer) |
+| [3718-smallest-missing-multiple-of-k](https://github.com/dadavidtseng/LeetCodePractice/tree/master/3718-smallest-missing-multiple-of-k) |
 ## Hash Table
 |  |
 | ------- |
@@ -121,6 +122,7 @@
 | [1386-cinema-seat-allocation](https://github.com/dadavidtseng/LeetCodePractice/tree/master/1386-cinema-seat-allocation) |
 | [2013-detect-squares](https://github.com/dadavidtseng/LeetCodePractice/tree/master/2013-detect-squares) |
 | [3471-find-the-largest-almost-missing-integer](https://github.com/dadavidtseng/LeetCodePractice/tree/master/3471-find-the-largest-almost-missing-integer) |
+| [3718-smallest-missing-multiple-of-k](https://github.com/dadavidtseng/LeetCodePractice/tree/master/3718-smallest-missing-multiple-of-k) |
 ## Math
 |  |
 | ------- |
