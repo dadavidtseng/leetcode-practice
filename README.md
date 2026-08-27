@@ -123,6 +123,7 @@
 | [2013-detect-squares](https://github.com/dadavidtseng/LeetCodePractice/tree/master/2013-detect-squares) |
 | [3471-find-the-largest-almost-missing-integer](https://github.com/dadavidtseng/LeetCodePractice/tree/master/3471-find-the-largest-almost-missing-integer) |
 | [3718-smallest-missing-multiple-of-k](https://github.com/dadavidtseng/LeetCodePractice/tree/master/3718-smallest-missing-multiple-of-k) |
+| [3720-lexicographically-smallest-permutation-greater-than-target](https://github.com/dadavidtseng/LeetCodePractice/tree/master/3720-lexicographically-smallest-permutation-greater-than-target) |
 ## Math
 |  |
 | ------- |
@@ -197,6 +198,7 @@
 | [1405-longest-happy-string](https://github.com/dadavidtseng/leetcode-practice/tree/master/1405-longest-happy-string) |
 | [1927-sum-game](https://github.com/dadavidtseng/LeetCodePractice/tree/master/1927-sum-game) |
 | [2904-shortest-and-lexicographically-smallest-beautiful-string](https://github.com/dadavidtseng/LeetCodePractice/tree/master/2904-shortest-and-lexicographically-smallest-beautiful-string) |
+| [3720-lexicographically-smallest-permutation-greater-than-target](https://github.com/dadavidtseng/LeetCodePractice/tree/master/3720-lexicographically-smallest-permutation-greater-than-target) |
 ## Divide and Conquer
 |  |
 | ------- |
@@ -498,6 +500,7 @@
 | [0347-top-k-frequent-elements](https://github.com/dadavidtseng/LeetCodePractice/tree/master/0347-top-k-frequent-elements) |
 | [0621-task-scheduler](https://github.com/dadavidtseng/LeetCodePractice/tree/master/0621-task-scheduler) |
 | [2013-detect-squares](https://github.com/dadavidtseng/LeetCodePractice/tree/master/2013-detect-squares) |
+| [3720-lexicographically-smallest-permutation-greater-than-target](https://github.com/dadavidtseng/LeetCodePractice/tree/master/3720-lexicographically-smallest-permutation-greater-than-target) |
 ## Quickselect
 |  |
 | ------- |
@@ -537,6 +540,7 @@
 | [1405-longest-happy-string](https://github.com/dadavidtseng/leetcode-practice/tree/master/1405-longest-happy-string) |
 | [1899-merge-triplets-to-form-target-triplet](https://github.com/dadavidtseng/LeetCodePractice/tree/master/1899-merge-triplets-to-form-target-triplet) |
 | [1927-sum-game](https://github.com/dadavidtseng/LeetCodePractice/tree/master/1927-sum-game) |
+| [3720-lexicographically-smallest-permutation-greater-than-target](https://github.com/dadavidtseng/LeetCodePractice/tree/master/3720-lexicographically-smallest-permutation-greater-than-target) |
 ## Sliding Window
 |  |
 | ------- |
@@ -711,4 +715,8 @@
 |  |
 | ------- |
 | [3116-kth-smallest-amount-with-single-denomination-combination](https://github.com/dadavidtseng/LeetCodePractice/tree/master/3116-kth-smallest-amount-with-single-denomination-combination) |
+## Enumeration
+|  |
+| ------- |
+| [3720-lexicographically-smallest-permutation-greater-than-target](https://github.com/dadavidtseng/LeetCodePractice/tree/master/3720-lexicographically-smallest-permutation-greater-than-target) |
 <!---LeetCode Topics End-->
