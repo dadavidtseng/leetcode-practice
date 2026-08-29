@@ -84,6 +84,7 @@
 | [1872-stone-game-viii](https://github.com/dadavidtseng/LeetCodePractice/tree/master/1872-stone-game-viii) |
 | [1899-merge-triplets-to-form-target-triplet](https://github.com/dadavidtseng/LeetCodePractice/tree/master/1899-merge-triplets-to-form-target-triplet) |
 | [2013-detect-squares](https://github.com/dadavidtseng/LeetCodePractice/tree/master/2013-detect-squares) |
+| [2948-make-lexicographically-smallest-array-by-swapping-elements](https://github.com/dadavidtseng/LeetCodePractice/tree/master/2948-make-lexicographically-smallest-array-by-swapping-elements) |
 | [3069-distribute-elements-into-two-arrays-i](https://github.com/dadavidtseng/LeetCodePractice/tree/master/3069-distribute-elements-into-two-arrays-i) |
 | [3116-kth-smallest-amount-with-single-denomination-combination](https://github.com/dadavidtseng/LeetCodePractice/tree/master/3116-kth-smallest-amount-with-single-denomination-combination) |
 | [3471-find-the-largest-almost-missing-integer](https://github.com/dadavidtseng/LeetCodePractice/tree/master/3471-find-the-largest-almost-missing-integer) |
@@ -165,6 +166,7 @@
 | [0846-hand-of-straights](https://github.com/dadavidtseng/LeetCodePractice/tree/master/0846-hand-of-straights) |
 | [0973-k-closest-points-to-origin](https://github.com/dadavidtseng/LeetCodePractice/tree/master/0973-k-closest-points-to-origin) |
 | [1851-minimum-interval-to-include-each-query](https://github.com/dadavidtseng/LeetCodePractice/tree/master/1851-minimum-interval-to-include-each-query) |
+| [2948-make-lexicographically-smallest-array-by-swapping-elements](https://github.com/dadavidtseng/LeetCodePractice/tree/master/2948-make-lexicographically-smallest-array-by-swapping-elements) |
 ## String
 |  |
 | ------- |
@@ -526,6 +528,7 @@
 | [0695-max-area-of-island](https://github.com/dadavidtseng/LeetCodePractice/tree/master/0695-max-area-of-island) |
 | [0778-swim-in-rising-water](https://github.com/dadavidtseng/LeetCodePractice/tree/master/0778-swim-in-rising-water) |
 | [1584-min-cost-to-connect-all-points](https://github.com/dadavidtseng/LeetCodePractice/tree/master/1584-min-cost-to-connect-all-points) |
+| [2948-make-lexicographically-smallest-array-by-swapping-elements](https://github.com/dadavidtseng/LeetCodePractice/tree/master/2948-make-lexicographically-smallest-array-by-swapping-elements) |
 ## Greedy
 |  |
 | ------- |
