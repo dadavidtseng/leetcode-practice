@@ -14,27 +14,21 @@ class Solution:
         curr = head
         prev = curr
         curr = curr.next
-        prev_idx = 0
         curr_idx = 1
         first_idx = -1
+        last_idx = -1
 
         # Iterate through the linkedlist
         while curr and curr.next:
-            
-
-            if (prev.val > curr.val and curr.next.val > curr.val) or (prev.val < curr.val and curr.next.val < curr.val):
-                if prev_idx != 0:
-                    min_dist = min(min_dist, curr_idx - prev_idx)
-                prev_idx = curr_idx
+            if (prev.val > curr.val < curr.next.val) or (
+                prev.val < curr.val > curr.next.val
+            ):
+                if last_idx != -1:
+                    min_dist = min(min_dist, curr_idx - last_idx)
                 if first_idx == -1:
                     first_idx = curr_idx
-            print(min_dist, curr_idx, prev_idx)
-
+                last_idx = curr_idx
             curr_idx += 1
             prev = curr
             curr = curr.next
-
-        if first_idx == -1 or prev_idx == first_idx:
-            return [-1,-1]
-
-        return [min_dist, prev_idx - first_idx]
+        return [-1, -1] if first_idx == last_idx else [min_dist, last_idx - first_idx]
