@@ -50,7 +50,7 @@ class Solution:
                     new_mask |= 1 << L_idx[(new_r, new_c)]
 
                 if grid == "R":
-                    new_e = full_e
+                    new_e = energy
 
                 if best_e[new_r][new_c][new_mask] >= new_e:
                     continue
