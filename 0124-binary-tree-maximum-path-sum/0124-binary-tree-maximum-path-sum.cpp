@@ -13,40 +13,52 @@
 class Solution {
 public:
     int maxPathSum(TreeNode* root) {
-        // return 0 if root node is nullptr to prevent crashing
+        // return 0 if root node is empty
         if (root == nullptr) {
             return 0;
         }
 
-        // initialize the result to INT_MIN for all negative nodes case
+        // Initialize the result to INT_MIN for all negative nodes case
+        // Note that this could be result = -1001 because -1000 <= Node.val <=
+        // 1000
         int result = INT_MIN;
 
-        // pass the result by reference in to helper function for recursive call
-        maxPathSum(root, result);
+        auto getMax = [](this auto&& self, const TreeNode* node) -> int {
+            // return 0 if current node is empty
+            if (node == nullptr) {
+                return 0;
+            }
 
+            // Get left/right nodes from recursive call
+            const int left = self(node->left);
+            const int right = self(node->right);
+
+            // Return current node's value + max(left, right) if current sum is
+            // positive
+            return max(node->val + max(left, right), 0);
+        };
+
+        auto dfs = [&](this auto&& self, const TreeNode* node) -> void {
+            // return if node is empty
+            if (node == nullptr) {
+                return;
+            }
+
+            // Get left/right from current nodes' left/right subtrees
+            const int left = getMax(node->left);
+            const int right = getMax(node->right);
+
+            // Update result if left + root's value + right is greater than
+            // result
+            result = max(result, left + node->val + right);
+
+            // Pass in current node's left/right nodes into DFS call
+            self(node->left);
+            self(node->right);
+        };
+
+        // Pass root into DFS call
+        dfs(root);
         return result;
-    }
-
-    int maxPathSum(TreeNode const* node, int& sum) {
-        // return 0 if this node is nullptr to prevent crashing
-        if (node == nullptr) {
-            return 0;
-        }
-
-        TreeNode const* cur = node;
-
-        // get the best chain from the left/right subtree, ignore if negative
-        // leftSum/rightSum is equal to the outcome if it's greater than 0
-        int const leftSum = max(0, maxPathSum(cur->left, sum));
-        int const rightSum = max(0, maxPathSum(cur->right, sum));
-
-        // update the passed in sum
-        // if leftSum + cur->val + rightSum is greater than sum
-        // this is the only thing current node cases about
-        sum = max(sum, leftSum + cur->val + rightSum);
-
-        // return current node's value + whichever is greater among leftSum and
-        // rightSum
-        return cur->val + max(leftSum, rightSum);
     }
 };
