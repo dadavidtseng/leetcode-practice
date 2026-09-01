@@ -740,5 +740,6 @@
 ## DP on Trees
 |  |
 | ------- |
+| [0124-binary-tree-maximum-path-sum](https://github.com/dadavidtseng/LeetCodePractice/tree/master/0124-binary-tree-maximum-path-sum) |
 | [0968-binary-tree-cameras](https://github.com/dadavidtseng/LeetCodePractice/tree/master/0968-binary-tree-cameras) |
 <!---LeetCode Topics End-->
