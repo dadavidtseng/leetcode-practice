@@ -23,38 +23,24 @@ public:
         // 1000
         int result = INT_MIN;
 
-        auto getMax = [](this auto&& self, const TreeNode* node) -> int {
-            // return 0 if current node is empty
+        auto dfs = [&](this auto&& self, const TreeNode* node) -> int {
+            // return 0 if node is empty
             if (node == nullptr) {
                 return 0;
             }
 
-            // Get left/right nodes from recursive call
-            const int left = self(node->left);
-            const int right = self(node->right);
+            // Get left/right from the best chain of the left/right subtree,
+            // ignore if negative because it'll decrement the result
+            const int left = max(self(node->left), 0);
+            const int right = max(self(node->right), 0);
 
-            // Return current node's value + max(left, right) if current sum is
-            // positive
-            return max(node->val + max(left, right), 0);
-        };
-
-        auto dfs = [&](this auto&& self, const TreeNode* node) -> void {
-            // return if node is empty
-            if (node == nullptr) {
-                return;
-            }
-
-            // Get left/right from current nodes' left/right subtrees
-            const int left = getMax(node->left);
-            const int right = getMax(node->right);
-
-            // Update result if left + root's value + right is greater than
+            // Update result if left + node's value + right is greater than
             // result
             result = max(result, left + node->val + right);
 
-            // Pass in current node's left/right nodes into DFS call
-            self(node->left);
-            self(node->right);
+            // Return current node's value + whichever is greater among left and
+            // right
+            return node->val + max(left, right);
         };
 
         // Pass root into DFS call
