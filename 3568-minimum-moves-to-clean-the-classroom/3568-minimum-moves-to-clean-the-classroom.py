@@ -2,20 +2,23 @@ class Solution:
     def minMoves(self, classroom: List[str], energy: int) -> int:
         m = len(classroom)
         n = len(classroom[0])
-        L = []
+        L_idx = {}
+        L_count = 0
 
         # Iterate every grid in classroom to find row and column
         for row in range(m):
             for col in range(n):
                 if classroom[row][col] == "S":
-                    S = (row, col)
-                if classroom[row][col] == "L":
-                    L.append((row, col))
+                    sx, sy = (row, col)
+                elif classroom[row][col] == "L":
+                    L_idx[(row, col)] = L_count
 
-        q = deque([(S[0], S[1], 0, energy, 0)])
-        
-        best_e = {(S[0], S[1], 0):energy}
-        full_mask = (1 << len(L)) - 1
+                    L_count += 1
+
+        best_e = [[[-1] * (1 << L_count) for _ in range(n)] for _ in range(m)]
+        best_e[sx][sy][0] = energy
+        q = deque([(sx, sy, 0, energy, 0)])
+        full_mask = (1 << L_count) - 1
         full_energy = energy
 
         while q:
@@ -43,18 +46,15 @@ class Solution:
                 new_mask = mask
 
                 if classroom[new_r][new_c] == "L":
-                    idx = L.index((new_r, new_c))
-                    new_mask = mask | (1 << idx)
+                    new_mask |= (1 << L_idx[(new_r, new_c)])
 
                 if classroom[new_r][new_c] == "R":
                     new_e = full_energy
 
-                state = (new_r, new_c, new_mask)
-
-                if best_e.get(state, -1) >= new_e:
+                if best_e[new_r][new_c][new_mask] >= new_e:
                     continue
 
-                best_e[state] = new_e
-                
+                best_e[new_r][new_c][new_mask] = new_e
+
                 q.append((new_r, new_c, new_mask, new_e, steps + 1))
         return -1
