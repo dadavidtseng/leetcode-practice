@@ -14,35 +14,23 @@ class Solution:
         # Note that this could be result = -1001 because -1000 <= Node.val <= 1000
         result = float("-inf")
 
-        def get_max(node: Optional[TreeNode]) -> int:
-            # return 0 if current node is empty
+        def dfs(node: Optional[TreeNode]) -> int:
+            nonlocal result
+
+            # return 0 if node is empty
             if not node:
                 return 0
 
-            # Get left/right nodes from recursive call
-            left = get_max(node.left)
-            right = get_max(node.right)
+            # Get left/right from the best chain of the left/right subtrees,
+            # ignore if negative because it'll decrement the result
+            left = max(dfs(node.left), 0)
+            right = max(dfs(node.right), 0)
 
-            # Return current node's value + max(left, right) if current sum is positive
-            return max(node.val + max(left, right), 0)
-
-        def dfs(node: Optional[TreeNode]) -> None:
-            nonlocal result
-
-            # return if node is empty
-            if not node:
-                return
-
-            # Get left/right from current nodes' left/right subtrees
-            left = get_max(node.left)
-            right = get_max(node.right)
-
-            # Update result if left + root's value + right is greater than result
+            # Update result if left + node's value + right is greater than result
             result = max(result, left + node.val + right)
 
-            # Pass in current node's left/right nodes into DFS call
-            dfs(node.left)
-            dfs(node.right)
+            # Return current node's value + whichever is greater among left and right
+            return node.val + max(left, right)
 
         # Pass root into DFS call
         dfs(root)
