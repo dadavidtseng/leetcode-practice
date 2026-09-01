@@ -89,6 +89,7 @@
 | [3069-distribute-elements-into-two-arrays-i](https://github.com/dadavidtseng/LeetCodePractice/tree/master/3069-distribute-elements-into-two-arrays-i) |
 | [3116-kth-smallest-amount-with-single-denomination-combination](https://github.com/dadavidtseng/LeetCodePractice/tree/master/3116-kth-smallest-amount-with-single-denomination-combination) |
 | [3471-find-the-largest-almost-missing-integer](https://github.com/dadavidtseng/LeetCodePractice/tree/master/3471-find-the-largest-almost-missing-integer) |
+| [3568-minimum-moves-to-clean-the-classroom](https://github.com/dadavidtseng/LeetCodePractice/tree/master/3568-minimum-moves-to-clean-the-classroom) |
 | [3718-smallest-missing-multiple-of-k](https://github.com/dadavidtseng/LeetCodePractice/tree/master/3718-smallest-missing-multiple-of-k) |
 ## Hash Table
 |  |
@@ -124,6 +125,7 @@
 | [1386-cinema-seat-allocation](https://github.com/dadavidtseng/LeetCodePractice/tree/master/1386-cinema-seat-allocation) |
 | [2013-detect-squares](https://github.com/dadavidtseng/LeetCodePractice/tree/master/2013-detect-squares) |
 | [3471-find-the-largest-almost-missing-integer](https://github.com/dadavidtseng/LeetCodePractice/tree/master/3471-find-the-largest-almost-missing-integer) |
+| [3568-minimum-moves-to-clean-the-classroom](https://github.com/dadavidtseng/LeetCodePractice/tree/master/3568-minimum-moves-to-clean-the-classroom) |
 | [3718-smallest-missing-multiple-of-k](https://github.com/dadavidtseng/LeetCodePractice/tree/master/3718-smallest-missing-multiple-of-k) |
 | [3720-lexicographically-smallest-permutation-greater-than-target](https://github.com/dadavidtseng/LeetCodePractice/tree/master/3720-lexicographically-smallest-permutation-greater-than-target) |
 ## Math
@@ -366,6 +368,7 @@
 | [0371-sum-of-two-integers](https://github.com/dadavidtseng/LeetCodePractice/tree/master/0371-sum-of-two-integers) |
 | [1386-cinema-seat-allocation](https://github.com/dadavidtseng/LeetCodePractice/tree/master/1386-cinema-seat-allocation) |
 | [3116-kth-smallest-amount-with-single-denomination-combination](https://github.com/dadavidtseng/LeetCodePractice/tree/master/3116-kth-smallest-amount-with-single-denomination-combination) |
+| [3568-minimum-moves-to-clean-the-classroom](https://github.com/dadavidtseng/LeetCodePractice/tree/master/3568-minimum-moves-to-clean-the-classroom) |
 ## Matrix
 |  |
 | ------- |
@@ -382,6 +385,7 @@
 | [0695-max-area-of-island](https://github.com/dadavidtseng/LeetCodePractice/tree/master/0695-max-area-of-island) |
 | [0778-swim-in-rising-water](https://github.com/dadavidtseng/LeetCodePractice/tree/master/0778-swim-in-rising-water) |
 | [0994-rotting-oranges](https://github.com/dadavidtseng/LeetCodePractice/tree/master/0994-rotting-oranges) |
+| [3568-minimum-moves-to-clean-the-classroom](https://github.com/dadavidtseng/LeetCodePractice/tree/master/3568-minimum-moves-to-clean-the-classroom) |
 ## Simulation
 |  |
 | ------- |
@@ -470,6 +474,7 @@
 | [0841-keys-and-rooms](https://github.com/dadavidtseng/leetcode-practice/tree/master/0841-keys-and-rooms) |
 | [0994-rotting-oranges](https://github.com/dadavidtseng/LeetCodePractice/tree/master/0994-rotting-oranges) |
 | [1448-count-good-nodes-in-binary-tree](https://github.com/dadavidtseng/LeetCodePractice/tree/master/1448-count-good-nodes-in-binary-tree) |
+| [3568-minimum-moves-to-clean-the-classroom](https://github.com/dadavidtseng/LeetCodePractice/tree/master/3568-minimum-moves-to-clean-the-classroom) |
 ## String Matching
 |  |
 | ------- |
