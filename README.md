@@ -205,6 +205,7 @@
 | [0647-palindromic-substrings](https://github.com/dadavidtseng/leetcode-practice/tree/master/0647-palindromic-substrings) |
 | [0678-valid-parenthesis-string](https://github.com/dadavidtseng/LeetCodePractice/tree/master/0678-valid-parenthesis-string) |
 | [0763-partition-labels](https://github.com/dadavidtseng/LeetCodePractice/tree/master/0763-partition-labels) |
+| [0940-distinct-subsequences-ii](https://github.com/dadavidtseng/LeetCodePractice/tree/master/0940-distinct-subsequences-ii) |
 | [0981-time-based-key-value-store](https://github.com/dadavidtseng/LeetCodePractice/tree/master/0981-time-based-key-value-store) |
 | [1143-longest-common-subsequence](https://github.com/dadavidtseng/LeetCodePractice/tree/master/1143-longest-common-subsequence) |
 | [1405-longest-happy-string](https://github.com/dadavidtseng/leetcode-practice/tree/master/1405-longest-happy-string) |
@@ -355,6 +356,7 @@
 | [0787-cheapest-flights-within-k-stops](https://github.com/dadavidtseng/LeetCodePractice/tree/master/0787-cheapest-flights-within-k-stops) |
 | [0877-stone-game](https://github.com/dadavidtseng/LeetCodePractice/tree/master/0877-stone-game) |
 | [0918-maximum-sum-circular-subarray](https://github.com/dadavidtseng/LeetCodePractice/tree/master/0918-maximum-sum-circular-subarray) |
+| [0940-distinct-subsequences-ii](https://github.com/dadavidtseng/LeetCodePractice/tree/master/0940-distinct-subsequences-ii) |
 | [0968-binary-tree-cameras](https://github.com/dadavidtseng/LeetCodePractice/tree/master/0968-binary-tree-cameras) |
 | [1140-stone-game-ii](https://github.com/dadavidtseng/LeetCodePractice/tree/master/1140-stone-game-ii) |
 | [1143-longest-common-subsequence](https://github.com/dadavidtseng/LeetCodePractice/tree/master/1143-longest-common-subsequence) |
