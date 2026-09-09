@@ -1,22 +1,7 @@
 class Solution:
     def getLucky(self, s: str, k: int) -> int:
-        store = []
+        num = sum(int(x) for c in s for x in str(ord(c) - ord("a") + 1))
 
-        for c in s:
-            value = ord(c) - ord('a') + 1
-            store.append(str(value))
-        
-        new_store = "".join(store)
-        result = 0
-
-        while k!=0:
-            total = 0
-            for c in new_store:
-                total += int(c)
-            new_store = str(total)
-            k -= 1    
-
-            if k == 0:
-                result = total
-        return result
-        
+        for _ in range(k - 1):
+            num = sum(int(x) for x in str(num))
+        return num
