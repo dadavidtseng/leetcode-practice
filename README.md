@@ -212,6 +212,7 @@
 | [1143-longest-common-subsequence](https://github.com/dadavidtseng/LeetCodePractice/tree/master/1143-longest-common-subsequence) |
 | [1405-longest-happy-string](https://github.com/dadavidtseng/leetcode-practice/tree/master/1405-longest-happy-string) |
 | [1927-sum-game](https://github.com/dadavidtseng/LeetCodePractice/tree/master/1927-sum-game) |
+| [1945-sum-of-digits-of-string-after-convert](https://github.com/dadavidtseng/LeetCodePractice/tree/master/1945-sum-of-digits-of-string-after-convert) |
 | [2904-shortest-and-lexicographically-smallest-beautiful-string](https://github.com/dadavidtseng/LeetCodePractice/tree/master/2904-shortest-and-lexicographically-smallest-beautiful-string) |
 | [3720-lexicographically-smallest-permutation-greater-than-target](https://github.com/dadavidtseng/LeetCodePractice/tree/master/3720-lexicographically-smallest-permutation-greater-than-target) |
 | [3734-lexicographically-smallest-palindromic-permutation-greater-than-target](https://github.com/dadavidtseng/LeetCodePractice/tree/master/3734-lexicographically-smallest-palindromic-permutation-greater-than-target) |
@@ -406,6 +407,7 @@
 | ------- |
 | [0043-multiply-strings](https://github.com/dadavidtseng/LeetCodePractice/tree/master/0043-multiply-strings) |
 | [0054-spiral-matrix](https://github.com/dadavidtseng/LeetCodePractice/tree/master/0054-spiral-matrix) |
+| [1945-sum-of-digits-of-string-after-convert](https://github.com/dadavidtseng/LeetCodePractice/tree/master/1945-sum-of-digits-of-string-after-convert) |
 | [3069-distribute-elements-into-two-arrays-i](https://github.com/dadavidtseng/LeetCodePractice/tree/master/3069-distribute-elements-into-two-arrays-i) |
 ## Linked List
 |  |
