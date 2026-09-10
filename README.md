@@ -253,6 +253,7 @@
 | [0703-kth-largest-element-in-a-stream](https://github.com/dadavidtseng/LeetCodePractice/tree/master/0703-kth-largest-element-in-a-stream) |
 | [0968-binary-tree-cameras](https://github.com/dadavidtseng/LeetCodePractice/tree/master/0968-binary-tree-cameras) |
 | [1448-count-good-nodes-in-binary-tree](https://github.com/dadavidtseng/LeetCodePractice/tree/master/1448-count-good-nodes-in-binary-tree) |
+| [2265-count-nodes-equal-to-average-of-subtree](https://github.com/dadavidtseng/LeetCodePractice/tree/master/2265-count-nodes-equal-to-average-of-subtree) |
 ## Binary Search Tree
 |  |
 | ------- |
@@ -300,6 +301,7 @@
 | [0703-kth-largest-element-in-a-stream](https://github.com/dadavidtseng/LeetCodePractice/tree/master/0703-kth-largest-element-in-a-stream) |
 | [0968-binary-tree-cameras](https://github.com/dadavidtseng/LeetCodePractice/tree/master/0968-binary-tree-cameras) |
 | [1448-count-good-nodes-in-binary-tree](https://github.com/dadavidtseng/LeetCodePractice/tree/master/1448-count-good-nodes-in-binary-tree) |
+| [2265-count-nodes-equal-to-average-of-subtree](https://github.com/dadavidtseng/LeetCodePractice/tree/master/2265-count-nodes-equal-to-average-of-subtree) |
 ## Two Pointers
 |  |
 | ------- |
@@ -467,6 +469,7 @@
 | [0841-keys-and-rooms](https://github.com/dadavidtseng/leetcode-practice/tree/master/0841-keys-and-rooms) |
 | [0968-binary-tree-cameras](https://github.com/dadavidtseng/LeetCodePractice/tree/master/0968-binary-tree-cameras) |
 | [1448-count-good-nodes-in-binary-tree](https://github.com/dadavidtseng/LeetCodePractice/tree/master/1448-count-good-nodes-in-binary-tree) |
+| [2265-count-nodes-equal-to-average-of-subtree](https://github.com/dadavidtseng/LeetCodePractice/tree/master/2265-count-nodes-equal-to-average-of-subtree) |
 ## Breadth-First Search
 |  |
 | ------- |
