@@ -84,6 +84,7 @@
 | [1851-minimum-interval-to-include-each-query](https://github.com/dadavidtseng/LeetCodePractice/tree/master/1851-minimum-interval-to-include-each-query) |
 | [1872-stone-game-viii](https://github.com/dadavidtseng/LeetCodePractice/tree/master/1872-stone-game-viii) |
 | [1899-merge-triplets-to-form-target-triplet](https://github.com/dadavidtseng/LeetCodePractice/tree/master/1899-merge-triplets-to-form-target-triplet) |
+| [1929-concatenation-of-array](https://github.com/dadavidtseng/LeetCodePractice/tree/master/1929-concatenation-of-array) |
 | [2013-detect-squares](https://github.com/dadavidtseng/LeetCodePractice/tree/master/2013-detect-squares) |
 | [2091-removing-minimum-and-maximum-from-array](https://github.com/dadavidtseng/LeetCodePractice/tree/master/2091-removing-minimum-and-maximum-from-array) |
 | [2948-make-lexicographically-smallest-array-by-swapping-elements](https://github.com/dadavidtseng/LeetCodePractice/tree/master/2948-make-lexicographically-smallest-array-by-swapping-elements) |
@@ -419,6 +420,7 @@
 | ------- |
 | [0043-multiply-strings](https://github.com/dadavidtseng/LeetCodePractice/tree/master/0043-multiply-strings) |
 | [0054-spiral-matrix](https://github.com/dadavidtseng/LeetCodePractice/tree/master/0054-spiral-matrix) |
+| [1929-concatenation-of-array](https://github.com/dadavidtseng/LeetCodePractice/tree/master/1929-concatenation-of-array) |
 | [1945-sum-of-digits-of-string-after-convert](https://github.com/dadavidtseng/LeetCodePractice/tree/master/1945-sum-of-digits-of-string-after-convert) |
 | [3069-distribute-elements-into-two-arrays-i](https://github.com/dadavidtseng/LeetCodePractice/tree/master/3069-distribute-elements-into-two-arrays-i) |
 ## Linked List
