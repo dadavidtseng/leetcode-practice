@@ -6,17 +6,18 @@ class Solution:
         # Sort intervals by right boundary
         intervals.sort(key=lambda x: x[1])
 
-        # Define dp[k][i], where picking k intervals from the prefix of intervals ending at i
-        # dp[k][i] = (score, intervals)
+        # dp[k][i] = (score, indices) using at most k intervals among the first i intervals
         dp = [[(0, []) for _ in range(n + 1)] for _ in range(5)]
 
-        # Pick i: intervals[i][2] + dp[k-1][j]
-        # Don't pick i: dp[k][i-1]
+        # Pick interval i: weight[i] + best result from compatible intervals
+        # Skip interval i: dp[k][i]
         for k in range(1, 5):
             for i in range(n):
+                # Binary search for the last compatible interval
                 L = 0
                 R = i - 1
 
+                # Exit the while loop when L > R
                 while L <= R:
                     M = (L + R) // 2
 
@@ -25,6 +26,7 @@ class Solution:
                     else:
                         R = M - 1
 
+                # dp[k][i] = (score, indices)
                 pick = (
                     intervals[i][2] + dp[k - 1][R + 1][0],
                     sorted(dp[k - 1][R + 1][1] + [intervals[i][3]]),
