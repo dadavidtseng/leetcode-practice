@@ -48,6 +48,7 @@
 | [0152-maximum-product-subarray](https://github.com/dadavidtseng/LeetCodePractice/tree/master/0152-maximum-product-subarray) |
 | [0153-find-minimum-in-rotated-sorted-array](https://github.com/dadavidtseng/LeetCodePractice/tree/master/0153-find-minimum-in-rotated-sorted-array) |
 | [0167-two-sum-ii-input-array-is-sorted](https://github.com/dadavidtseng/LeetCodePractice/tree/master/0167-two-sum-ii-input-array-is-sorted) |
+| [0169-majority-element](https://github.com/dadavidtseng/LeetCodePractice/tree/master/0169-majority-element) |
 | [0200-number-of-islands](https://github.com/dadavidtseng/LeetCodePractice/tree/master/0200-number-of-islands) |
 | [0212-word-search-ii](https://github.com/dadavidtseng/LeetCodePractice/tree/master/0212-word-search-ii) |
 | [0215-kth-largest-element-in-an-array](https://github.com/dadavidtseng/LeetCodePractice/tree/master/0215-kth-largest-element-in-an-array) |
@@ -118,6 +119,7 @@
 | [0139-word-break](https://github.com/dadavidtseng/LeetCodePractice/tree/master/0139-word-break) |
 | [0141-linked-list-cycle](https://github.com/dadavidtseng/LeetCodePractice/tree/master/0141-linked-list-cycle) |
 | [0146-lru-cache](https://github.com/dadavidtseng/LeetCodePractice/tree/master/0146-lru-cache) |
+| [0169-majority-element](https://github.com/dadavidtseng/LeetCodePractice/tree/master/0169-majority-element) |
 | [0202-happy-number](https://github.com/dadavidtseng/LeetCodePractice/tree/master/0202-happy-number) |
 | [0208-implement-trie-prefix-tree](https://github.com/dadavidtseng/LeetCodePractice/tree/master/0208-implement-trie-prefix-tree) |
 | [0217-contains-duplicate](https://github.com/dadavidtseng/LeetCodePractice/tree/master/0217-contains-duplicate) |
@@ -171,6 +173,7 @@
 | [0015-3sum](https://github.com/dadavidtseng/LeetCodePractice/tree/master/0015-3sum) |
 | [0049-group-anagrams](https://github.com/dadavidtseng/LeetCodePractice/tree/master/0049-group-anagrams) |
 | [0056-merge-intervals](https://github.com/dadavidtseng/LeetCodePractice/tree/master/0056-merge-intervals) |
+| [0169-majority-element](https://github.com/dadavidtseng/LeetCodePractice/tree/master/0169-majority-element) |
 | [0215-kth-largest-element-in-an-array](https://github.com/dadavidtseng/LeetCodePractice/tree/master/0215-kth-largest-element-in-an-array) |
 | [0217-contains-duplicate](https://github.com/dadavidtseng/LeetCodePractice/tree/master/0217-contains-duplicate) |
 | [0242-valid-anagram](https://github.com/dadavidtseng/LeetCodePractice/tree/master/0242-valid-anagram) |
@@ -232,6 +235,7 @@
 | [0053-maximum-subarray](https://github.com/dadavidtseng/LeetCodePractice/tree/master/0053-maximum-subarray) |
 | [0105-construct-binary-tree-from-preorder-and-inorder-traversal](https://github.com/dadavidtseng/LeetCodePractice/tree/master/0105-construct-binary-tree-from-preorder-and-inorder-traversal) |
 | [0108-convert-sorted-array-to-binary-search-tree](https://github.com/dadavidtseng/LeetCodePractice/tree/master/0108-convert-sorted-array-to-binary-search-tree) |
+| [0169-majority-element](https://github.com/dadavidtseng/LeetCodePractice/tree/master/0169-majority-element) |
 | [0190-reverse-bits](https://github.com/dadavidtseng/LeetCodePractice/tree/master/0190-reverse-bits) |
 | [0191-number-of-1-bits](https://github.com/dadavidtseng/LeetCodePractice/tree/master/0191-number-of-1-bits) |
 | [0215-kth-largest-element-in-an-array](https://github.com/dadavidtseng/LeetCodePractice/tree/master/0215-kth-largest-element-in-an-array) |
@@ -544,6 +548,7 @@
 ## Counting
 |  |
 | ------- |
+| [0169-majority-element](https://github.com/dadavidtseng/LeetCodePractice/tree/master/0169-majority-element) |
 | [0347-top-k-frequent-elements](https://github.com/dadavidtseng/LeetCodePractice/tree/master/0347-top-k-frequent-elements) |
 | [0621-task-scheduler](https://github.com/dadavidtseng/LeetCodePractice/tree/master/0621-task-scheduler) |
 | [2013-detect-squares](https://github.com/dadavidtseng/LeetCodePractice/tree/master/2013-detect-squares) |
@@ -777,4 +782,8 @@
 | ------- |
 | [0124-binary-tree-maximum-path-sum](https://github.com/dadavidtseng/LeetCodePractice/tree/master/0124-binary-tree-maximum-path-sum) |
 | [0968-binary-tree-cameras](https://github.com/dadavidtseng/LeetCodePractice/tree/master/0968-binary-tree-cameras) |
+## Boyer–Moore Majority Vote Algorithm
+|  |
+| ------- |
+| [0169-majority-element](https://github.com/dadavidtseng/LeetCodePractice/tree/master/0169-majority-element) |
 <!---LeetCode Topics End-->
