@@ -226,6 +226,7 @@
 | [1405-longest-happy-string](https://github.com/dadavidtseng/leetcode-practice/tree/master/1405-longest-happy-string) |
 | [1927-sum-game](https://github.com/dadavidtseng/LeetCodePractice/tree/master/1927-sum-game) |
 | [1945-sum-of-digits-of-string-after-convert](https://github.com/dadavidtseng/LeetCodePractice/tree/master/1945-sum-of-digits-of-string-after-convert) |
+| [2472-maximum-number-of-non-overlapping-palindrome-substrings](https://github.com/dadavidtseng/LeetCodePractice/tree/master/2472-maximum-number-of-non-overlapping-palindrome-substrings) |
 | [2904-shortest-and-lexicographically-smallest-beautiful-string](https://github.com/dadavidtseng/LeetCodePractice/tree/master/2904-shortest-and-lexicographically-smallest-beautiful-string) |
 | [3720-lexicographically-smallest-permutation-greater-than-target](https://github.com/dadavidtseng/LeetCodePractice/tree/master/3720-lexicographically-smallest-permutation-greater-than-target) |
 | [3734-lexicographically-smallest-palindromic-permutation-greater-than-target](https://github.com/dadavidtseng/LeetCodePractice/tree/master/3734-lexicographically-smallest-palindromic-permutation-greater-than-target) |
@@ -336,6 +337,7 @@
 | [0567-permutation-in-string](https://github.com/dadavidtseng/LeetCodePractice/tree/master/0567-permutation-in-string) |
 | [0647-palindromic-substrings](https://github.com/dadavidtseng/leetcode-practice/tree/master/0647-palindromic-substrings) |
 | [0763-partition-labels](https://github.com/dadavidtseng/LeetCodePractice/tree/master/0763-partition-labels) |
+| [2472-maximum-number-of-non-overlapping-palindrome-substrings](https://github.com/dadavidtseng/LeetCodePractice/tree/master/2472-maximum-number-of-non-overlapping-palindrome-substrings) |
 | [3734-lexicographically-smallest-palindromic-permutation-greater-than-target](https://github.com/dadavidtseng/LeetCodePractice/tree/master/3734-lexicographically-smallest-palindromic-permutation-greater-than-target) |
 ## Stack
 |  |
@@ -384,6 +386,7 @@
 | [1143-longest-common-subsequence](https://github.com/dadavidtseng/LeetCodePractice/tree/master/1143-longest-common-subsequence) |
 | [1751-maximum-number-of-events-that-can-be-attended-ii](https://github.com/dadavidtseng/LeetCodePractice/tree/master/1751-maximum-number-of-events-that-can-be-attended-ii) |
 | [1872-stone-game-viii](https://github.com/dadavidtseng/LeetCodePractice/tree/master/1872-stone-game-viii) |
+| [2472-maximum-number-of-non-overlapping-palindrome-substrings](https://github.com/dadavidtseng/LeetCodePractice/tree/master/2472-maximum-number-of-non-overlapping-palindrome-substrings) |
 | [3414-maximum-score-of-non-overlapping-intervals](https://github.com/dadavidtseng/LeetCodePractice/tree/master/3414-maximum-score-of-non-overlapping-intervals) |
 ## Memoization
 |  |
@@ -599,6 +602,7 @@
 | [1899-merge-triplets-to-form-target-triplet](https://github.com/dadavidtseng/LeetCodePractice/tree/master/1899-merge-triplets-to-form-target-triplet) |
 | [1927-sum-game](https://github.com/dadavidtseng/LeetCodePractice/tree/master/1927-sum-game) |
 | [2091-removing-minimum-and-maximum-from-array](https://github.com/dadavidtseng/LeetCodePractice/tree/master/2091-removing-minimum-and-maximum-from-array) |
+| [2472-maximum-number-of-non-overlapping-palindrome-substrings](https://github.com/dadavidtseng/LeetCodePractice/tree/master/2472-maximum-number-of-non-overlapping-palindrome-substrings) |
 | [3720-lexicographically-smallest-permutation-greater-than-target](https://github.com/dadavidtseng/LeetCodePractice/tree/master/3720-lexicographically-smallest-permutation-greater-than-target) |
 ## Sliding Window
 |  |
