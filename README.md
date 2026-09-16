@@ -161,6 +161,7 @@
 | [0877-stone-game](https://github.com/dadavidtseng/LeetCodePractice/tree/master/0877-stone-game) |
 | [0973-k-closest-points-to-origin](https://github.com/dadavidtseng/LeetCodePractice/tree/master/0973-k-closest-points-to-origin) |
 | [1140-stone-game-ii](https://github.com/dadavidtseng/LeetCodePractice/tree/master/1140-stone-game-ii) |
+| [1621-number-of-sets-of-k-non-overlapping-line-segments](https://github.com/dadavidtseng/LeetCodePractice/tree/master/1621-number-of-sets-of-k-non-overlapping-line-segments) |
 | [1872-stone-game-viii](https://github.com/dadavidtseng/LeetCodePractice/tree/master/1872-stone-game-viii) |
 | [1927-sum-game](https://github.com/dadavidtseng/LeetCodePractice/tree/master/1927-sum-game) |
 | [3116-kth-smallest-amount-with-single-denomination-combination](https://github.com/dadavidtseng/LeetCodePractice/tree/master/3116-kth-smallest-amount-with-single-denomination-combination) |
@@ -384,6 +385,7 @@
 | [0968-binary-tree-cameras](https://github.com/dadavidtseng/LeetCodePractice/tree/master/0968-binary-tree-cameras) |
 | [1140-stone-game-ii](https://github.com/dadavidtseng/LeetCodePractice/tree/master/1140-stone-game-ii) |
 | [1143-longest-common-subsequence](https://github.com/dadavidtseng/LeetCodePractice/tree/master/1143-longest-common-subsequence) |
+| [1621-number-of-sets-of-k-non-overlapping-line-segments](https://github.com/dadavidtseng/LeetCodePractice/tree/master/1621-number-of-sets-of-k-non-overlapping-line-segments) |
 | [1751-maximum-number-of-events-that-can-be-attended-ii](https://github.com/dadavidtseng/LeetCodePractice/tree/master/1751-maximum-number-of-events-that-can-be-attended-ii) |
 | [1872-stone-game-viii](https://github.com/dadavidtseng/LeetCodePractice/tree/master/1872-stone-game-viii) |
 | [2472-maximum-number-of-non-overlapping-palindrome-substrings](https://github.com/dadavidtseng/LeetCodePractice/tree/master/2472-maximum-number-of-non-overlapping-palindrome-substrings) |
@@ -570,6 +572,7 @@
 | ------- |
 | [0238-product-of-array-except-self](https://github.com/dadavidtseng/LeetCodePractice/tree/master/0238-product-of-array-except-self) |
 | [1140-stone-game-ii](https://github.com/dadavidtseng/LeetCodePractice/tree/master/1140-stone-game-ii) |
+| [1621-number-of-sets-of-k-non-overlapping-line-segments](https://github.com/dadavidtseng/LeetCodePractice/tree/master/1621-number-of-sets-of-k-non-overlapping-line-segments) |
 | [1872-stone-game-viii](https://github.com/dadavidtseng/LeetCodePractice/tree/master/1872-stone-game-viii) |
 | [3903-smallest-stable-index-i](https://github.com/dadavidtseng/LeetCodePractice/tree/master/3903-smallest-stable-index-i) |
 | [3904-smallest-stable-index-ii](https://github.com/dadavidtseng/LeetCodePractice/tree/master/3904-smallest-stable-index-ii) |
@@ -739,6 +742,7 @@
 |  |
 | ------- |
 | [0062-unique-paths](https://github.com/dadavidtseng/LeetCodePractice/tree/master/0062-unique-paths) |
+| [1621-number-of-sets-of-k-non-overlapping-line-segments](https://github.com/dadavidtseng/LeetCodePractice/tree/master/1621-number-of-sets-of-k-non-overlapping-line-segments) |
 | [3116-kth-smallest-amount-with-single-denomination-combination](https://github.com/dadavidtseng/LeetCodePractice/tree/master/3116-kth-smallest-amount-with-single-denomination-combination) |
 ## Longest Common Subsequence
 |  |
