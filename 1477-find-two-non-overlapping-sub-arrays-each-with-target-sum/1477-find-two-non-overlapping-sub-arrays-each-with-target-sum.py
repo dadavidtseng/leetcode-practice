@@ -12,12 +12,10 @@ class Solution:
             while curr > target:
                 curr -= arr[L]
                 L += 1
-
             dp[R + 1] = dp[R]
 
             if curr == target:
                 length = R - L + 1
-                
                 result = min(result, length + dp[L])
                 dp[R + 1] = min(dp[R], length)
 
