@@ -8,29 +8,36 @@ public:
         }
 
         const int n = static_cast<int>(intervals.size());
-        int i = 0;
+        const int target = newInterval[0];
+        int L = 0;
+        int R = n - 1;
         vector<vector<int>> result;
 
-        // Intervals completely before newInterval
-        while (i < n && intervals[i][1] < newInterval[0]) {
-            result.push_back(intervals[i]);
-            ++i;
+        // Use binary search to find the correct position where newInterval
+        // should be inserted based on its start time.
+        while (L <= R) {
+            int M = L + (R - L) / 2;
+
+            if (intervals[M][0] < target) {
+                L = M + 1;
+            } else {
+                R = M - 1;
+            }
         }
 
-        // Intervals that overlap with newInterval
-        // 1. new start = minimum of starts
-        // 2. new end = maximum of ends
-        while (i < n && intervals[i][0] <= newInterval[1]) {
-            newInterval[0] = min(newInterval[0], intervals[i][0]);
-            newInterval[1] = max(newInterval[1], intervals[i][1]);
-            ++i;
-        }
-        result.push_back(newInterval);
+        // Insert newInterval into intervals at the position of L
+        // Noted that after inserting, the list is still sorted by start time.
+        intervals.insert(intervals.begin() + L, newInterval);
 
-        // Intervals completely after the merged newInterval
-        while (i < n) {
-            result.push_back(intervals[i]);
-            ++i;
+        // Iterate through intervals
+        // If the current interval does not overlap the last interval in the
+        // result, append it otherwise merge them by extending the end
+        for (const auto& interval : intervals) {
+            if (result.empty() || result.back()[1] < interval[0]) {
+                result.push_back(interval);
+            } else {
+                result.back()[1] = max(result.back()[1], interval[1]);
+            }
         }
         return result;
     }
