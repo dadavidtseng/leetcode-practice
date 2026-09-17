@@ -17,8 +17,8 @@ class Solution:
 
             if curr == target:
                 length = R - L + 1
-                if L > 0:
-                    result = min(result, length + dp[L])
-                dp[R + 1] = min(dp[R + 1], length)
+                
+                result = min(result, length + dp[L])
+                dp[R + 1] = min(dp[R], length)
 
         return -1 if result == float("inf") else result
