@@ -81,6 +81,7 @@
 | [1046-last-stone-weight](https://github.com/dadavidtseng/LeetCodePractice/tree/master/1046-last-stone-weight) |
 | [1140-stone-game-ii](https://github.com/dadavidtseng/LeetCodePractice/tree/master/1140-stone-game-ii) |
 | [1386-cinema-seat-allocation](https://github.com/dadavidtseng/LeetCodePractice/tree/master/1386-cinema-seat-allocation) |
+| [1477-find-two-non-overlapping-sub-arrays-each-with-target-sum](https://github.com/dadavidtseng/LeetCodePractice/tree/master/1477-find-two-non-overlapping-sub-arrays-each-with-target-sum) |
 | [1584-min-cost-to-connect-all-points](https://github.com/dadavidtseng/LeetCodePractice/tree/master/1584-min-cost-to-connect-all-points) |
 | [1751-maximum-number-of-events-that-can-be-attended-ii](https://github.com/dadavidtseng/LeetCodePractice/tree/master/1751-maximum-number-of-events-that-can-be-attended-ii) |
 | [1800-maximum-ascending-subarray-sum](https://github.com/dadavidtseng/LeetCodePractice/tree/master/1800-maximum-ascending-subarray-sum) |
@@ -135,6 +136,7 @@
 | [0846-hand-of-straights](https://github.com/dadavidtseng/LeetCodePractice/tree/master/0846-hand-of-straights) |
 | [0981-time-based-key-value-store](https://github.com/dadavidtseng/LeetCodePractice/tree/master/0981-time-based-key-value-store) |
 | [1386-cinema-seat-allocation](https://github.com/dadavidtseng/LeetCodePractice/tree/master/1386-cinema-seat-allocation) |
+| [1477-find-two-non-overlapping-sub-arrays-each-with-target-sum](https://github.com/dadavidtseng/LeetCodePractice/tree/master/1477-find-two-non-overlapping-sub-arrays-each-with-target-sum) |
 | [2013-detect-squares](https://github.com/dadavidtseng/LeetCodePractice/tree/master/2013-detect-squares) |
 | [3471-find-the-largest-almost-missing-integer](https://github.com/dadavidtseng/LeetCodePractice/tree/master/3471-find-the-largest-almost-missing-integer) |
 | [3483-unique-3-digit-even-numbers](https://github.com/dadavidtseng/LeetCodePractice/tree/master/3483-unique-3-digit-even-numbers) |
@@ -292,6 +294,7 @@
 | [0778-swim-in-rising-water](https://github.com/dadavidtseng/LeetCodePractice/tree/master/0778-swim-in-rising-water) |
 | [0875-koko-eating-bananas](https://github.com/dadavidtseng/LeetCodePractice/tree/master/0875-koko-eating-bananas) |
 | [0981-time-based-key-value-store](https://github.com/dadavidtseng/LeetCodePractice/tree/master/0981-time-based-key-value-store) |
+| [1477-find-two-non-overlapping-sub-arrays-each-with-target-sum](https://github.com/dadavidtseng/LeetCodePractice/tree/master/1477-find-two-non-overlapping-sub-arrays-each-with-target-sum) |
 | [1751-maximum-number-of-events-that-can-be-attended-ii](https://github.com/dadavidtseng/LeetCodePractice/tree/master/1751-maximum-number-of-events-that-can-be-attended-ii) |
 | [1851-minimum-interval-to-include-each-query](https://github.com/dadavidtseng/LeetCodePractice/tree/master/1851-minimum-interval-to-include-each-query) |
 | [3116-kth-smallest-amount-with-single-denomination-combination](https://github.com/dadavidtseng/LeetCodePractice/tree/master/3116-kth-smallest-amount-with-single-denomination-combination) |
@@ -385,6 +388,7 @@
 | [0968-binary-tree-cameras](https://github.com/dadavidtseng/LeetCodePractice/tree/master/0968-binary-tree-cameras) |
 | [1140-stone-game-ii](https://github.com/dadavidtseng/LeetCodePractice/tree/master/1140-stone-game-ii) |
 | [1143-longest-common-subsequence](https://github.com/dadavidtseng/LeetCodePractice/tree/master/1143-longest-common-subsequence) |
+| [1477-find-two-non-overlapping-sub-arrays-each-with-target-sum](https://github.com/dadavidtseng/LeetCodePractice/tree/master/1477-find-two-non-overlapping-sub-arrays-each-with-target-sum) |
 | [1621-number-of-sets-of-k-non-overlapping-line-segments](https://github.com/dadavidtseng/LeetCodePractice/tree/master/1621-number-of-sets-of-k-non-overlapping-line-segments) |
 | [1751-maximum-number-of-events-that-can-be-attended-ii](https://github.com/dadavidtseng/LeetCodePractice/tree/master/1751-maximum-number-of-events-that-can-be-attended-ii) |
 | [1872-stone-game-viii](https://github.com/dadavidtseng/LeetCodePractice/tree/master/1872-stone-game-viii) |
@@ -615,6 +619,7 @@
 | [0239-sliding-window-maximum](https://github.com/dadavidtseng/LeetCodePractice/tree/master/0239-sliding-window-maximum) |
 | [0424-longest-repeating-character-replacement](https://github.com/dadavidtseng/LeetCodePractice/tree/master/0424-longest-repeating-character-replacement) |
 | [0567-permutation-in-string](https://github.com/dadavidtseng/LeetCodePractice/tree/master/0567-permutation-in-string) |
+| [1477-find-two-non-overlapping-sub-arrays-each-with-target-sum](https://github.com/dadavidtseng/LeetCodePractice/tree/master/1477-find-two-non-overlapping-sub-arrays-each-with-target-sum) |
 | [2904-shortest-and-lexicographically-smallest-beautiful-string](https://github.com/dadavidtseng/LeetCodePractice/tree/master/2904-shortest-and-lexicographically-smallest-beautiful-string) |
 ## Merge Sort
 |  |
