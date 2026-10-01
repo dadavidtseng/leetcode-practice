@@ -1,14 +1,15 @@
 class Solution:
     def countStudents(self, students: list[int], sandwiches: list[int]) -> int:
-        q = deque(students)
-        idx = 0
+        result = len(students)
+        freq = {}
 
-        while q and idx < len(sandwiches):
-            if not sandwiches[idx] in q:
-                break
-            if q[0] == sandwiches[idx]:
-                q.popleft()
-                idx += 1
+        for s in students:
+            freq[s] = freq.get(s, 0) + 1
+
+        for s in sandwiches:
+            if freq.get(s, 0) > 0:
+                result -= 1
+                freq[s] -= 1
             else:
-                q.append(q.popleft())
-        return len(q)
+                break
+        return result
