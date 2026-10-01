@@ -86,6 +86,7 @@
 | [1386-cinema-seat-allocation](https://github.com/dadavidtseng/LeetCodePractice/tree/master/1386-cinema-seat-allocation) |
 | [1477-find-two-non-overlapping-sub-arrays-each-with-target-sum](https://github.com/dadavidtseng/LeetCodePractice/tree/master/1477-find-two-non-overlapping-sub-arrays-each-with-target-sum) |
 | [1584-min-cost-to-connect-all-points](https://github.com/dadavidtseng/LeetCodePractice/tree/master/1584-min-cost-to-connect-all-points) |
+| [1700-number-of-students-unable-to-eat-lunch](https://github.com/dadavidtseng/LeetCodePractice/tree/master/1700-number-of-students-unable-to-eat-lunch) |
 | [1751-maximum-number-of-events-that-can-be-attended-ii](https://github.com/dadavidtseng/LeetCodePractice/tree/master/1751-maximum-number-of-events-that-can-be-attended-ii) |
 | [1800-maximum-ascending-subarray-sum](https://github.com/dadavidtseng/LeetCodePractice/tree/master/1800-maximum-ascending-subarray-sum) |
 | [1851-minimum-interval-to-include-each-query](https://github.com/dadavidtseng/LeetCodePractice/tree/master/1851-minimum-interval-to-include-each-query) |
@@ -360,6 +361,7 @@
 | [0678-valid-parenthesis-string](https://github.com/dadavidtseng/LeetCodePractice/tree/master/0678-valid-parenthesis-string) |
 | [0682-baseball-game](https://github.com/dadavidtseng/LeetCodePractice/tree/master/0682-baseball-game) |
 | [0739-daily-temperatures](https://github.com/dadavidtseng/LeetCodePractice/tree/master/0739-daily-temperatures) |
+| [1700-number-of-students-unable-to-eat-lunch](https://github.com/dadavidtseng/LeetCodePractice/tree/master/1700-number-of-students-unable-to-eat-lunch) |
 ## Dynamic Programming
 |  |
 | ------- |
@@ -443,6 +445,7 @@
 | [0043-multiply-strings](https://github.com/dadavidtseng/LeetCodePractice/tree/master/0043-multiply-strings) |
 | [0054-spiral-matrix](https://github.com/dadavidtseng/LeetCodePractice/tree/master/0054-spiral-matrix) |
 | [0682-baseball-game](https://github.com/dadavidtseng/LeetCodePractice/tree/master/0682-baseball-game) |
+| [1700-number-of-students-unable-to-eat-lunch](https://github.com/dadavidtseng/LeetCodePractice/tree/master/1700-number-of-students-unable-to-eat-lunch) |
 | [1929-concatenation-of-array](https://github.com/dadavidtseng/LeetCodePractice/tree/master/1929-concatenation-of-array) |
 | [1945-sum-of-digits-of-string-after-convert](https://github.com/dadavidtseng/LeetCodePractice/tree/master/1945-sum-of-digits-of-string-after-convert) |
 | [3069-distribute-elements-into-two-arrays-i](https://github.com/dadavidtseng/LeetCodePractice/tree/master/3069-distribute-elements-into-two-arrays-i) |
@@ -708,6 +711,7 @@
 | [0225-implement-stack-using-queues](https://github.com/dadavidtseng/LeetCodePractice/tree/master/0225-implement-stack-using-queues) |
 | [0239-sliding-window-maximum](https://github.com/dadavidtseng/LeetCodePractice/tree/master/0239-sliding-window-maximum) |
 | [0918-maximum-sum-circular-subarray](https://github.com/dadavidtseng/LeetCodePractice/tree/master/0918-maximum-sum-circular-subarray) |
+| [1700-number-of-students-unable-to-eat-lunch](https://github.com/dadavidtseng/LeetCodePractice/tree/master/1700-number-of-students-unable-to-eat-lunch) |
 ## Monotonic Queue
 |  |
 | ------- |
