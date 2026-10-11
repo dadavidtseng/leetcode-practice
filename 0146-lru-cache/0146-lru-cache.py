@@ -12,7 +12,10 @@ class LRUCache:
     def put(self, key: int, value: int) -> None:
         if key in self.cache:
             self.cache.move_to_end(key)
-        self.cache[key] = value
+            self.cache[key] = value
+            return
 
-        if len(self.cache) > self.capacity:
+        if len(self.cache) == self.capacity:
             self.cache.popitem(last=False)
+
+        self.cache[key] = value
