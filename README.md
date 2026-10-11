@@ -839,4 +839,8 @@
 |  |
 | ------- |
 | [0374-guess-number-higher-or-lower](https://github.com/dadavidtseng/LeetCodePractice/tree/master/0374-guess-number-higher-or-lower) |
+## K-D Tree
+|  |
+| ------- |
+| [0973-k-closest-points-to-origin](https://github.com/dadavidtseng/LeetCodePractice/tree/master/0973-k-closest-points-to-origin) |
 <!---LeetCode Topics End-->
