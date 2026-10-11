@@ -1,53 +1,45 @@
-class Node:
-    def __init__(self, key=0, value=0) -> None:
-        self.key = key
-        self.value = value
-        self.prev: "Node" = self
-        self.next: "Node" = self
-
-
 class LRUCache:
     def __init__(self, capacity: int):
+        self.cache = []  # stores [(key, value)]
         self.capacity = capacity
-        self.cache = {}
-        self.left = Node()
-        self.right = Node()
-        self.left.next = self.right
-        self.right.prev = self.left
-
-    def _remove(self, node) -> None:
-        node.prev.next = node.next
-        node.next.prev = node.prev
-
-    def _add_to_head(self, node) -> None:
-        right = self.right
-        prev_right = self.right.prev
-
-        node.prev = prev_right
-        node.next = right
-        right.prev = node
-        prev_right.next = node
 
     def get(self, key: int) -> int:
-        if key in self.cache:
-            self._remove(self.cache[key])
-            self._add_to_head(self.cache[key])
-            return self.cache[key].value
+        # Iterate through cache
+        # If current cache's key equals key
+        # 1. Pop it from the cache list and store it as temp
+        # 2. Push temp into cash list
+        # 3. Return temp's value
+        for i in range(len(self.cache)):
+            if self.cache[i][0] == key:
+                temp = self.cache.pop(i)
+                self.cache.append(temp)
+                return temp[1]
 
+        # Return -1 if key doesn't exist
         return -1
 
     def put(self, key: int, value: int) -> None:
-        if key in self.cache:
-            node = self.cache[key]
-            node.value = value
-            self._remove(node)
-            self._add_to_head(node)
-            return
+        n = len(self.cache)
 
-        self.cache[key] = Node(key, value)
-        self._add_to_head(self.cache[key])
+        # Iterate through cache
+        # If current cache's key equals key
+        # 1. Pop it from the cache list and store it as temp
+        # 2. Update temp[1] with value
+        # 3. Push temp into cash list
+        # 4. Return
+        for i in range(n):
+            if self.cache[i][0] == key:
+                temp = self.cache.pop(i)
+                temp[1] = value
+                self.cache.append(temp)
+                return
 
-        if len(self.cache) > self.capacity:
-            lru = self.left.next
-            self._remove(lru)
-            del self.cache[lru.key]
+        # If key isn't in cache list
+        # 1. Remove the oldest cache if the cache is full
+        # 2. Push [key, value] into cache
+        # Note that we're using [key, value] instead of (key, value)
+        # because tuple is immutable
+        else:
+            if self.capacity == n:
+                self.cache.pop(0)
+            self.cache.append([key, value])
