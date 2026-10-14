@@ -161,6 +161,7 @@
 | [0050-powx-n](https://github.com/dadavidtseng/LeetCodePractice/tree/master/0050-powx-n) |
 | [0062-unique-paths](https://github.com/dadavidtseng/LeetCodePractice/tree/master/0062-unique-paths) |
 | [0066-plus-one](https://github.com/dadavidtseng/LeetCodePractice/tree/master/0066-plus-one) |
+| [0069-sqrtx](https://github.com/dadavidtseng/LeetCodePractice/tree/master/0069-sqrtx) |
 | [0070-climbing-stairs](https://github.com/dadavidtseng/LeetCodePractice/tree/master/0070-climbing-stairs) |
 | [0150-evaluate-reverse-polish-notation](https://github.com/dadavidtseng/LeetCodePractice/tree/master/0150-evaluate-reverse-polish-notation) |
 | [0202-happy-number](https://github.com/dadavidtseng/LeetCodePractice/tree/master/0202-happy-number) |
@@ -286,6 +287,7 @@
 | ------- |
 | [0004-median-of-two-sorted-arrays](https://github.com/dadavidtseng/LeetCodePractice/tree/master/0004-median-of-two-sorted-arrays) |
 | [0033-search-in-rotated-sorted-array](https://github.com/dadavidtseng/LeetCodePractice/tree/master/0033-search-in-rotated-sorted-array) |
+| [0069-sqrtx](https://github.com/dadavidtseng/LeetCodePractice/tree/master/0069-sqrtx) |
 | [0074-search-a-2d-matrix](https://github.com/dadavidtseng/LeetCodePractice/tree/master/0074-search-a-2d-matrix) |
 | [0098-validate-binary-search-tree](https://github.com/dadavidtseng/LeetCodePractice/tree/master/0098-validate-binary-search-tree) |
 | [0108-convert-sorted-array-to-binary-search-tree](https://github.com/dadavidtseng/LeetCodePractice/tree/master/0108-convert-sorted-array-to-binary-search-tree) |
@@ -844,4 +846,8 @@
 |  |
 | ------- |
 | [0973-k-closest-points-to-origin](https://github.com/dadavidtseng/LeetCodePractice/tree/master/0973-k-closest-points-to-origin) |
+## Newton's Method
+|  |
+| ------- |
+| [0069-sqrtx](https://github.com/dadavidtseng/LeetCodePractice/tree/master/0069-sqrtx) |
 <!---LeetCode Topics End-->
