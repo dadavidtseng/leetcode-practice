@@ -1,7 +1,14 @@
 class Solution:
     def mySqrt(self, x: int) -> int:
-        if x == 0 or x == 1:
+        if x < 2:
             return x
-        for i in range(x):
-            if i * i <= x and (i + 1) * (i + 1) > x:
-                return i
+        L, R = 0, x // 2
+        while L <= R:
+            M = L + (R - L) // 2
+            if M * M == x:
+                return M
+            elif M * M < x:
+                L = M + 1
+            else:
+                R = M - 1
+        return R
